@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initail-scale=1.0">
+    
+    <!--[if IE]>
+      <script src="../js/common/modernizr-custom.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../css/src/b_03_float.css">
+
+    <title>float 및 clear</title>
+
+    <link rel="shortcut" href="../favicon.png" type="image/png">
+  </head>
+  <body>
+    <!-- layout-->
+    <div id="wrap">
+      <h1><a href="./a_00_content.html">웹기초</a></h1>
+      <hr />
+
+      <div class="ex_part">
+        <h2>이미지 불러오기</h2>
+        <div class="img_arr"></div>
+        <div>
+          <img src="../img/sticker/angel.png" alt="엔젤이미지" />
+          <img src="../img/sticker/angry.png" alt="앵그리이미지" />
+          <img src="../img/sticker/workout.png" alt="워크아웃이미지" />
+
+        </div>
+      </div> <!-- // .ex_part-->
+
+      <div class="ex_part">
+        <h2>이미지와 텍스트 포함</h2>
+        <div class="img_content">          
+          <p> <img src="../img/sticker/in-love.png" alt="인러브" />Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Deserunt rem doloribus corrupti minus maiores ipsum eum 
+            dolorem. Eum, voluptatem beatae, numquam aliquam, quos 
+            adipisci labore sint similique veniam aut dolores 
+            consequatur consequuntur molestias rem reiciendis nulla 
+            nesciunt quam obcaecati officia debitis tempore. Nisi iusto aliquid ducimus tempora id quia expedita omnis, mollitia provident amet praesentium repudiandae eveniet. Atque tenetur laudantium error, id at dolor non consectetur ab, iusto quibusdam quam saepe deleniti architecto exercitationem veniam nulla, alias libero iure cum! Sed saepe quia tempora nemo delectus inventore at? Distinctio cupiditate incidunt 
+            deleniti fuga suscipit dignissimos nostrum numquam earum 
+            vel molestiae?</p>
+        </div>
+
+      </div><!--// .ex_part-->
+
+      <div class="ex_part">
+        <h2>이미지와 텍스트 포함</h2>
+        <div class="img_content">
+          <div class="img_area"></div>          
+           <p> <img src="../img/sticker/in-love.png" alt="인러브" />Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Deserunt rem doloribus corrupti minus maiores ipsum eum 
+            dolorem. Eum, voluptatem beatae, numquam aliquam, quos 
+            adipisci labore sint similique veniam aut dolores 
+            consequatur consequuntur molestias rem reiciendis nulla 
+            nesciunt quam obcaecati officia debitis tempore. Nisi iusto aliquid ducimus tempora id quia expedita omnis, mollitia provident amet praesentium repudiandae eveniet. Atque tenetur laudantium error, id at dolor non consectetur ab, iusto quibusdam quam saepe deleniti architecto exercitationem veniam nulla, alias libero iure cum! Sed saepe quia tempora nemo delectus inventore at? Distinctio cupiditate incidunt 
+            deleniti fuga suscipit dignissimos nostrum numquam earum 
+            vel molestiae?</p>
+          </div>
+      </div>
+ 
+      <hr />
+
+      <h2>다시 해보기</h2>
+        
+        <div class="img_wrap">
+          <img src="../img/sticker/angel.png" alt="이미지"/>
+          <img src="../img/sticker/angry.png" alt="이미지"/>
+          <img src="../img/sticker/in-love.png" alt="이미지"/>
+          <img src="../img/sticker/rich.png" alt="이미지"/>
+          <img src="../img/sticker/workout.png" alt="이미지"/>
+        </div>
+
+        <ul class="img_list">
+          <li><img src="../img/sticker/angel.png" alt="이미지" /></li>
+          <li><img src="../img/sticker/angry.png" alt="이미지" /></li>
+          <li><img src="../img/sticker/in-love.png" alt="이미지" /></li>
+          <li><img src="../img/sticker/rich.png" alt="이미지" /></li>
+          <li><img src="../img/sticker/workout.png" alt="이미지" /></li>
+        </ul>
+
+
+        <div class="content_area">
+          <div class="viewer">
+            <img src="../img/sticker/in-love.png" 
+                 alt="인러브" />
+          </div>      
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ullam blanditiis modi velit repudiandae, ratione nihil asperiores a, magni nulla eaque dignissimos adipisci iusto dolorum quas distinctio mollitia molestias. Quam dolores praesentium, ipsam distinctio aut recusandae corporis harum consectetur saepe optio necessitatibus illo ut at itaque dolore, in eaque. Iste, ad! Quas assumenda eligendi neque tempore nemo amet? Quaerat eum, animi nisi quo praesentium omnis. Cum, sunt. Repudiandae facere ex numquam in, quia aspernatur commodi natus laudantium cupiditate deleniti earum sunt, voluptates optio. Labore architecto repellendus quidem soluta nesciunt nihil aliquid molestiae qui. Eveniet, eaque tempore sit aliquam quam provident!
+          </p>    
+        </div>
+
+        <div class="list_area">
+          <ul>
+            <li><img src="../img/sticker/angel.png" alt="이미지" /></li>
+            <li><img src="../img/sticker/angry.png" alt="이미지" /></li>
+            <li><img src="../img/sticker/in-love.png" alt="이미지" /></li>
+            <li><img src="../img/sticker/rich.png" alt="이미지" /></li>
+           <li><img src="../img/sticker/workout.png" alt="이미지" /></li>
+          </ul> 
+          <div class="other"></div>         
+        </div>
+
+        <!--
+          부모가 높이가 autp일때 자식이 float처리하면,
+        부모의 높이는 0가 된다. 이를 해결하는 방법을 찾아내자!!!
+        -->
+
+        <div class="ex_part">
+          <div class="float_area float_01">
+            <div class="box b_01">1</div>
+            <div class="box b_02">2</div>
+            <div class="box b_03">3</div>
+            <div class="box b_04">4</div>
+            <div class="box b_05">5</div>
+            <div class="floor">판때기</div>
+          </div>
+        </div>
+
+        <div class="ex_part">
+          <h2>float 처리 이해 2</h2>
+          <div class="float_area float_02">
+            <div class="box b_01">1</div>
+            <div class="box b_02">2</div>
+            <div class="box b_03">3</div>
+            <div class="box b_04">4</div>
+            <div class="box b_05">5</div>
+            <div class="box b_01">6</div>
+            <div class="box b_02">7</div>
+            <!--<hr />-->
+            <!--<p></p>-->
+            <br>
+          </div>
+        </div>
+
+        <div class="ex+part">
+          <h3>list형식의 float</h3>
+          <ul class="float_area">
+            <li class="box b_01">01</li>
+            <li class="box b_02">02</li>
+            <li class="box b_03">03</li>
+            <li class="box b_04">04</li>
+            <!-- <::after></::after> -->
+          </ul>
+        </div>
+
+
+
+
+        
+
+    </div><!--//#warp-->
+
+    <!-- script-->
+
+  </body>
+</html>
