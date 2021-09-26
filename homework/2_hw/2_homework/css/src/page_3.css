@@ -74,7 +74,7 @@ float: left;margin-top: 20px; margin-right: 62px}
 .pop_con_img {width: 330px; height: 200px; background-color:#8F5BD9;
 margin: auto; margin-top: 8px; margin-bottom: 14px;}
 .pop_con_text {width: 330px; height: 200px; background-color:#8F5BD9;
-margin: auto; margin-bottom: 14px;}
+margin: auto; margin-bottom: 8px;}
 
  
 /* newContentBox */
@@ -95,15 +95,15 @@ margin: auto; margin-top: 30px;}
 .new_con_more_area {width: 630px; height: 400px; background-color:#F1BDF2 ;
 float:right;}
 .new_con_more_01 {width: 630px; height: 180px; background-color: #F2D6A2; margin-bottom:40px;}
- .new_con_more_01>p:first-child {float:left; width: 200px; height: 180px; background-color: #F5712A;
+ .new_con_more_01 > div:first-child {float:left; width: 200px; height: 180px; background-color: #F5712A;
 margin: auto;}
- .new_con_more_01>p:last-child {float:right; width: 380px; height: 136px; background-color: #F5712A;
+ .new_con_more_01 > div:last-child {float:right; width: 380px; height: 136px; background-color: #F5712A;
 margin-top: 44px;}
 
 .new_con_more_02 {width: 630px; height: 180px; background-color: #F2D6A2;}
-.new_con_more_02>p:first-child {float:left; width: 200px; height: 180px; background-color: #F5712A;
+  .new_con_more_02 > div:first-child {float:left; width: 200px; height: 180px; background-color: #F5712A;
   margin: auto;}
-   .new_con_more_02>p:last-child {float:right; width: 380px; height: 136px; background-color: #F5712A;
+   .new_con_more_02 > div:last-child {float:right; width: 380px; height: 136px; background-color: #F5712A;
   margin-top: 44px;}
 
 /* recommendedContentBox */
@@ -123,10 +123,7 @@ margin-top: 44px;}
     /* .re_con_part_img {width: 300px; height: 210px; background-color: #8F5BD9; margin-bottom: 15px;}
     .re_con_part_text {width: 270px; height: 180px; background-color: #8F5BD9; margin: auto;   } */
 
-    /* padding 사용 하는 법 못찾겠음 */
-
-
-    
+    /* padding 사용 하는 법 못찾겠음 */    
 
 /* communityBox */
 #communityBox {width: 1600px; height: 800px; background-color: #dfdfdf;
