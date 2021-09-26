@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* css/src/page_1.css */
+
+#wrap {width:auto; height: auto; background-color: #fff; font-size: 30px;
+font-weight: bold; margin-top: 50px; margin-bottom: 30px;}
+p {margin:30; text-align: center;}
+
+/* headbox */
+#headBox {width: 1600px; height: 150px; background-color: #dfdfdf;
+margin:auto;}
+
+/* adViewBox */
+#adViewBox {width: 1600px; height: 750px; background-color: #a5a5a5;
+margin:auto;}
+
+/*localNavBox */
+#localNavBox {width: 1600px; height: 250px; background-color: #545454;
+margin:auto; margin-bottom: 50px;}
+
+/* popularContentBox */
+#popularContentBox {width: 1600px; height: 600px; background-color: #a5a5a5;
+margin:auto;}
+
+/* newContentBox */
+#newContentBox {width: 1600px; height: 900px; background-color:#dfdfdf;
+margin:auto; margin-bottom: 80px;}
+
+/* recommendedContentBox */
+#recommendedContentBox {width: 1600px; height: 600px; background-color: #a5a5a5;
+margin: auto; margin-bottom: 80px;}
+
+/* communityBox */
+#communityBox {width: 1600px; height: 800px; background-color: #dfdfdf;
+margin: auto; margin-bottom: 80px;}
+
+/* miniAdBox */
+#miniAdBox {width: 1600px; height: 400px; background-color:#a5a5a5;
+margin: auto; margin-bottom: 80px;}
+
+/* footBox */
+#footBox {width: 1600px; height: 200px; background-color:#545454 ;
+margin: auto;}
