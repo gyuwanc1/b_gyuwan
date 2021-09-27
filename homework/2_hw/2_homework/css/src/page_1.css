@@ -1,9 +1,33 @@
 @charset "UTF-8";
 /* css/src/page_1.css */
+/* 속성작성 요령
+선택자 {
+  존재의뮤무/형태->display, overflow
+  위치 -> position
+  크기-> width -> height ( 반응형은 min, max 필요 )
+  공간 -> margin -> box-sizing-> padding ->border
+  서체 -> font-weight,font-style, font-size, line-height,family....
+  배경처리 -> image,repeat,position,size, clip ...
+  기타효과 -> shadow, ...
+  애니메이션 } 
+*/
 
+
+/* reset.css */
+body {margin:0;}
+ul, ol ,li ,dl, dt, dd {margin:0; padding:0; font-size: 16px;}
+ul,ol {list-style:none;}
+button {border:0; background-color: transparent;
+cursor:pointer;}
+
+/* common.css */
+.clearfix:after
+.cleartfix::after{  content:""; display: block; clear:both;}
+
+/* wrap h1 */
 #wrap {width:auto; height: auto; background-color: #fff; font-size: 30px;
-font-weight: bold; margin-top: 50px; margin-bottom: 30px;}
-p {margin:30; text-align: center;}
+  font-weight: bold; padding:30px}
+p {text-align:center;}  
 
 /* headbox */
 #headBox {width: 1600px; height: 150px; background-color: #dfdfdf;

@@ -17,46 +17,57 @@
   <!-- layout -->
   <div id="wrap">
     <p><a href="./main.html">page2_wire</a><p>
-    <div id="headBox" class="clearfix">
+    <div id="headBox" class="clearfix" role="banner">
       <h1>site_name</h1>
-      <div class="a_box"></div>
-      <div class="b_box"></div> 
+      <div class="a_box" role="navigation">
+        <h2 class="blind">global_navigation</h2>
+      </div>
+      <div class="b_box" role="navigation">
+        <h2 class="blind">utility_navigation</h2>
+      </div> 
     </div>  
 
-    <div id="adViewBox">
+    <div id="adViewBox" role="region">
+      <h2 class="blind">주요광고 모음</h2>
       <div class="view_outer">.view_outer</div>
       <div class="view_indicator">.view_indicator</div>
     </div>
 
-    <div id="localNavBox">
-      <div class="local_nav_outer">.local_nav_outer</div>
+    <div id="localNavBox" role="navigation">
+      <h2 class="blind">local navigation</h2>
+      <div class="local_nav_outer">local_nav_outer</div>
     </div>
 
-    <div id="popularContentBox">
-      <h3>h3(인기콘텐츠)</h3>
-      <div class="pop_con_area">.pop_con_area</div>
-    </div>
+    <div class="content_box_wrap" role="main">
+      <h2 class="blind"> 주요내용 </h2>
+      <div id="popularContentBox">
+        <h3>h3(인기콘텐츠)</h3>
+        <div class="pop_con_area">.pop_con_area</div>
+      </div>
 
-    <div id="newContentBox">
-      <h3>h3(최신콘텐츠)</h3>
-      <div class="new_con_area">.new_con_area</div>
-    </div>
+      <div id="newContentBox">
+        <h3>h3(최신콘텐츠)</h3>
+        <div class="new_con_area">.new_con_area</div>
+      </div>
 
-    <div id="recommendedContentBox">
-      <h3>h3(추천콘텐츠)</h3>
-      <div class="recom_con_area">.recom_con_area</div>
-    </div>
+      <div id="recommendedContentBox">
+        <h3>h3(추천콘텐츠)</h3>
+        <div class="recom_con_area">.recom_con_area</div>
+      </div>
+    </div><!-- // .content_box_wrap -->  
     
-    <div id="communityBox">
-      <h3>h3(community)</h3>
+    <div id="communityBox" role="main">
+      <h2 class="community">h3(community)</h2>
       <div class="community_area">.community_area</div>
     </div>
 
-    <div id="miniAdBox">
+    <div id="miniAdBox" role="region">
+      <h2 class="blind">보조광고 모음</h2>
       <div class="mini_ad_outer">.mini_ad_outer</div>
     </div>
 
-    <div id="footBox">
+    <div id="footBox" role="contentinfo">
+      <h2 class="blind">site_information</h2>
       <div class="f_box"></div>
     </div>  
 

@@ -1,8 +1,20 @@
 @charset "UTF-8";
 /* css/src/page_2.css */
+/* 속성작성 요령
+선택자 {
+  존재의뮤무/형태->display, overflow
+  위치 -> position
+  크기-> width -> height ( 반응형은 min, max 필요 )
+  공간 -> margin -> box-sizing-> padding ->border
+  서체 -> font-weight,font-style, font-size, line-height,family....
+  배경처리 -> image,repeat,position,size, clip ...
+  기타효과 -> shadow, ...
+  애니메이션 } 
+*/
 
 /* reset.css */
 body {margin:0;}
+h1, h2,h3,h4,h5,h6
 ul, ol ,li ,dl, dt, dd {margin:0; padding:0; font-size: 16px;}
 ul,ol {list-style:none;}
 button {border:0; background-color: transparent;
@@ -11,74 +23,80 @@ cursor:pointer;}
 /* common.css */
 .clearfix:after,
 .cleartfix::after{  content:""; display: block; clear:both;}
+.blind {width: 0px; height: 0px; overflow: hidden;}
 
-/* wrap h1 */
-#wrap {width:auto; height: auto; background-color: #fff; font-size: 30px;
-  font-weight: bold; margin-top: 50px; margin-bottom: 50px;}
-p {margin:30; text-align: center;}
+/* wrap work area */
+#wrap {width:100%; height: auto; background-color: #fff; font-size: 30px;
+  font-weight: bold; padding:30px;}
+p {text-align: center;}
 h3 {width: 1300px; height: 50px; background-color: #34B1BF; margin:auto;}
 
 /* headbox */
-#headBox {width: 1600px; height: 150px; background-color: #dfdfdf;
+#headBox {width: auto; height: 150px; background-color: #dfdfdf;
 margin:auto;}
 h1{float:left; width: 250px; height: 80px;background-color: #34B1BF;
-margin:auto; margin-left: 50px; margin-top: 34px; font-size: 3rem; 
+margin-left: 50px; margin-top: 34px; font-size: 3rem; 
 text-align: center;}
 .a_box {float: left; width: 850px; height: 80px; background-color: #34B1Bf;
-margin: auto; margin-left: 75px; margin-top: 34px; margin-right: 75px;}
-.b_box {float: left; width: 250px; height: 80px; background-color: #34B1BF;
-margin: auto; margin-top: 34px; margin-right: 50px;}
+margin-left: 75px; margin-top: 34px; margin-right: 75px;}
+.b_box {float: right; width: 250px; height: 80px; background-color: #34B1BF;
+ margin-top: 34px; margin-right: 50px;}
 
 
   
 /* adViewBox */
-#adViewBox {width: 1600px; height: 750px; background-color: #a5a5a5;
-margin:auto; padding-top: 28px;}
+#adViewBox {width: auto; height: 750px; background-color: #a5a5a5;
+padding-top: 28px; margin: auto;}
 .view_outer {width: 1300px; height: 600px; background-color: #34B1BF;
 margin:auto;}
 .view_indicator {width: 850px; height: 60px; background-color: #34B1BF;
 margin:auto; margin-top: 28px;}
   
 /*localNavBox */
-#localNavBox {width: 1600px; height: 250px; background-color: #545454;
-margin:auto; margin-bottom: 50px;padding-top: 18px;} 
+#localNavBox {width: auto; height: 250px; background-color: #545454;
+margin:auto; margin-bottom: 50px;padding-top: 18px; box-sizing: border-box;} 
 .local_nav_outer {width: 1500px; height:196px; background-color: #34B1BF;
 margin:auto;}
+
+/*======================================*/
+/* .content_box_wrap */
+.content_box_warp {width: 100%; height: auto;}
  
 /* popularContentBox */
-#popularContentBox {width: 1600px; height: 600px; background-color: #a5a5a5;
+#popularContentBox {width: auto; height: 600px; background-color: #a5a5a5;
 margin:auto;}
 .pop_con_area {width: 1300px; height: 470px; background-color: #34B1BF; 
 margin:auto; margin-top: 30px; }
   
 /* newContentBox */
-#newContentBox {width: 1600px; height: 900px; background-color:#dfdfdf;
+#newContentBox {width: auto; height: 900px; background-color:#dfdfdf;
 margin:auto; margin-bottom: 80px; padding-top:60px;}
 
 .new_con_area {width: 1300px; height: 700px; background-color: #34B1BF;
 margin: auto; margin-top: 30px;}
   
 /* recommendedContentBox */
-#recommendedContentBox {width: 1600px; height: 600px; background-color: #a5a5a5;
-margin: auto; margin-bottom: 80px; padding-top: 30px;}
+#recommendedContentBox {width: auto; height: 600px; background-color: #a5a5a5;
+margin: auto; margin-bottom: 80px; padding-top: 30px; box-sizing: border-box;}
 .recom_con_area {width: 1300px; height: 440px; background-color: #34B1BF;
 margin: auto; margin-top:30px;}
 
 
 /* communityBox */
-#communityBox {width: 1600px; height: 800px; background-color: #dfdfdf;
+#communityBox {width: auto; height: 800px; background-color: #dfdfdf;
 margin: auto; margin-bottom: 80px; padding-top: 60px;}
+.community {width: 1300px; height: 50px; background-color: #34B1BF; margin:auto;}
 .community_area {width: 1300px; height: 600px; background-color: #34B1BF;
 margin: auto; margin-top: 30px;}
 
 /* miniAdBox */
-#miniAdBox {width: 1600px; height: 400px; background-color:#a5a5a5;
+#miniAdBox {width: auto; height: 400px; background-color:#a5a5a5;
 margin: auto; margin-bottom: 80px; padding-top: 40px;}
 .mini_ad_outer {width: 1500px; height: 300px; background-color: #34B1BF;
 margin:auto;}
 
 /* footBox */
-#footBox {width: 1600px; height: 200px; background-color:#545454 ;
-margin: auto; padding:22px;}
+#footBox {width: auto; height: 200px; background-color:#545454 ;
+margin: auto; padding-top:22px; box-sizing: border-box;}
 .f_box {width: 1300px; height: 140px; background-color: #34B1BF;
 margin: auto;}
