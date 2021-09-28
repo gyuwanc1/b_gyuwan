@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* b_05_layout_test_02.css */
+/* 속성작성요령: 
+  선택자{
+    존재유무/형태 -> display, overflow
+    위치 -> position
+    크기 -> width -> height 
+    공간 -> margin -> box-sizing -> padding -> border
+    서체 -> font-weight, font-style, font-size, line-height, family..... 
+    배경처리 -> image, repeat, position, size, clip ...
+    기타효과 -> shadow, ...
+    애니메이션 
+  }
+*/
+/* reset.css ==================================================== */
+html,body {width:100%; height: 100%;}
+
+html,body,
+h1,h2,h3,h4,h5,h6,
+div,p,pre,address,
+ul,ol,li,dl,dt,dd {
+  margin: 0; padding: 0; font-family: 'apple SD', 'myriad pro',arial,sans-serif;
+  vertical-align: baseline;
+}
+
+header, nav, section, main, article, aside, footer, figure, figcaption {display:block;
+  margin:0; padding:0; border:0;}
+  
+
+ol,ul {list-style:none; }
+a { color:inherit; text-decoration: none;}
+table,tr,td,th,thead,tbody,tfoot {
+  border:1px solid #333; border-spacing: 0; border-collapse: collapse;
+}
+button { border:0; cursor: pointer;}
+em,address { font-style: normal; }
+strong,b { font-weight:normal;}
+abbr {text-decoration: none;}
+
+
+/* common.css ==================================================== */
+.blind {width:0; height: 0; overflow: hidden;}
+.clearfix:after,
+.clearfix::after{  content:""; display: block; clear:both;}
+
+/* work page */
+#wrap {width: 1440px; height: auto; background-color: #fff; margin:auto;}
+
+#headBox{width: 100%; height: 100px ; background-color: #c4c4c4;
+padding:20px 170px 10px; box-sizing: border-box;}
+  h1 {width: 120px; height:70px; background-color: #eee;}
+  #navigation {width: 510px; height: 70px; background-color: ;}
+
+
+
+#slide_banner {width: 100%; height: 600px; background-color: #834c33;}
+#new_menu { width: 100%; height: 700px; background-color: #fff ;}
+#sub_banner {width: 100%; height:350px; background-color: #ffbd55;}
+#best_menu {width: 100%; height:700px; background-color:#fff}
+#gallery {width: 100%; height: 750px; background-color: #e7e9d3;}
+#sponser {width: 100%; height: 100px; background-color: #777;}
+#footBox {width: 100%; height:450px; background-color: #171717;}
+

@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* b_05_layout_test_02.css */
+/* 속성작성요령: 
+  선택자{
+    존재유무/형태 -> display, overflow
+    위치 -> position
+    크기 -> width -> height 
+    공간 -> margin -> box-sizing -> padding -> border
+    서체 -> font-weight, font-style, font-size, line-height, family..... 
+    배경처리 -> image, repeat, position, size, clip ...
+    기타효과 -> shadow, ...
+    애니메이션 
+  }
+*/
+/* reset.css ==================================================== */
+html,body {width:100%; height: 100%;}
+
+html,body,
+h1,h2,h3,h4,h5,h6,
+div,p,pre,address,
+ul,ol,li,dl,dt,dd {
+  margin: 0; padding: 0; font-family: 'apple SD', 'myriad pro',arial,sans-serif;
+  vertical-align: baseline;
+}
+
+header, nav, section, main, article, aside, footer, figure, figcaption {display:block;
+  margin:0; padding:0; border:0;}
+  
+
+ol,ul {list-style:none; }
+a { color:inherit; text-decoration: none;}
+table,tr,td,th,thead,tbody,tfoot {
+  border:1px solid #333; border-spacing: 0; border-collapse: collapse;
+}
+button { border:0; cursor: pointer;}
+em,address { font-style: normal; }
+strong,b { font-weight:normal;}
+abbr {text-decoration: none;}
+
+
+/* common.css ==================================================== */
+.blind {width:0; height: 0; overflow: hidden;}
+.clearfix:after,
+.clearfix::after{  content:""; display: block; clear:both;}
+
+/* work page */
+#wrap {width: 700px; height: auto; background-color: #fff; margin:auto;}
+
+#headBox {width: 100%; height: 80px; background-color: deepskyblue;
+padding:15px 35px; box-sizing: border-box;}
+  h1 {float:left;width: 100px; height: 50px; background-color: #fff;}
+  #navigation {float: right; width: auto; height: 30px;}
+  .gnb{width: auto; height: 30px; background-color:;}
+  .gnb a {
+    display:inline-block;
+    width: 100px; height: 100%;
+    margin-right:5px;
+    background-color: #fff;
+  }
+  .gnb a:last-of-type {margin:0}
+
+#banner {width: 100%; height: 250px; background-color: #afa;}
+
+#subbox {width: 100%; height: 35px; background-color: mediumblue;}
+
+#main_box {width: 100%; height: 300px;}
+#main_box >div {width: 50%; height: 300px;} 
+.article_box {float:left; background-color: #777; padding: 20px 30px; box-sizing: border-box;}
+div > .tmi{float:left;width: 140px; height: 120px; background-color: #fff; }
+.a_1 {margin-right:10px; margin-bottom: 10px;}
+.a_2 {margin-bottom: 10px;}
+.a_4 {margin-left: 10px;}
+
+
+.article_box2 {float:left; background-color: #333; padding:50px 45px; box-sizing: border-box; }
+.b_1 { float:left; width: 258px; height: 50px; margin-bottom: 20px; background-color: #fff;}
+.b_2 { float:left; width: 258px; height: 50px; margin-bottom: 20px; background-color: #fff;}
+.b_3 { float:left; width: 258px; height: 50px; background-color: #fff;}
+
+
+#footBox {width: 100%; height: 80px; background-color: lightsalmon;}
