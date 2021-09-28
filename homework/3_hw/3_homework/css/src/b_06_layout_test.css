@@ -46,15 +46,51 @@ abbr {text-decoration: none;}
 /* work page */
 #wrap {width: 1440px; height: auto; background-color: #fff; margin:auto;}
 
+/* header */
 #headBox{width: 100%; height: 100px ; background-color: #c4c4c4;
 padding:20px 170px 10px; box-sizing: border-box;}
-  h1 {width: 120px; height:70px; background-color: #eee;}
-  #navigation {width: 510px; height: 70px; background-color: ;}
+  h1 {float:left; width: 120px; height:70px; background-color: #eee;}
+  #navigation {float:right;width: 510px; height: 70px; background-color:#c4c4c4 ;}
+  .unb {float:right; width: 270px; height: 26px; background-color: #555;
+  padding: 3px 5px; box-sizing: border-box;}
+  .unb a {float:left; display:block;
+    width: 50px; height: 100%;
+    margin-right:20px;
+    background-color: #c4c4c4;}
+  .unb a:last-of-type {margin:0;}
+  
+  .gnb {float:right; width: 510x; height: 35px; background-color: #555;
+    padding:5px; box-sizing: border-box; margin-top: 10px;}
+    .gnb a {float:left; display:block;
+      width: 70px; height: 100%;
+      margin-right:16px;
+      background-color: #c4c4c4;}
+    .gnb a:last-of-type {margin:0;}  
 
+#slide_banner {width: 100%; height: 600px; background-color: #834c33;
+padding-left:330px; padding-right: 330px; padding-top: 100px;  box-sizing: border-box;}
+  .banner_text {float:left; width: 300px; height: 262px; background-color: #834c33;
+  margin-top: 76px; margin-bottom: 162px; margin-right:100px}
+  h2 {width: 245px; height: 54px;}
+  p {width: 300px; height:140px;}
+  .button {width: 220px; height:51px; background-color: #c4c4c4; border-radius: 10px;}
+  .banner_image {float:left; width: 380px ; height: 400px; background-color: #c4c4c4;}
 
+#new_menu { width: 100%; height: 700px; background-color: #fff ;
+padding-top:67px; padding-left: 250px; padding-right: 250px; padding-bottom: 71px;
+box-sizing: border-box;}
+  h2 {width:245px; height:54px;}
+  .new_box {width: 940px; height:370px; margin-top:58px;}  
+  .new_img {float:left; width: 300px; height: 370px; margin-right: 20px; background-color: #555; }
+  .new_img:last-child {margin-right: 0;}
 
-#slide_banner {width: 100%; height: 600px; background-color: #834c33;}
-#new_menu { width: 100%; height: 700px; background-color: #fff ;}
+  .scroll {width: 140px; height: 30px; margin: auto;margin-top: 50px;}
+  .c_button {float:left; width: 30px; height: 30px; margin-right: 25px; background-color: #555;
+  border-radius: 30px;}
+  .c_button:last-child {margin:0;}
+  
+  
+
 #sub_banner {width: 100%; height:350px; background-color: #ffbd55;}
 #best_menu {width: 100%; height:700px; background-color:#fff}
 #gallery {width: 100%; height: 750px; background-color: #e7e9d3;}
