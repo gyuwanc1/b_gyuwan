@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- b_03_layout_test_02_result.html -->
-<html lang="ko-KR" class="no-js">
+<html class="no-js" lang="ko-KR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +16,12 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    <div id="headBox" role="banner">
+    <header id="headBox">
       <h1>file name</h1>
-      <div class="unb" role="navigation">
+      <nav class="unb">
         <h2 class="blind">utility navigation</h2>
-      </div>
-      <div class="gnb" role="navigation">
+      </nav>
+      <nav class="gnb">
         <h2 class="blind">global navigation</h2>
         <ul class="clearfix">
           <li>li_01</li>
@@ -30,12 +30,11 @@
           <li>li_04</li>
           <li>li_05</li>
         </ul>
-      </div>    
-    </div>
+      </nav>    
+    </header>
     <!-- // #headBox -->  
-    <div id="adViewBox" role="region">
+    <section id="adViewBox">
       <h2 class="blind">주요 광고 내용</h2>
-
       <div class="view_outer">view_outer</div>
       <div class="view_indicator">
         <ul class="clearfix">
@@ -46,11 +45,10 @@
           <li>ad_05</li>
           <li>ad_06</li>
         </ul>
-      </div>
-      
-    </div>
+      </div>      
+    <section>
     <!-- // #adViewBox -->    
-    <div id="localNavBox" role="navigation">
+    <nav id="localNavBox">
       <h2 class="blind">local navigation</h2>
       <div class="local_nav_outer">
         <ul class="clearfix">
@@ -62,114 +60,117 @@
           <li>lnb_06</li>
         </ul>
       </div>
-    </div>
-    <div class="content_box_wrap" role="main">
-      <h2 class="blind">주요 내용</h2>
-      <!-- // #localNavBox -->    
-      <div id="popularContentBox">
-        <h3 class="area_title">
-          인기 콘텐츠
-        </h3>
-        <div class="pop_con_area">
-          <div class="card">
-            <div class="img_part"></div>
-            <div class="con_part"></div>
-          </div>
-          <div class="card">
-            <div class="img_part"></div>
-            <div class="con_part"></div>
-          </div>
-          <div class="card">
-            <div class="img_part"></div>
-            <div class="con_part"></div>
-          </div>
-        </div>
-      </div>
-      <!-- // #popularContentBox -->    
-      <div id="newContentBox" class="box_space">
-        <h3 class="area_title">
-          최신 콘텐츠
-        </h3>
-        <div class="new_con_area">
-          <div class="new_con_title_area">
-            <div class="new_con_title_img">
-              이미지
+    </nav> 
+    <!-- // #localNavBox -->
+    <main>
+      <div class="content_box_wrap">
+        <h2 class="blind">주요 내용</h2>
+      
+        <article id="popularContentBox">
+          <h3 class="area_title">
+            인기 콘텐츠
+          </h3>
+          <div class="pop_con_area">
+            <div class="card">
+              <div class="img_part"></div>
+              <div class="con_part"></div>
             </div>
-            <div class="new_con_title_text">
-              설명
+            <div class="card">
+              <div class="img_part"></div>
+              <div class="con_part"></div>
+            </div>
+            <div class="card">
+              <div class="img_part"></div>
+              <div class="con_part"></div>
             </div>
           </div>
-          <div class="new_con_more_area"></div>
-        </div>
-      </div>
-      <!-- // #newContentBox -->    
-      <div id="recommendedContentBox" class="box_space">
-        <h3 class="area_title">
-          추천콘텐츠
-        </h3>
-        <div class="recon_con_area">
-          <ul class="clearfix">
-            <li>
-              <div class="recon_img"></div>
-              <div class="recon_content">card_01</div>
-            </li>
-            <li>
-              <div class="recon_img"></div>
-              <div class="recon_content">card_02</div>
-            </li>
-            <li>
-              <div class="recon_img"></div>
-              <div class="recon_content">card_03</div>
-            </li>
-            <li>
-              <div class="recon_img"></div>
-              <div class="recon_content">card_04</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- // #recommendedContentBox -->  
+        </article>
+        <!-- // #popularContentBox -->    
+        <article id="newContentBox" class="box_space">
+          <h3 class="area_title">
+            최신 콘텐츠
+          </h3>
+          <div class="new_con_area">
+            <div class="new_con_title_area">
+              <div class="new_con_title_img">
+                이미지
+              </div>
+              <div class="new_con_title_text">
+                설명
+              </div>
+            </div>
+            <div class="new_con_more_area"></div>
+          </div>
+        </article>
+        <!-- // #newContentBox -->    
+        <article id="recommendedContentBox" class="box_space">
+          <h3 class="area_title">
+            추천콘텐츠
+          </h3>
+          <div class="recon_con_area">
+            <ul class="clearfix">
+              <li>
+                <div class="recon_img"></div>
+                <div class="recon_content">card_01</div>
+              </li>
+              <li>
+                <div class="recon_img"></div>
+                <div class="recon_content">card_02</div>
+              </li>
+              <li>
+                <div class="recon_img"></div>
+                <div class="recon_content">card_03</div>
+              </li>
+              <li>
+                <div class="recon_img"></div>
+                <div class="recon_content">card_04</div>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <!-- // #recommendedContentBox -->  
 
-    </div><!-- // .content_box_wrap -->
-    <div id="communityBox" class="box_space" role="main">
-      <h2 class="area_title">
-        community
-      </h2>
-      <div class="community_area">
-        <ul>
-          <li class="community_con">
-            <dl>
-              <dt>community_title</dt>
-              <dd>community_contents Lorem, ipsum.</dd>
-            </dl>
-          </li>
-          <li class="community_con">
-            <dl>
-              <dt>community_title</dt>
-              <dd>community_contents Lorem, ipsum.</dd>
-            </dl>
-          </li>
-          <li class="community_con">
-            <dl>
-              <dt>community_title</dt>
-              <dd>community_contents Lorem, ipsum.</dd>
-            </dl>
-          </li>
-        </ul>        
-      </div>
-    </div>
-    <!-- // #communityBox -->    
-    <div id="miniAdBox" class="box_space" role="region">
+      </div><!-- // .content_box_wrap -->
+      <article id="communityBox" class="box_space">
+        <h2 class="area_title">
+          community
+        </h2>
+        <div class="community_area">
+          <ul>
+            <li class="community_con">
+              <dl>
+                <dt>community_title</dt>
+                <dd>community_contents Lorem, ipsum.</dd>
+              </dl>
+            </li>
+            <li class="community_con">
+              <dl>
+                <dt>community_title</dt>
+                <dd>community_contents Lorem, ipsum.</dd>
+              </dl>
+            </li>
+            <li class="community_con">
+              <dl>
+                <dt>community_title</dt>
+                <dd>community_contents Lorem, ipsum.</dd>
+              </dl>
+            </li>
+          </ul>        
+        </div>
+      </article>
+    </main>  
+      <!-- // #communityBox -->    
+    <aside id="miniAdBox" class="box_space">
       <h2 class="blind">보조광고</h2>
       <div class="mini_ad_outer">
         mini_ad_outer
       </div>
-    </div>
+    </aside>
     <!-- // #miniAdBox -->    
-    <div id="footBox" role="contentinfo">
+    <footbox id="footBox">
       <h2 class="blind">site infomation</h2>
       <div class="foot_outer"></div>
-    </div>
+    </footbox>
     <!-- // #footBox -->
 
   </div><!-- // #wrap -->
