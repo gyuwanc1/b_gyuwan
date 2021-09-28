@@ -1,4 +1,4 @@
-# HTML 정리 #
+ # HTML 정리 #
 
 ---
 
@@ -13,7 +13,7 @@ Default_code_값
     <head>
         <meta charset="UTF-8">  ---------인코딩 언어속성 결정
         <meta http-equiv="X-UA-compatible" content="IE-edge"> ----비표준값,Browser최신버전설정
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></mata>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         -------- 반응형 웹셋팅
         <title> title명</title>
         <!--style-->
@@ -135,10 +135,29 @@ window.location="./html/내용.html";----작성하고 있는 문서 기준으로
 margin:여백공간이라고 하며 시각적인 공간을 말한다.
 padding: 본문과 박스사이의 공간을 말한다.
 border-radius:테두리 R값을 말한다.
-vox-shadow: 그림자를 말한다.
+box-shadow: 그림자를 말한다.
 ```
 ---
 
+## semantic 구조
+``` html
+
+semantic->별도의 능력 ,role 삭제 가능
+
+요소
+ * header: 최상위 부분
+ * section: 목차, 주요광고
+ * article: 웹페이지의 본문
+ * footer: 최하단 copyright 및 company info
+ * aside: 보조 광고
+
+구형 browser는 인식을 못함
+
+main->기피하는 영향이 있음
+
+sction내에는 작은 웹 구성 가능
+```
+---
 
 
 
