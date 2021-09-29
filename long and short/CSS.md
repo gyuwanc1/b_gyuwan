@@ -19,7 +19,7 @@
 ```
 ---
 ## psuedo-code
-```css
+``` css
  psuedo는 가상의 코드이며 의사전달코드라고 한다.
  수행될 내용을 인간의 언어로 간략히 설명한 것이다.
 
@@ -46,7 +46,23 @@
   ```
   ---
 
+## hidden 
+``` css
+.blind { 
+  overflow:hidden; width: 0; height: 0; 
+  margin: 0; padding: 0;
+}
+```
+---
 
+## ABC:before,after
+``` CSS
+ABC:before,after {content:"ABC" display:block; float:left;}
+
+ABC에 before, after를 사용하면, 요소값으로 변환 
+display:block; 처리시 생성 되어있는 블럭안에 요소로 삽임된다.
+```
+---
 
 
 

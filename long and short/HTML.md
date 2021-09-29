@@ -1,4 +1,4 @@
- # HTML 정리 #
+# HTML 정리 #
 
 ---
 
@@ -120,7 +120,7 @@ window.location="./html/내용.html";----작성하고 있는 문서 기준으로
 ```
 ---
 ## ID와 CLASS ##
-```html
+``` html
 
 <id="id명">: id명을 페이지에 한번만 사용가능, 카멜표기법  #id명 { }
 <class="class명"> 여러번 사용가능 하다. 언더바표기법 .class명 { } CSS 언어사용
@@ -131,33 +131,107 @@ window.location="./html/내용.html";----작성하고 있는 문서 기준으로
 ---
 
 ## Margin 과 padding
-```html
+``` html
 margin:여백공간이라고 하며 시각적인 공간을 말한다.
 padding: 본문과 박스사이의 공간을 말한다.
 border-radius:테두리 R값을 말한다.
-box-shadow: 그림자를 말한다.
+vox-shadow: 그림자를 말한다.
 ```
 ---
 
-## semantic 구조
+## font setting ##
 ``` html
 
-semantic->별도의 능력 ,role 삭제 가능
+그래픽->16px=16pt
 
-요소
- * header: 최상위 부분
- * section: 목차, 주요광고
- * article: 웹페이지의 본문
- * footer: 최하단 copyright 및 company info
- * aside: 보조 광고
+WEB-> 16px=12pt=1rem
 
-구형 browser는 인식을 못함
+소수점 6자리 기준으로 한다.
 
-main->기피하는 영향이 있음
-
-sction내에는 작은 웹 구성 가능
 ```
 ---
+
+## 용어정리 ##
+``` html
+
+GnB : global navigation Bar
+
+UnB : utility navigation Bar
+
+```
+---
+
+## Head ##
+
+``` html
+h1 -> h2-> h3->
+ h2가 없을 경우 nop name 
+
+ 각 구조의 단락 마다 h2를 작성 -> hidden처리한다.
+ <h2 class="blind"> </h2> aria기법 CSS에서 hidden.
+ ```
+ ---
+ 
+ ## 단락 계산 자동 완성 #3
+
+``` html
+ex) ul > li*5 {li_0$}
+```
+---
+
+## flaot add summary 
+
+``` html
+float은 모든 요소를 Block 처리한다.
+```
+---
+
+## background-clip ##
+``` html
+background-clip: 배경을 칠하는 범위
+    content-box: 내용만 칠해라
+    padding-box: padding범위 칠해라
+    border-box: borderline을 칠해라
+```
+---
+
+## 0929 class position ##
+``` html
+positon -> 적제 적소에 맞게 사용 (용도에 맞게)
+
+* 성향
+    static:가장 기본 값 (default), 위치설정하는 속성과 z-index기능 동작하지 않음
+    realative:자신을 기준으로 처리하는 속성, 위치선정 속성을 사용해도 주변 요소에는 영향X
+    absoloute:틀기준 부모 -> 아이(자식)
+    fixed:고정, browse기준으로 처리
+    sticky:다른조건필요
+
+relative -> absolute ->기준이 어디냐에 따라 바뀜
+absolute -> absolute (가능)
+
+*기본틀 후 위치에 맞게 사용
+
+position->블럭에 사용
+
+위치설정: top,left,right,bottom
+해당요소의 각 위치를 기준 ( top일 경우 상단을 기준, bottom일 경우 하단을 기준)
+지정된 곳에서 위치설정
+
+```
+---
+
+    
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
