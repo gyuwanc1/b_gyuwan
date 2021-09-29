@@ -28,14 +28,16 @@ abbr {text-decoration: none;}
   margin: auto; padding: 100px; 
   background-color: #fff;
 }
-#wrap > div {width:100%; margin-bottom: 100px;}
-#wrap > div:first-child {margin-bottom: 0;}
-#wrap > div:last-child {margin-bottom: 0;}
+section {margin-bottom: 100px;}
+aside {margin-bottom: 100px;}
+article {margin-bottom: 100px;}
 
 
-#header {height: 80px;background-color: #313131;}
+#headBox {width: 1440px; height: 80px;background-color: #313131;
+ margin:auto; }
 
-#commercial { height: 800px; background-color: #dfdfdf; }
+#commercial { height: 800px; background-color: #dfdfdf; 
+}
 
 #newMd { height: 600px; background-color: #eee ; }
 
