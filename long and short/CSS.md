@@ -64,5 +64,16 @@ display:block; 처리시 생성 되어있는 블럭안에 요소로 삽임된다
 ```
 ---
 
+## 0930 css class ##
+``` css
+fixed 기준은 브라우져
+
+relative를 사용 하면 사용된 요소가 기준이 됨. 
+
+opacity -> block 안에 있는 내용까지 투명화 됨  
+
+box-shadow : X Y blur
+```
+---
 
 

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+
+/* work space */ 
+#wrap { width: 1200px; height: auto; background-color: #eee;}
+
+.headerBox{width: 100%; height: 100px; background-color: #C2885D;}
+  h1 {float:left;width: 200px; height: 100px; background-color: #B0EED0;}
+  .indexBox {float:right;width:1000px; height: 100px; background-color: #012085;
+  padding:10px;box-sizing: border-box;}
+  .indexBox li {padding:0 5px;}
+    a {float: right; width: 160px; height: 50px; background-color: #EBB1F8;
+    margin-top:10px; border:5px  solid #171717;}
+
+.commercial {width: auto; height: 300px; background-color:#636506;}
+
+.notice {width: auto; height: 200px; background-color: #DBDB94;}
+  .n_text {float:left; width: 400px; height: 200px; background-color: #5EBA4D;
+  padding:10px 20px; box-sizing: border-box;}
+
+  .tab_title_area { width: 100%; height: 30px; background-color: #eee;}
+
+  .tab_title_area ul { width: 100%; height: 100%; box-sizing: border-box;
+  border-bottom:1px solid #333;}
+
+  .tab_title_area li { float:left;width: 100px; height: 100%;
+    box-sizing: border-box; padding:0 5px;
+    text-align:center; line-height: 30px;
+  background-color: #fff;}
+
+  .tab_title_area li.action {
+    border:1px solid #333;
+    border-bottom:0;
+  }
+
+  .tab_content_area {width: 100%; height: 150px; background-color: #f88;}
+
+    .tab_content_area > div.action {display: block;}
+    .tab_detail_01 {display:none; width: 100%; height: 100%;background-color: #9B0955;}        
+    .tad_detail_02 {display:none; width: 100%; height: 100%;background-color: #CF3778;}
+  
+
+  .con {float:left; width: 400px; height: 200px; background-color: #0EF7F7;}
+  .go_to {float:left; width: 400px; height: 200px; background-color: #DA31CC;
+  padding:20px; box-sizing: border-box;}
+  .go_to > .btn{ width: 100%; height: 30px; }
+  .go_to button {width: 100%; height: 100%; background-color: #fd0;} 
+  .go_to button:hover {font-weight: 700; background-color: #BD96AF;} 
+  .go_to button:focus {outline:0; border-bottom: 3px solid #f06;
+  box-shadow:3px 3px 3px #333;} 
+
+  /* .modal*/
+  .modal {
+    
+    position: fixed;
+    top:0; left:0; z-index: 1000;
+    width: 100%; height: 100%;
+    /* background-color: #daa; */
+  }
+
+  .modal_message {
+    position:absolute;
+    top:0; left:0; bottom:0; right:0;
+    margin: auto;
+    width: 500px; height: 300px;
+    padding:30px;
+    border:1px solid #333;
+    background-color: #fff;
+  }
+  .modal_bg {
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+.footBox {width: auto; height: 100px; background-color: #B47611;}
+  .logo_2{float:left; width: 200px; height:100px ; background-color: #8C7E01; }
+  .com_info {float:left; width: 800px; height:100px; background-color: #0B6A82;}
+  .sns {float:left; width: 200px; height: 100px; background-color: #E18497;}
+ 
