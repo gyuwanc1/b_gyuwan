@@ -28,24 +28,53 @@ abbr {text-decoration: none;}
   margin: auto; padding: 100px; 
   background-color: #fff;
 }
+/* common.css */
 section {margin-bottom: 100px;}
 aside {margin-bottom: 100px;}
 article {margin-bottom: 100px;}
 
+/* work place */
 
-#headBox {width: 1440px; height: 80px;background-color: #313131;
+#headBox {width: 1440px; height: 80px;background-color: #fff;
  margin:auto; }
+  
+  .all_menu{float:left; width: 32px; height: 32px; background-color: #333;
+  margin-left: 20px; margin-top: 25px;}
+  h1 {float:left; width: 220px; height: 32px; margin: auto;
+  margin-left: 50px; margin-top:25px;}
 
-#commercial { height: 800px; background-color: #dfdfdf; 
-}
+  .gnb > li {float:left;width: 80px; height: 20px;background-color: #333;
+  margin-right:30px; margin-top: 30px;}
+  .gnb>li:first-child {margin-left: 300px;}
+  .gnb>li:last-child {margin-right: 0px;}
 
-#newMd { height: 600px; background-color: #eee ; }
+  .unb > li {float:left;width: 80px; height: 20px;background-color: #333;
+  margin-left: 30px; margin-top:30px; }
+  .unb>li:first-child {margin-left: 60px;}
+  
+
+
+#commercial { height: 800px; background-color: #dfdfdf;}
+  .back { float:left; width: 1330px; height: 80px;background-color:#333;
+    margin-left:55px; margin-top: 360px;}
+
+#newMd { height: 600px; background-color: #eee ; padding:90px; box-sizing: border-box;}
+    .new_box {width: 1100px; height: 420px; background-color: #333;
+    margin:auto;}
 
 #bestOnnew {height: 500px; background-color: #a5a5a5;}
+  .bn_Box {width:930px; height:500px; background-color: #eee ;
+  margin: auto;}
 
-#bestMd {height: 550px;background-color: #c4c4c4;} 
+#bestMd {height: 550px;background-color: #c4c4c4;
+padding-top: 75px; box-sizing: border-box;}
+    .bob {width: 1100px; height: 400px; background-color: #fff; margin:auto;}
 
-#gotomagazine {height: 380px; background-color:#313131 ;}
+#gotomagazine {height: 380px; background-color:#313131; padding-top: 320px;
+box-sizing: border-box;}
+  .btn {width: 290px; height: 30px; background-color: #eee; margin: auto;}
+  
+
 
 #Eco {height: 1400px; background-color:#dfdfdf ;}
 
