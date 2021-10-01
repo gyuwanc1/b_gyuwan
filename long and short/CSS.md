@@ -76,4 +76,42 @@ box-shadow : X Y blur
 ```
 ---
 
+## 1001 ##
+### position ###
+
+``` css
+
+positon:fixed를 사용할 경우 ->값 없이 Web page 기준으로 공중에 뜸
+
+여기서 positon:fixed의 기준은 Browser, top, left 값 넣기를 잊지 말것.
+
+** z-index ** -> 값없이 떠있는 fixed에 값을 줌.
+```
+
+e.g.  
+
+<details>
+<summary>눌러줘요</summary>
+
+``` html
+<div class="headerBox"> 
+  <div class="headwrapper">
+</div>
+```
+</details>
+이러한 구조에서  headwrapper의 margin 값은 부모인 headBox의 기준 값을 따라간다.
+
+e.g. header Box 단락에 position을 사용하면 다음 요소들은 position:fixed를 사용한 요소의 빈공간으로
+올라간다.
+
+therefore!! 
+
+전체 #wrap의 CSS에 padding 과 margin을 사용한다.
+
+---
+
+
+
+
+
 

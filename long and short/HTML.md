@@ -232,6 +232,34 @@ id,class 이름을 선정할때 ->ad,banner 뺄것
 autofocus: 한번만 사용 가능, 구형browser에서는 사용불가.
 ```
 ---
+## 10/1 Class TIL ##
+
+-semantic 추가 내용 <br />
+
+    Semantic 안에 header,article,footer을 넣을 수 있다.
+
+    semantic 구조에서 웹페이지의 본문의 성격을 가지는 article/section의 형식은 내부에 다시
+    header/article/section/nav/aside/footer (작은 web page)를 가질 수 있다.
+    하지만 header/aside/footer/nav의 특정위치나 기능의 성향을 가지고 있는 요소는 내부에 
+    section/article을 사용할 수 없다.
+    header의 경우는 내부에 nav요소를 가질 수 있다.
+---
+### 특수tag  `<a> </a>`
+``` html
+
+<a href ="#"> </a> 는 inline 요소 이지만 a안에 div를 사용 할 수 있다.
+
+<a href="#"><div></div></a>  이렇게 사용가능.
+```
+---
+
+
+
+
+
+
+
+
 
 
     
