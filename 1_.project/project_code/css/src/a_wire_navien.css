@@ -76,10 +76,19 @@ box-sizing: border-box;}
   
 
 
-#Eco {height: 1400px; background-color:#dfdfdf ;}
+#Eco {height: 1400px; background-color:#dfdfdf ; padding-top: 150px; box-sizing: border-box;}
+  .Eco_image {margin:auto;
+    width: 1100px; height: 500px; background-color: #313131;}
+  .explain_area {width: 1100px; height: 400px; background-color: #313131;
+  margin:auto; margin-top: 200px;; }  
 
-#service {height: 400px; background-color: #c4c4c4;}
+#service {height: 400px; background-color: #c4c4c4; padding-top: 70px; box-sizing: border-box;}
+    .cs_img {height: 260px; width: 430px; background-color: #fff; margin: auto;}
+    
 
-#footBox {height: 224px; background-color: #dfdfdf;} 
+#footBox {height: 224px; background-color: #dfdfdf; padding-top: 30px; }
+  .com_info {float:left; width: 350px; height: 194px; background-color: #333; margin-left: 230px;
+  margin-right: 500px;} 
+  .sns {float:left; width: 190px; height: 184px; background-color: #333;}   
 
 
