@@ -4,6 +4,10 @@
 /* reset.css ==================================================== */
 html,body {width:100%; height: 100%;}
 
+.blind { 
+  display: block;
+  width: 0; height: 0; overflow: hidden; }
+
 html,body,
 h1,h2,h3,h4,h5,h6,
 div,p,pre,address,
@@ -35,6 +39,7 @@ article {margin-bottom: 100px;}
 
 /* work place */
 
+/* head Box */
 #headBox {width: 1440px; height: 80px;background-color: #fff;
  margin:auto; }
   
@@ -51,44 +56,86 @@ article {margin-bottom: 100px;}
   .unb > li {float:left;width: 80px; height: 20px;background-color: #333;
   margin-left: 30px; margin-top:30px; }
   .unb>li:first-child {margin-left: 60px;}
+
+  /*------------------------------------------------------------*/
+
   
+/* 광고영역  */
+#commercial{position: relative; width: 1440px; height: 800px; background-color: #dfdfdf;} 
+    .back {position: absolute; width: 1330px; height: 80px; background-color: #333; 
+      top:360px; left:55px; z-index: 100;}
+/*--------------------------------------*/
 
 
-#commercial { height: 800px; background-color: #dfdfdf;}
-  .back { float:left; width: 1330px; height: 80px;background-color:#333;
-    margin-left:55px; margin-top: 360px;}
+/* 새로운 제품 */
+#newMd { width: 1440px; height: 600px; background-color: #fff ; padding:90px; box-sizing: border-box;}
+    .new_box {width: 1100px; height: 420px; margin:auto;}
+    h3 {text-align:center}
+    .new_box li {width: 200px; height:280px; background-color:#333 ;
+    float: left; margin-right:100px; margin-top: 100px;  }
+    .new_box li:last-child {margin-right: 0; }
+/*-----------------------------------------------------------*/
 
-#newMd { height: 600px; background-color: #eee ; padding:90px; box-sizing: border-box;}
-    .new_box {width: 1100px; height: 420px; background-color: #333;
-    margin:auto;}
 
-#bestOnnew {height: 500px; background-color: #a5a5a5;}
-  .bn_Box {width:930px; height:500px; background-color: #eee ;
-  margin: auto;}
+/* 새로운 것 중 베스트 */
+#bestOnnew {width:1440px; height: 500px; background-color: #C5D3D9;}
+  .bn_Box {width:930px; height:500px; margin: auto; padding-top:50px; box-sizing: border-box;}
+  h3 {text-align:center;}
+  .bn_img {float:left; width: 320px; height: 320px; background-color: #333;
+    margin-left: 50px;  margin-top: 50px;}
+  .bn_Box ul {float: right;width: 320px; height: 200px; margin-top: 100px; margin-right: 50px;}
+  ul > .bn_title {float:left; width: 320px; height: 24px; font-size: 24px; font-weight: bold;}
+  ul > .bn_text {float:left; width: 320px; height: 120px;  margin-top: 30px;}
+/*-------------------------------------------------------------*/
 
-#bestMd {height: 550px;background-color: #c4c4c4;
+
+/* 가장 잘팔린 것 */
+#bestMd {width:1440px; height: 550px;background-color: #F5AE3D;
 padding-top: 75px; box-sizing: border-box;}
-    .bob {width: 1100px; height: 400px; background-color: #fff; margin:auto;}
+  .best_box {width: 1100px; height: 400px;  margin:auto;}
+  h3 {text-align:center}
+  .best_box li {width: 200px; height:280px; background-color:#333 ;
+  float: left; margin-right:100px; margin-top: 100px;  }
+  .best_box   li:last-child {margin-right: 0; } 
 
-#gotomagazine {height: 380px; background-color:#313131; padding-top: 320px;
-box-sizing: border-box;}
-  .btn {width: 290px; height: 30px; background-color: #eee; margin: auto;}
+/*-------------------------------------------------------*/
+
+
+/* go to maagazine */
+#gotomagazine {width:1440px; height: 380px; background-color:#313131; padding:50px; box-sizing: border-box;}
+  #gotomagazine  h2 { color:#eee; text-align: center; }
+  .btn {width: 290px; height: 30px; background-color: #eee; border-radius: 30px; margin-left: 575px; margin-top: 230px;}
+  button {width: 290px; height: 30px;border-radius: 30px; }
   
+/*--------------------------------------------------*/  
+  
+/* Eco */
+#Eco {width:1440px; height: 1400px; background-color:#E8EFEE; padding: 100px; box-sizing:border-box}
+#Eco > h2 {text-align: center;}
+  .Eco_image { width: 1100px; height: 500px; margin-top:100px; margin-left: 70px;}
+    .eco_img_01 {float:left; width: 600px; height: 500px; background-color:#313131;
+    margin-right: 90px; }
+    .eco_img_02 {float:right; width: 400px; height: 500px; background-color: #313131;}
+
+  .explain_area {width: 1100px; height: 400px; margin:auto; margin-top: 100px;}
+    .explain_area > ul {float:left; width: 600px; height: 300px;     margin-top: 40px;}
+    .con_title {float:right; width: 300px; height: 24px; margin-top:30px; margin-bottom: 30px;;
+     font-weight: bold; font-size: 24px;}
+    .con_text {float:right; width: 600px; height: 236px;}
+    .con_img {float:right; width: 400px; height: 400px; background-color: #313131;}  
+/*----------------------------------------*/    
+
+/*  고객센터  */
+#service {height: 400px;  padding-top: 70px; box-sizing: border-box;}
+  .cs_img {width: 430px; height: 260px; background-color: #eee; margin: auto;}
+  .cs_img > h3 {width:430PX; height: 50PX; background-color: #2D3C73;
+  font-size: 2.5rem; color:#fff; border-radius: 60px;}
+
+/*------------------------------------------------*/    
 
 
-#Eco {height: 1400px; background-color:#dfdfdf ; padding-top: 150px; box-sizing: border-box;}
-  .Eco_image {margin:auto;
-    width: 1100px; height: 500px; background-color: #313131;}
-  .explain_area {width: 1100px; height: 400px; background-color: #313131;
-  margin:auto; margin-top: 200px;; }  
-
-#service {height: 400px; background-color: #c4c4c4; padding-top: 70px; box-sizing: border-box;}
-    .cs_img {height: 260px; width: 430px; background-color: #fff; margin: auto;}
-    
-
-#footBox {height: 224px; background-color: #dfdfdf; padding-top: 30px; }
-  .com_info {float:left; width: 350px; height: 194px; background-color: #333; margin-left: 230px;
-  margin-right: 500px;} 
-  .sns {float:left; width: 190px; height: 184px; background-color: #333;}   
+/* company */
+#footBox {width:1440px; height: 250px; background-color: #dfdfdf;}
+  .com_info {float:left;width: 1440px; height: 200px; background-color: #333; margin-top: 50px;}   /* ------------------------------------*/    
 
 
