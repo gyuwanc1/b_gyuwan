@@ -253,6 +253,44 @@ autofocus: 한번만 사용 가능, 구형browser에서는 사용불가.
 ```
 ---
 
+## 1004 TIL ##
+
+
+
+h1의  text를 작성 할 때에는 소문자로 작성할것
+
+CSS에서 text-transform:uppercase; word-spacing:-3px;로 대문자 표시
+
+``` html
+<ul> 
+<li> </li>
+</ul>
+의 구조를 가질때에  UL의 사이즈 먼저 만들것!!
+```
+text의 색을 다르게 하려면?
+``` html
+text에 <span> </span>을 이용하여 색을 다르게 넣어준다.
+```
+
+input을 이용한 search bar 만들기
+``` html
+
+<div class="search_demo">
+    <form action="연결문서">
+        <fieldset>
+            <legend>검색제목</legend>
+            <label for="search">검색어를 입력하세요</label>
+            <input type="text" value=""> id="search" 
+            placeholber="검색어를 입력하세요>
+            <button>검색</button>
+        </fieldset>    
+    </form>
+</div
+```
+---
+
+
+
 
 
 
