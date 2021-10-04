@@ -26,20 +26,25 @@ em,address { font-style: normal; }
 strong,b { font-weight:normal; }
 abbr {text-decoration: none;}
 
+/* common.css */
+section {margin-bottom: 100px;}
+aside {margin-bottom: 100px;}
+article {margin-bottom: 100px;}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+
+/* work place */
+
+/* head Box */
 
 #wrap {
   width: 1440px; height: auto; min-height:500px;
   margin: auto; padding: 100px; 
   background-color: #fff;
 }
-/* common.css */
-section {margin-bottom: 100px;}
-aside {margin-bottom: 100px;}
-article {margin-bottom: 100px;}
-
-/* work place */
-
-/* head Box */
 #headBox {width: 1440px; height: 80px;background-color: #fff;
  margin:auto; }
   
@@ -104,7 +109,8 @@ padding-top: 75px; box-sizing: border-box;}
 /* go to maagazine */
 #gotomagazine {width:1440px; height: 380px; background-color:#313131; padding:50px; box-sizing: border-box;}
   #gotomagazine  h2 { color:#eee; text-align: center; }
-  .btn {width: 290px; height: 30px; background-color: #eee; border-radius: 30px; margin-left: 575px; margin-top: 230px;}
+
+  .btn {width: 290px; height: 30px; background-color: #eee; border-radius: 30px; margin-left: 525px; margin-top: 230px;}
   button {width: 290px; height: 30px;border-radius: 30px; }
   
 /*--------------------------------------------------*/  
@@ -126,7 +132,7 @@ padding-top: 75px; box-sizing: border-box;}
 /*----------------------------------------*/    
 
 /*  고객센터  */
-#service {height: 400px;  padding-top: 70px; box-sizing: border-box;}
+#service {width:1440px; height: 400px;  padding-top: 70px; box-sizing: border-box;}
   .cs_img {width: 430px; height: 260px; background-color: #eee; margin: auto;}
   .cs_img > h3 {width:430PX; height: 50PX; background-color: #2D3C73;
   font-size: 2.5rem; color:#fff; border-radius: 60px;}
