@@ -285,8 +285,24 @@ input을 이용한 search bar 만들기
             <button>검색</button>
         </fieldset>    
     </form>
-</div
+</div>
 ```
+---
+## 1005 TIL ##
+
+``` html
+text-indient :한줄 들여쓰기
+
+transition : 단편성의 애니메이션
+
+clip:rect ()
+하나의 의치를 잡기 위해:
+Y->X순서
+
+(y1,x1) (y2,x2) ->이정도의 사이즈로 박스를 그려라
+```
+** clip은 position과 같이 사용 한다.( absolute, fixed만 가능) 
+
 ---
 
 
