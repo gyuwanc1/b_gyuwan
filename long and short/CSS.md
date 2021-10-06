@@ -110,6 +110,57 @@ therefore!!
 
 ---
 
+## 1006
+
+### font
+
+Web에서는 woff,eot 확장자 사용
+
+*family:선체 선택 속성 영문 대안 대중적이며 사용할 한글 등.
+
+*font불러오기- 사용할 웹폰트가 없을경우.
+
+  **weight:서체의 굵기
+
+  **style: 서체의 기울기
+
+ *line-height
+
+ *text-transform
+
+ *letter-spacing: 글자사이의 간격
+
+*word-spacing: 단어사이의 간격
+
+> *white-spacing : `nowrap`->평균적으로 많이 사용;<br />
+> *overflow:hidden;<br />
+> *text-overflow:ellipsis;<br />
+
+*word-break
+
+*text-overflow
+
+---
+
+## UNIT-단위
+
+
+16px-12pt-100%-1em-1rem = Default
+
+:root{} -기본셋팅 (reset.css 이전에 사용한다.) 
+최초의 설정값만 잘하면 가능, 현재 최신 Browser에서 사용가능
+
+@supports->최신기술, var(값)으로 전환 가능
+
+---
+
+
+
+
+
+
+
+
 
 
 
