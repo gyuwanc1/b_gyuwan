@@ -31,6 +31,7 @@ section {margin-bottom: 100px;}
 aside {margin-bottom: 100px;}
 article {margin-bottom: 100px;}
 h1, h2, h3, h4, h5 {text-transform: uppercase;}
+li 
 
 .clearfix,
 .clearfix::after{
@@ -50,18 +51,21 @@ h1, h2, h3, h4, h5 {text-transform: uppercase;}
 #wrap {
   width: 1280px; height: auto; min-height:500px;
   margin: auto; 
-  background-color: #fff;
+  background-color: #fff; padding-top: 5rem;
 }
-#headBox {position:relative; 
+#headBox {position:fixed; left: 0; top: 0; z-index: 1000;
   width: 100%; height: 80px;background-color: #fff;
- margin:auto; padding:25px; box-sizing: border-box; }
+ margin:auto; padding:25px; box-sizing: border-box; 
+border: 1px solid #333;}
+ .headBox{  position: relative; width: 100%; max-width: 1440px; margin: auto;
+}
  h1 {float:left; width: 220px; height: 32px; margin: auto;
   margin-left: 100px;}
 
  .all_menu button {width: 100%; height: 100%;}
  .all_menu{
   position:absolute; top:0; left:0;
-  width: 32px; height: 32px;  margin-left:20px; margin-top: 25px;
+  width: 32px; height: 32px;  margin-left:20px; 
   border: #333;}
 
  .navigation{float:right; width:auto; height: 30px; }  
@@ -74,7 +78,7 @@ h1, h2, h3, h4, h5 {text-transform: uppercase;}
     float:left; width: 70px; height: 100%; margin-right: 30px; border: 1px solid #333;  
    }
   
-  .navigation li a { display:block; width: 100%; height: 100%; text-align: center;
+  .navigation li a { display:block; width: 100%; height: 100%; text-align: center; 
   line-height:30px;}
   
 
@@ -93,14 +97,14 @@ overflow: hidden;}
         width: 40px; height: 40px; background-color: #fff;
       }
       .back .next {float:right;}
-      .back .prev {float:left;}
+      .back .prev {float:left;}      
 /*--------------------------------------*/
 
 
 /* 새로운 제품 */
 #newMd { width: 100%; height: 600px; background-color: #fff ; padding:90px; box-sizing: border-box;}
     .new_box {width: 1100px; height: 420px; margin:auto;}
-    h3 {text-align:center; font-weight:bold; text-transform: uppercase;}
+    #newMd h2 {text-align:center; font-weight:bold; text-transform: uppercase;}
     .new_box > ul {width: auto; height: 280px; margin-top: 100px;}
     .new_box li {float:left;width: 200px; height:280px; background-color:#333 ;
    margin-right: 100px;}
@@ -109,9 +113,9 @@ overflow: hidden;}
 
 
 /* 새로운 것 중 베스트 */
-#bestOnnew {width:100%; height: 500px; background-color: #C5D3D9;}
-  .bn_Box {width:930px; height:500px; margin: auto; padding-top:50px; box-sizing: border-box;}
-  h3 {text-align:center;}
+#bestOnnew {width:100%; height: 500px; background-color: #C5D3D9; padding-top: 50px; box-sizing: border-box;}
+  .bn_Box {width:930px; height:500px; margin: auto;}
+  h2 {text-align:center;}
   .bn_img {float:left; width: 320px; height: 320px; background-color: #333;
     margin-left: 50px;  margin-top: 50px;}
   .bn_Box ul {float: right;width: 320px; height: 200px; margin-top: 100px; margin-right: 50px;}
@@ -124,7 +128,7 @@ overflow: hidden;}
 #bestMd {width:100%; height: 550px;
 padding-top: 75px; box-sizing: border-box;}
   .best_box {width: 1100px; height: 400px;  margin:auto;}
-  h3 {text-align:center}
+  #bestmd h2 {text-align:center}
   .best_box ul {width: auto; height: auto; margin-top: 100px;}
   .best_box li {float: left; width: 200px; height:280px; background-color:#333 ;
   margin-right:100px;}
@@ -135,10 +139,15 @@ padding-top: 75px; box-sizing: border-box;}
 
 /* go to maagazine */
 #gotomagazine {width:100%; height: 380px; background-color:#313131; padding-top:50px; box-sizing: border-box;}
-  #gotomagazine  h2 { color:#eee; text-align: center; }
+  #gotomagazine  h2 { color:#eee; text-align: center; margin-bottom: 40px; }
+  .magz_text_box {width: auto; height: 200px; margin-left: 55% ;}
+    .magazine_title {width: auto; height: 30px;  margin-bottom: 20px;
+    color: #eee; font-size: large; font-style: italic; font-weight: bolder; line-height: 30px; }
+    .magazine_text {width: 400px; height: 140px;
+    color:#eee; font-style: italic;}
 
-  .btn {width: 290px; height: 30px; background-color: #eee; border-radius: 30px;margin-top: 230px;
-  margin: auto; margin-top: 260px;}
+  .btn {width: 290px; height: 30px; background-color: #eee; border-radius: 30px;
+  margin: auto;}
   button {width: 290px; height: 30px;border-radius: 30px; }
   
 /*--------------------------------------------------*/  
@@ -166,13 +175,19 @@ padding-top: 75px; box-sizing: border-box;}
 #service {width:100%; height: 400px;  padding-top: 70px; box-sizing: border-box;}
   .cs_img {width: 430px; height: 260px; background-color: #eee; margin: auto;}
   .cs_img > h3 {width:430PX; height: 50PX; background-color: #2D3C73;
-  font-size: 2.5rem; color:#fff; border-radius: 60px;}
+  font-size: 2.5rem; color:#fff; border-radius: 60px;
+text-align: center;}
 
 /*------------------------------------------------*/    
 
 
 /* company */
 #footBox {width:100%; height: 250px; background-color: #dfdfdf;}
-  .com_info {float:left;width: 100%; height: 200px; background-color: #333; margin-top: 50px;}   /* ------------------------------------*/    
+  .use_info {float:left;width: 100%; height: 60px;}
+  .temp {float: left; width: auto; height: 60px;margin-left: 100px;}
+  .temp li {float:left; width: 70px; height: 100%; margin-right: 30px; 
+  text-align:center; line-height: 60px;}
+  .com_info {float:left;width: 100%; height: 190px; background-color: #333;}
+
 
 

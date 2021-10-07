@@ -9,39 +9,42 @@
   <script src="../js/common/modernizr-custom.js"></script>
 
   <link rel="stylesheet" href="../css/src/a_wire_navien.css">
-  <title>project_01</title>
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="../favicon.png">
+  <title>project_01</title>
 </head>
 <body>
   <!-- layout -->
   <div id="wrap">
     <header id="headBox">
-      <div class="all_menu"></div>
-      <h1><a href="#"><img src="../img/Home_Logo.svg" alt="홈으로가기"></a></h1>      
-      <nav class="navigation" class="clearfix">
-        <ul class="gnb">
-          <li><a href="#">menu1</a></li>
-          <li><a href="#">menu2</a></li>
-          <li><a href="#">menu3</a></li>
-        </ul>
-        <ul class="unb">
-          <li><a href="#">menu1</a></li>
-          <li><a href="#">menu2</a></li>
-          <li><a href="#">menu3</a></li>
-        </ul>
+      <div class="headBox">
+        <div class="all_menu"></div>
+        <h1><a href="#"><img src="../img/Home_Logo.svg" alt="Main_Home"></a></h1>      
+        <nav class="navigation">
+          <h2 class="blind">navigation</h2>
+          <ul class="gnb">
+            <li><a href="#">eco</a></li>
+            <li><a href="#">product</a></li>
+            <li><a href="#">magazine</a></li>
+          </ul>
+          <ul class="unb">
+            <li><a href="#">signup</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">c/s</a></li>
+          </ul>
 
-        <div class="search">
-          <button type="button">search</button>
-        </div> 
-        <div class="all_menu">
-          <button type="button">메뉴</button>
-        </div>
-      </nav>
+          <div class="search">
+            <button type="button">search</button>
+          </div> 
+          <div class="all_menu">
+            <button type="button">menu</button>
+          </div>
+        </nav>
+    </div>
     </header>
 
     <section id="commercial">
-      <h2 class="blind">광고</h2>                   
+      <h2 class="blind">commercial</h2>                   
       <div class="back">
         <button type="button" class="next">next</button>
         <button type="button" class="prev">prev</button>
@@ -50,9 +53,8 @@
     
 
     <section id="newMd">
-      <h2 class="blind">new</h2>
-      <div class="new_box">
-        <h3> new</h3>
+      <h2><a href="#">new</a></h2>
+      <div class="new_box">        
         <ul>
           <li>1</li>
           <li>2</li>
@@ -63,9 +65,8 @@
     </section>
 
     <section id="bestOnnew">
-      <h2 class="blind">새로운 것 중 베스트</h2>
-      <div class="bn_Box">
-        <h3>BEST ON NEW</h3>
+      <h2><a href="#">best on new</a></h2>
+      <div class="bn_Box">        
         <div class="bn_img"></div>
         <ul>
           <li class="bn_title">Lorem ipsum dolor sit.</li>
@@ -78,9 +79,8 @@
     </section>
     
     <section id="bestMd">
-      <h2 class="blind">best</h2>
-      <div class="best_box">
-        <h3> best</h3>
+      <h2><a href="#">best</a></h2>
+      <div class="best_box">        
         <ul>
           <li>1</li>
           <li>2</li>
@@ -91,14 +91,22 @@
     </section>
 
     <aside id="gotomagazine">
-      <h2>Go To Magazine</h2>
-      <div class="btn">
+      <h2>go to magazine</h2>
+      <div class="magz_text_box">
+        <div class="magazine_title">Lorem, ipsum.</div>
+        <div class="magazine_text">Lorem ipsum dolor sit 
+          amet consectetur, adipisicing elit. Ea cupiditate expedita vero voluptatibus itaque
+           quibusdam suscipit deserunt consectetur possimus dolorum corporis, tempore neque doloribus 
+           earum in sit voluptatum quas molestias.</div>
+        
+      </div>
+      <div class="btn">       
         <button type="button">go_to_magazine</button>
       </div>
     </aside>
 
     <article id="Eco">
-      <h2>Eco_Friendly</h2>
+      <h2>eco friendly</h2>
       <div class="Eco_con">
         <div class="Eco_image">        
           <div class="eco_img_01"></div>
@@ -127,13 +135,22 @@
     </article>
 
     <aside id="service">
-      <h2 class="blind">Customer_service</h2>
+      <h2 class="blind">Customer_Service</h2>
       <div class="cs_img">
-        <h3>C/s Center</h3>
+        <h3>c/s number</h3>
       </div>
     </aside>
 
     <footer id="footBox">
+      <h2 class="blind">company info</h2>
+      <div class="use_info">
+        <ul class="temp">
+          <li>term</li>
+          <li>privacy</li>
+          <li>cookies</li>
+          <li>certificate</li>
+        </ul>
+      </div>
       <div class="com_info"></div>
      
     </footer>
