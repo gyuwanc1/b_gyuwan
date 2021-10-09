@@ -1,55 +1,13 @@
 @charset "UTF-8";
 /* a_wire_navien */
 
-/* reset.css ==================================================== */
-html,body {width:100%; height: 100%;}
-
-.blind { 
-  display: block;
-  width: 0; height: 0; overflow: hidden; }
-
-html,body,
-h1,h2,h3,h4,h5,h6,
-div,p,pre,address,
-ul,ol,li,dl,dt,dd {
-  margin: 0; padding: 0; font-family: 'apple SD', 'myriad pro',arial,sans-serif;
-  vertical-align: baseline; 
-}
-
-ol,ul { list-style:none; }
-a { color:inherit; text-decoration: none;}
-table,tr,td,th,thead,tbody,tfoot {
-  border:1px solid #333; border-spacing: 0; border-collapse: collapse;
-}
-button { border:0; cursor: pointer;}
-em,address { font-style: normal; }
-strong,b { font-weight:normal; }
-abbr {text-decoration: none;}
-
-/* common.css */
-section {margin-bottom: 100px;}
-aside {margin-bottom: 100px;}
-article {margin-bottom: 100px;}
-h1, h2, h3, h4, h5 {text-transform: uppercase;}
-li 
-
-.clearfix,
-.clearfix::after{
-  content: ""; display: block; clear: both;
-} 
-
-
-
-
-
-/*-----------------------------------------------------------------------------------*/
 
 /* work place */
 
 /* head Box */
 
 #wrap {
-  width: 1280px; height: auto; min-height:500px;
+  width: 1440px; height: auto; min-height:500px;
   margin: auto; 
   background-color: #fff; padding-top: 5rem;
 }
@@ -82,7 +40,7 @@ border: 1px solid #333;}
   line-height:30px;}
   
 
-  .search {float: right; width: 32px; height: 32px; border: 1px solid #333;}
+  .search {float: right; width: 32px; height: 32px;}
   .search button {width: 100%; height: 100%;}  
 
   /*------------------------------------------------------------*/
@@ -91,20 +49,20 @@ border: 1px solid #333;}
 /* 광고영역  */
 #commercial{position: relative; width: 100%; height: 800px; background-color: #dfdfdf;
 overflow: hidden;} 
-    .back {position: absolute; width: 92.361%; height: 0; background-color: #333; 
+    .btn_i {position: absolute; width: 92.361%; height: 0; background-color: #333; 
       top:360px; left:55px; z-index: 100;}
-      .back button {
+      .btn_i button {
         width: 40px; height: 40px; background-color: #fff;
       }
-      .back .next {float:right;}
-      .back .prev {float:left;}      
+      .btn_i .next {float:right;}
+      .btn_i .prev {float:left;}      
 /*--------------------------------------*/
 
 
 /* 새로운 제품 */
 #newMd { width: 100%; height: 600px; background-color: #fff ; padding:90px; box-sizing: border-box;}
     .new_box {width: 1100px; height: 420px; margin:auto;}
-    #newMd h2 {text-align:center; font-weight:bold; text-transform: uppercase;}
+    #newMd h2 {text-align:center; font-weight:bold;}
     .new_box > ul {width: auto; height: 280px; margin-top: 100px;}
     .new_box li {float:left;width: 200px; height:280px; background-color:#333 ;
    margin-right: 100px;}
@@ -139,8 +97,8 @@ padding-top: 75px; box-sizing: border-box;}
 
 /* go to maagazine */
 #gotomagazine {width:100%; height: 380px; background-color:#313131; padding-top:50px; box-sizing: border-box;}
-  #gotomagazine  h2 { color:#eee; text-align: center; margin-bottom: 40px; }
-  .magz_text_box {width: auto; height: 200px; margin-left: 55% ;}
+  #gotomagazine  h2 { color:#eee; text-align: center; }
+  .magz_text_box {width: auto; height: 200px; margin-left: 55% ; margin-top: 40px;}
     .magazine_title {width: auto; height: 30px;  margin-bottom: 20px;
     color: #eee; font-size: large; font-style: italic; font-weight: bolder; line-height: 30px; }
     .magazine_text {width: 400px; height: 140px;
