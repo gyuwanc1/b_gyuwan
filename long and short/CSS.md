@@ -154,6 +154,23 @@ Web에서는 woff,eot 확장자 사용
 
 ---
 
+## 1008 TIL ##
+
+- 추가기능
+    - tabindex property <br />
+    기본으로 -1,0,1의 value 값을 가진다.
+    deafult 값은 0이고 tabindex를 가지고 있는 요소는
+    `a, button input, select textarea,form` 요소이다.  
+    tabindex기능은 강제로 focus 처리를 가능하게 한다.
+
+- ETC  
+    - language:웹문서의 시작전에 인식되게 하여 처리하는 것이 좋다.
+    - 각영역별로 의미가 있는 구로조 전환
+    - 버튼,내용, 인디케이터 유사 요소끼리, 사용성을 기준으로
+    쓰기 쉽게 그룹처리 및 순서 배치 잘할것.
+
+--- 
+
 
 
 
