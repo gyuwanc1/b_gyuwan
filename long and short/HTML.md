@@ -304,6 +304,17 @@ Y->X순서
 ** clip은 position과 같이 사용 한다.( absolute, fixed만 가능) 
 
 ---
+## 1011 css 작성 순서 ##
+
+1. 큰틀
+1. 중간 레이아웃 잡기
+1. font/링크 
+1. hover/focus
+1. 이미지
+1. 이외에 html/css를 js 에서 구현해야하는 기능에 파악
+1. animation효과 
+---
+
 
 
 
