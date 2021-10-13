@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* green.css */
+
+#wrap { position:relative; width:980px; height: 850px; background-color: #a8a8a8;
+padding-top: 30px; box-sizing: border-box; text-transform: uppercase;}
+
+/*----------work area -----*/
+#headBox {width:250px; height:710px; background-color: #777;
+padding: 20px; box-sizing: border-box;}
+  .head_menu {width: 210px; height: 670px; 
+  padding: 25px; box-sizing: border-box;}
+  .head_menu a {display:block; width: 100%; height: 100%;
+  padding:10px; box-sizing: border-box; }
+  .head_menu ul {width: 100%; height: auto;}
+  .head_menu li {width: 153px; height: 80px;
+  border-bottom: 10px solid #fff;
+font-size:30px; text-align: center; line-height:55px; color: #fff;}
+  .head_menu li:last-of-type {width: 80px; height: 80px; border-radius: 100%; border-bottom: none;
+  background-color: #fff; color: #aaa; margin:auto; margin-top: 20px;}
+  
+  /*----------------------------------------------------------------*/
+
+
+#sideBar {position:absolute; top:0; left:0; 
+   width:100%; height: 30px; background-color: #888;}
+    #sideBar > ul {float:right; width: 340px; height: 100%; background-color: #eee;}
+    #sideBar li {float:right; width:70px; height: 100%; background-color: #753689;}
+
+    #sideBar a {display: block; width: 100%; height: 100%;}
+
+    #sideBar li:nth-of-type(1) {width: 200px; height: 100%; background-color: #fda;} 
+    #sideBar li:nth-of-type(2) {background-color: #fff;}
+    
+    
+
+
+#footBox {width: 100%; height: 120px; background-color: #eee;
+padding:20px; box-sizing: border-box;}
+  .foot_con {width: 100%; height: 100%; background-color: #fda;
+  margin: auto;}
