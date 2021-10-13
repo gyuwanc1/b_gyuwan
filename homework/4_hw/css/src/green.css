@@ -15,8 +15,15 @@ padding: 20px; box-sizing: border-box;}
   .head_menu li {width: 153px; height: 80px;
   border-bottom: 10px solid #fff;
 font-size:30px; text-align: center; line-height:55px; color: #fff;}
+    
+    .head_menu a:after { content:"\25b6";font-weight: 900; color: #fff;
+    margin-left: 20px;}
+               
   .head_menu li:last-of-type {width: 80px; height: 80px; border-radius: 100%; border-bottom: none;
   background-color: #fff; color: #aaa; margin:auto; margin-top: 20px;}
+  /* .head_menu li:last-of-type::after{content:"";display: block;} */
+
+  /*뭐가 문제일까??*/
   
   /*----------------------------------------------------------------*/
 
