@@ -2,10 +2,10 @@
 /* green.css */
 
 #wrap { position:relative; width:980px; height: 850px; background-color: #a8a8a8;
-padding-top: 30px; box-sizing: border-box; text-transform: uppercase;}
+padding-top: 30px; box-sizing: border-box; text-transform: uppercase; }
 
 /*----------work area -----*/
-#headBox {width:250px; height:710px; background-color: #777;
+#headBox {float:left; width:250px; height:710px; background-color: #777;
 padding: 20px; box-sizing: border-box;}
   .head_menu {width: 210px; height: 670px; 
   padding: 25px; box-sizing: border-box;}
@@ -16,12 +16,25 @@ padding: 20px; box-sizing: border-box;}
   border-bottom: 10px solid #fff;
 font-size:30px; text-align: center; line-height:55px; color: #fff;}
     
-    .head_menu a:after { content:"\25b6";font-weight: 900; color: #fff;
-    margin-left: 20px;}
+    .head_menu ul a:after { float:right; content:"\25b6";font-weight: 900; color: #fff;
+    }
+
+    .head_menu li:last-of-type a::after{content:"";display: none;}
+    
                
   .head_menu li:last-of-type {width: 80px; height: 80px; border-radius: 100%; border-bottom: none;
   background-color: #fff; color: #aaa; margin:auto; margin-top: 20px;}
-  /* .head_menu li:last-of-type::after{content:"";display: block;} */
+  /*-----------------------------------------------------------------------*/
+
+  #viewBox {float:left; width: 730px; height: 710px;padding-top: 100px;}
+    .view_img {float: right; width: 600px; height: 600px; background-color: #93980D;}
+    .pc {float:left; width: 300px; height: 600px; background-color: #15F3C8; }
+    .green {float:left; width: 300px; height: 600px; background-color: #A2AC7F; }
+
+    .pc img {width: 100%; height: auto;}
+    .green img {width: 100%; height: auto;}
+  
+  
 
   /*뭐가 문제일까??*/
   
@@ -30,18 +43,47 @@ font-size:30px; text-align: center; line-height:55px; color: #fff;}
 
 #sideBar {position:absolute; top:0; left:0; 
    width:100%; height: 30px; background-color: #888;}
-    #sideBar > ul {float:right; width: 340px; height: 100%; background-color: #eee;}
-    #sideBar li {float:right; width:70px; height: 100%; background-color: #753689;}
+    #sideBar > ul {float:right; width: 340px; height: 100%;}
+    #sideBar li {float:right; width:70px; height: 100%;}
 
-    #sideBar a {display: block; width: 100%; height: 100%;}
+    #sideBar a {display: block; width: 100%; height: 100%; text-align: center; line-height: 30px;
+    color:#fff}
 
-    #sideBar li:nth-of-type(1) {width: 200px; height: 100%; background-color: #fda;} 
-    #sideBar li:nth-of-type(2) {background-color: #fff;}
+    #sideBar li:nth-of-type(1) {width: 200px; height: 100%; background-color: #f3ff0d; }
+    #sideBar li:nth-of-type(1) a {color:#171717;}  
+    #sideBar li:nth-of-type(2) {background-color: #555; color:#fff;}
     
     
 
 
-#footBox {width: 100%; height: 120px; background-color: #eee;
-padding:20px; box-sizing: border-box;}
-  .foot_con {width: 100%; height: 100%; background-color: #fda;
+#footBox {clear: both; width: 100%; height: 120px; background-color: #eee;}
+  .foot_con {width: 100%; height: 100%;  padding:20px; box-sizing: border-box;
   margin: auto;}
+  .foot_con h2 {float:left; width: auto; height: auto; margin-top: 20px;}
+  .foot_inner {float:left; width:800px; height: 50px; margin-left: 20px; margin-top: 20px;}
+  .lo_sns {float:left; width: 100px; height: 50px;}
+    .lo {float:left; width: 50%; height: 100%;}
+    .lo img {width: 100%; height: auto;} 
+
+    .sns {float:left; width: 50%; height: 100%;}
+    .sns img {width: 100%; height: auto;}  
+  .addre {float:left;width: 400px; height: 50px; margin-left: 20px; margin-top: 10px; font-size: 0.875rem; text-align:left;}
+
+  .go_web_page {float: right; width: 280px; height: 50px; background-color: #6FF58A;
+  text-align: center; border:1px solid #171717;}
+  
+  .web {width: 100%; height: 50%; background-color: #394216;}
+
+    .web dt {float:left; width: 30%; height: 100%; background-color: #888;
+      border-bottom: 1px solid #171717}
+    .web dd { float:left; width: 70%; height: 100%; background-color: #f3ff0d;
+    border-bottom: 1px solid #171717}
+
+  .popol {width: 100%; height: 50%; background-color: #598081;} 
+
+    .popol dt {float:left; width: 30%; height: 100%; background-color: #888;}
+    .popol dd { float:left; width: 70%; height: 100%; background-color: #f3ff0d;}
+    
+    .go_web_page dt {font-size: 13px; text-align:center; line-height: 25px;}
+    .go_web_page dd {font-size: 13px; text-align:center; line-height: 25px;}
+
