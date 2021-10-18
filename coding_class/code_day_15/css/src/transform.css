@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+#wrap {
+  width: 800px; height: auto;
+  min-height: 500px;
+  margin:auto;
+}
+
+h1 {
+  width: 100%; height: auto;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+h2{
+  border-bottom: 1px solid #171717;
+}
+
+.part {
+  width: 95%; height: 800px;
+  margin: auto; margin-top: 50px; padding:8px;
+  border:1px solid #333;
+  padding: 8px;
+}
+
+h3 {background-color: #ddf;}
+
+.part ul{
+  width: 100%; height: auto;
+  background-color: #faa;
+}
+
+.part li {
+  width: 100px; height: 100px;
+  border-radius: 4px;
+  border:1px solid #fa0;
+  color: #fff;
+  background-color: #07a;
+}
+
+/*==============================================================*/
+.translate li {transition: all 500ms linear;}
+.translate:hover li:nth-child(1) { transform:translateX(100px);}
+.translate:hover li:nth-child(2) { transform: translateY(-100px);}
+.translate:hover li:nth-child(3) { transform:translate(-120px, 50px);}
+.translate:hover li:nth-child(4) { transform:translateZ(500px);}
+.translate:hover li:nth-child(5) { transform:translate(50%);}
+/* transform의 기준은 자기자신의 크기
+X를 사용하지 않더라도 default값은 X이다. */
+
+/*-------------------------------------------------------------------*/
+
+.scale li {margin: 30px; transition: all 500ms ease;}
+.scale:hover li:nth-child(1) { transform:scale(120%);} /* 형태그대로 1.2든 120%든 값은 동일 */
+.scale:hover li:nth-child(2) { transform:scaleX(150%);}
+.scale:hover li:nth-child(3) { transform:scaleY(0.7);}
+.scale:hover li:nth-child(4) { transform:scale(0.5, 1.5);}
+.scale:hover li:nth-child(5) { transform:scaleZ(2);} /* 커지기는 하나 눈에는 안보임*/
+
+/* scale도 X축이 default값이다*/
+/*----------------------------------------------------------------------*/
+
+.skew li { margin: 30px; transition: all 300ms ease-in;
+font-size: 2rem;}
+.skew li:nth-child(1){transform:skew(30deg) ;}
+.skew li:nth-child(2){transform:skewY(30deg) ;}
+.skew li:nth-child(3){transform:skew(30deg,15deg) ;}
+.skew li:nth-child(4){transform:skewX(45deg);}
+.skew li:nth-child(4) span {
+  display: block;width: 100%;height: 100%;
+  transform:skewX(-45deg);}
+
+  /*--------------------------------------------------------------------*/
+  .rotate li { margin: 40px; transition: all 300ms ease-in;}
+  .rotate:hover li:nth-child(1) {transform:rotate(45deg);}  /* 기본 방향이 Z축 */
+  .rotate:hover li:nth-child(2) {transform:rotateY(720deg);}
+  .rotate:hover li:nth-child(3) {transform:rotateX(30deg);}
+  /* .rotate:hover li:nth-child(4) {transform:rotate3d();} */
+/*   
+  .rotate:hover li:nth-child(5) {transform:rotateY(180deg);} */
+
+  .rotate li:nth-child(5)
+  {position: relative; z-index: 20; width: 200px; height: 150px;}
+  .rotate li div {width: 100%; height: 100%;
+    position: absolute; top:0; left:0;
+    backface-visibility:hidden ;
+  transition: all 400ms ease;}
+
+  .rotate li:hover .front { transform: rotateY(180deg);}
+  .rotate li:hover .back { transform: rotateY(360deg);}
+  
+  .front {background-color: #fa0; transform:rotate(0);}
+  .back {background-color: #adf;  transform:rotateY(180deg);}
+/* 카드 뒤집기 문제 발생 요망 */
+
+/* 
+-앞면 뒷면을 만들어서 배치후 
+-감싼 요소를 회전 X 
+-앞면 과 뒷면을 만든 각각의 카드를 회전시켜야 한다!
+-각도 값 확인하고 줄 것!!
+/*------------------------------------------------------------*/
+
+.part .rotate2 {
+  perspective: 500px;  /*perspective-원근법  수치가 높아질수록 거리감이 생김
+  기준은 요소를 감싸고 있는 틀*/
+  float:left; width: auto;
+}
+.rotate2 li { float: left; transition: all 1500ms linear;
+text-align: center; line-height: 100px;}
+.rotate2:hover li {transform:rotateX(360deg);}
+
+/*-----------------------------------------------------------------*/
+.part .rotate3 {
+  float:left; width: auto; margin-top: 40px;
+}
+
+.rotate3 li {
+  float:left; transition: all 1500ms linear;
+  text-align: center; line-height: 100px;
+}
+
+.rotate3:hover li {transform: perspective(300px) rotateX(180deg);}
+
+/*------------------------------------------------------------------*/
+
+.multi_tr li { transition: all 2000ms ease;} 
+.multi_tr:hover li:nth-child(1) {transform:translateX(500px) rotate(360deg); }
+.multi_tr:hover li:nth-child(2) {transform:rotate(360deg) translateX(500px);}
+.multi_tr li:nth-child(3) { transform-origin:100% 100%; }
+.multi_tr:hover li:nth-child(3) {transform:rotate(360deg);}
+
+/* transform: translate () :: sclae:: skew():: rotate()::perspective()::
+transform-origin:기준의 좌표를 지정하는 형태 
+backface-cisiblity:hidden :: visible; */
+
+#perspectiveWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;min-width: 1440px;
+  height: 400px; padding-bottom: 500px;
+  box-sizing: content-box;
+  padding-top: 50px;
+  background-color: #eee;
+  perspective: 500px;
+  
+}
+.pers_card {
+  width: 250px; height: 400px;
+  background-color: #acf;
+  background-image: linear-gradient(45deg, #acf, #fac);
+  border-radius: 5px;
+  transition:all 1000ms linear;
+}
+#perspectiveWrap:hover .pers_card {transform:rotateX(45deg); }
+/* #perspectiveWrap:hover .pers_card { transform:perspective(10px) rotateX(45deg); } 
+perspective는 자기자신에게는 직접사용 하더라도 적용되지 않고
+감싸는  부모요소에 넣어야 한다.*/
