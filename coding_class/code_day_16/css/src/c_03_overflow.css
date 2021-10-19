@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+#wrap {
+  width: 600px; height: auto;
+  background-color: #ddd;
+
+}
+
+.part {
+  width: 90%; height: auto;
+  padding: 1rem;
+  margin: auto; border: 1px solid #555;
+}
+
+.over_01 {
+width: 100%; height: 200px;
+background-color: #caa;
+padding: 0.5rem;
+overflow-y:auto;}
+
+/*overflow: visible(보여라)::auto (자동으로 처리하여라) :: hidden (넘어가는 아이는 감춰라)::scroll (스크롤을 생성하여라)*/
+
+h3 {height: 50px; margin-bottom: 0.3rem;}
+p {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+dl{
+  width: 100%; height: 150px;
+  background-color: #fa0;
+}
+
+dt {background-color: #0aa; color: #fff;}
+dd{ background-color: #fff;}
+li { border-bottom: 1px solid #000; margin-bottom: 1rem;}
+
+.over_02 { 
+  width: 100%; height: 200px;
+  margin-top: 4rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  background-color: #5df;
+  overflow: hidden;
+}
+
+.con_wrap {
+  width: 100%; height: 100%;
+  padding-right:5rem;
+  box-sizing: content-box;
+  overflow-x:hidden ;
+  overflow-y:auto;
+}

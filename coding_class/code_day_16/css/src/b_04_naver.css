@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+#wrap {width: 500px; height: 500px; background-color: #fff; margin: auto;
+padding:50px; box-sizing: border-box;}
+
+.i_lo {width: 120px; height: 50px; background-color: #fff;
+border: 1px solid #171717;}
+
+legend { background-color: #fff;}
+
+.content_input_area input {float:left;
+  width:300px; height: 50px; margin: auto;}
+
+  .keep_area input {float:left; margin: auto;}
+  p {float: left;}
+
+  .submit input {float:left; width: 300px;height: 50px; background-color:green;
+  margin-left: 30px;}
+
+.etc ul {width: 400px; height: 50px; }
+  .etc li a {float: left;  margin-right: 10px;text-align: center; 
+  margin-top:10px; margin-left: 30px;
+border-right: 1px solid #171717;}
+
+.etc li:last-child a {margin-right: 0; border-right:0;}
