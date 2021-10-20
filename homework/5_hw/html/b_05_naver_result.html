@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--b_03_form.html-->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_05_naver_result.css">  
+  <script src="../js/common/modernizr-custom.js"></script>  
+  <title>Document</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1>웹</h1>
+    <div class="part">
+      <h2>로그인페이지</h2>
+      <div class="login_area">
+        <form action="#" method="POST">
+          <fieldset class="login_part">
+            <legend class="blind">회원 계정 입력한</legend>
+            <div class="member member_id">
+              <input type="text" id="usrId" value="" name="user__Id"
+              maxlength="10" placeholder="아이디" /> <!-- 그안에 쓴 글이 그대로 보이는 효과-->
+              <label for="usrId">
+                <i class="fas fa-user"></i>
+                <span class="blind">사용자의 아이디를 입력</span>
+              </label>
+            </div>
+
+            <div class="member member_pw">
+              <input type="password" id="usrPw" value="" name="user__Pw"
+              maxlength="16" placeholder="비밀 번호" />
+              <label for="usrPw">
+                <i class="fas fa-lock"></i>
+                <span class="blind">사용자의 아이디를 입력</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="member_status">
+            <legend class="blind">회원 계정 상태유지</legend>
+            <input type="checkbox" value="상태유지확인" id="stateCheck" name="state__ck">
+            <label for="stateCheck">회원 계정 상태 유지</label>
+          </fieldset>
+
+          <fieldset class="ok_btn">
+            <legend class="blind">로그인 확인</legend>
+            <input type="submit" value="로그인" />
+          </fieldset>
+        </form>
+
+        <div class="member_more">
+          <a href="#">아이디 찾기</a>
+          <a href="#">비밀번호찾기</a>
+          <a href="#">회원가입</a>
+        </div>
+      </div>
+    </div>
+
+  </div>

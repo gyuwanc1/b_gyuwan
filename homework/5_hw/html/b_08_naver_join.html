@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- b_07_naver_join.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_08_naver_join.css">
+  <script src="../js/common/modernizr-custom.js"></script>
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">네이버</a></h1>
+    <div class="join_content">
+      <fieldset class="row_group">
+        <dl class="id_con">
+          <dt><label for="usrId">아이디</label></dt>
+          <dd><input type="text" id="usrId" name="usr_Id" value=""
+            placeholder="@naver.com">
+          
+          </dd>
+        </dl>
+        <dl class="ps_con">
+          <dt><label for="usrPw">비밀번호</label></dt>
+          <dd><input type="password" id="usrPw" name="usr_pw" value=""></dd>
+        </dl>
+        <dl class="reps_con">
+          <dt><label for="reusrPw">비밀번호 재입력</label></dt>
+          <dd><input type="password" id="reusrPw" name="reusr_Pw" value=""></dd>
+        </dl>
+      </fieldset>
+      <fieldset class="name_group">
+        <dl class="name_con">
+          <dt><label for="usr_name">이름</label></dt>
+          <dd><input type="text" id="usr_name" name="usr__name" value="" ></dd>
+        </dl>
+        <div class="birth">
+          <ul><p>생년월일</p>
+            <li><label for="birth_y" class="blind">년</label>
+            <input type="text" id="birth_y" name="birth__y" value=""
+            placeholder="년">
+            </li>
+            <label for="month" class="blind">태어난 월을 입력하시오.</label>                  
+            <li><select name="select__month" id="month">
+                <option>월</option>
+                <option value="">1월</option>
+                <option value="">2월</option>
+                <option value="">3월</option>
+                <option value="">4월</option>
+                <option value="">5월</option>
+                <option value="">6월</option>
+                <option value="">7월</option>
+                <option value="">8월</option>
+                <option value="">9월</option>
+                <option value="">10월</option>
+                <option value="">11월</option>
+                <option value="">12월</option>
+                </select>
+            </li>
+            <li><label for="birth_d" class="blind">일</label>
+            <input type="text" id="birth_d" name="birth__d" value=""
+            placeholder="일">
+            </li>
+          </ul>
+        </div>
+        <div class="gen">
+          <label for="gender">성별</label>
+          <select name="sexual" id="gender">
+            <option>성별</option>
+            <option value="">남자</option>
+            <option value="">여자</option>
+            <option value="">선택 안함</option>
+        </div>
+        <div class="confirm">
+          <label for="con_email">본인 확인 이메일</label>
+          <input type="text" id="con_email" name="con__email" value="">
+        </div>
+      </fieldset>
+
+      <fieldset class="tel_group">
+
+      </fieldset>
+
+    </div>
+
+
+  </div>
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>

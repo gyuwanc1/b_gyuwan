@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#wrap {width:360px; height: 1000px; background-color: #eee; margin: auto;
+padding-top: 100px;}
+
+h3 { width: 360px; height: 37px; margin: auto; background-color: #35C02B;
+text-indent: 30px;}
+
+.sign_up {width: 100%; height: 490px; background-color: #8597C2; margin-top:20px;}
+
+.company_info {border: 0;}
+.company_info input {width: 100%; height: 42px; margin-bottom: 10px; border:1px solid #eee; border-radius: 5px;}
+
+.info-wrap:hover a {color: #35C02B;}
