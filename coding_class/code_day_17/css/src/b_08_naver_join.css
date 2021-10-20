@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*b_07_naver_join.css*/
+
+#wrap {width: 972px; height: 1212px; background-color: #eee;}
+
+.join_content {width: 460px; height: auto; min-height: 100px;margin: auto;}
+.row_group {width: 100%; height: auto; min-height: 100px; background-color: #E01938;}
+.name_group {width: 100%; height:auto; min-height: 100px; background-color: palegoldenrod;}
+.tel_group {width: 100%; height:auto; min-height: 100px; background-color:#BC66F2;}
