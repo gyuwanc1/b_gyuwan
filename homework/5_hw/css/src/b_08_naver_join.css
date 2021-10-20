@@ -1,12 +1,73 @@
 @charset "UTF-8";
 /*b_07_naver_join.css*/
 
-#wrap {width: 972px; height: 1212px; background-color: #eee; padding: 50px;}
 
-h1 {text-align: center; margin-bottom: 50px;}
+
+#wrap {width: 972px; height: 1212px; background-color: #eee; padding: 50px;
+font-weight: bold;}
+
+h1 {text-align: center; margin-bottom: 20px; color: #2FED28; font-size:44px;}
 
 .join_content {width: 460px; height: auto; min-height: 100px;margin: auto;}
+  .row_group {width: 100%; height: auto;}
+    .id_con {width: 100%; height: auto;}
+    .id_con dt {width: 100%; height:auto; font-size: 20px;}
+    .id_con dd {width:100%; height: 51px;padding:10px 110px 10px 14px; background-color: #fff;
+    border:1px solid #777;}
+    .id_con input {width: 334px; height:29px; border:0; padding:0;}
 
-.row_group {width: 100%; height: auto; min-height: 100px; background-color: #E01938;}
-.name_group {width: 100%; height:auto; min-height: 100px; background-color: palegoldenrod;}
-.tel_group {width: 100%; height:auto; min-height: 100px; background-color:#BC66F2;}
+    .ps_con {width: 100%; height: auto;}
+    .ps_con dt {width: 100%; height:auto; font-size: 20px;}
+    .ps_con dd {width:100%; height: 51px;padding:10px 110px 10px 14px; background-color: #fff;
+      border:1px solid #777;}
+    .ps_con input {width: 334px; height:29px; border:0; padding:0;}
+
+    .reps_con {width: 100%; height: auto;}
+    .reps_con dt {width: 100%; height:auto; font-size: 20px;}
+    .reps_con dd {width:100%; height: 51px;padding:10px 110px 10px 14px; background-color: #fff;
+      border:1px solid #777;}
+    .reps_con input {width: 334px; height:29px; border:0; padding:0;}
+    
+.name_group {width: 100%; height:auto; min-height: 100px; margin-top: 20px;}
+  .name_con {width: 100%; height: auto;}
+  .name_con dt {width: 100%; height:auto; font-size: 20px;}
+  .name_con dd {width:100%; height: 51px;padding:10px 110px 10px 14px; background-color: #fff;
+    border:1px solid #777;}
+  .name_con input {width: 334px; height:29px; border:0; padding:0;}
+
+  .birth {width:100%; height: auto;}
+  p {margin-top: 19px; margin-bottom: 8px; font-size: 20px;}
+
+  .birth ul {width: 100%; height: 100px;}
+  .birth li {float:left;width: 117px; height: 33px;}
+  .birth input {width: 117px; height: 33px;
+  margin-left: 10px;}
+
+  .birth select {
+    width: 125px; height: 36px;
+    margin-left: 55px;}
+
+  .birth li:last-child {float: right; margin-right: 20px;}
+  
+  .gen {width: 100%; height: auto; font-size: 20px;}
+  .gen select {width: 100%; height: 51px;}
+
+  .confirm span {font-size: small; color:#777}
+  .confirm input {width: 100%; height: 51px; box-sizing: border-box;}
+  
+
+.tel_group {width: 100%; height:auto; min-height: 100px; margin-top: 20px;
+font-size: 20px;}
+.tell select {width: 100%; height: 51px;}
+
+.phon input {float:left; width: 330px; height: 51px; border:1px solid #777; padding:0;
+box-sizing: border-box; margin-top: 20px;}
+
+.phon button {width:115px; height: 51px; font-size: smaller; margin-top: 20px; background-color:#2FED28;
+margin-left:13px; color:#fff;}
+
+.cirtifi input {width: 100%; height: 50px; margin-top: 20px; padding: 0; border:1px solid #777;
+box-sizing: border-box;}
+
+.sign_up input {width: 100% ; height: 51px; margin-top: 30px; background-color:#2FED28;
+color:#fff; font-size: 20px;}

@@ -25,8 +25,7 @@
         <dl class="id_con">
           <dt><label for="usrId">아이디</label></dt>
           <dd><input type="text" id="usrId" name="usr_Id" value=""
-            placeholder="@naver.com">
-          
+            placeholder="@naver.com">          
           </dd>
         </dl>
         <dl class="ps_con">
@@ -38,17 +37,20 @@
           <dd><input type="password" id="reusrPw" name="reusr_Pw" value=""></dd>
         </dl>
       </fieldset>
+
       <fieldset class="name_group">
         <dl class="name_con">
           <dt><label for="usr_name">이름</label></dt>
           <dd><input type="text" id="usr_name" name="usr__name" value="" ></dd>
         </dl>
+
         <div class="birth">
-          <ul><p>생년월일</p>
+          <ul>
+            <p>생년월일</p>
             <li><label for="birth_y" class="blind">년</label>
             <input type="text" id="birth_y" name="birth__y" value=""
-            placeholder="년">
-            </li>
+            placeholder="년"></li>
+
             <label for="month" class="blind">태어난 월을 입력하시오.</label>                  
             <li><select name="select__month" id="month">
                 <option>월</option>
@@ -72,27 +74,48 @@
             </li>
           </ul>
         </div>
+
         <div class="gen">
           <label for="gender">성별</label>
           <select name="sexual" id="gender">
-            <option>성별</option>
+            <option>선택안함</option>
             <option value="">남자</option>
             <option value="">여자</option>
             <option value="">선택 안함</option>
+          </select>
         </div>
         <div class="confirm">
-          <label for="con_email">본인 확인 이메일</label>
-          <input type="text" id="con_email" name="con__email" value="">
+          <label for="con_email">본인 확인 이메일
+            <span>(선택)</span>
+          </label>
+          <input type="text" id="con_email" name="con__email" value="" />
         </div>
       </fieldset>
 
       <fieldset class="tel_group">
-
+        <div class="tell">
+          <label for="national">휴대전화</label>
+          <select name="call" id="national">
+            <option>대한민국 +82</option>
+            <option value="">그리스 +30</option>
+            <option value="">나이지리아 +234</option>
+            <option value="">콩고 +242</option>
+          </select>
+        <div class=" phon">
+          <label for="p_num" class="blind">전화번호 입력</label>
+          <input type="text" id="p_num" name="pon_number" value="" placeholder="전화번호 입력" />
+          <button type="button">인증번호 받기</button>
+        </div>
+        <div class="cirtifi">
+          <label for="number" class="blind">인증번호를 입력하세요</label>
+          <input type="tel" id="number" name="cf_number" placeholder="인증번호를 입력하세요" />
+        </div> 
       </fieldset>
 
+      <fieldset class="sign_up">
+        <input type="submit"value="가입하기" />
+      </fieldset>
     </div>
-
-
   </div>
 
   <!-- script -->
