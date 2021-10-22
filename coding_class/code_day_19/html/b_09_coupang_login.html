@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- b_09_coupang_login.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_09_coupang_login.css">
+  <script src="../js/common/modernizr-custom.js"></script>
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">쿠팡</a></h1>
+    <form action="#" methode="POST">
+      <fieldset class="id_pw">
+        <legend class="blind">아이디 및 비밀번호</legend>
+        <div>
+          <label for="id_mail"><i class="far fa-envelope"></i><span class="blind">아이디</span></label>
+          <input type="email" name="id__mail" id="id_mail" value="" placeholder="아이디(이메일)" />
+        </div>
+
+        <div>
+          <label for="password_con"><i class="fas fa-lock"></i><span class="blind">비밀번호</span></label>
+          <input type="password" name="psword" id="password_con" value="" placeholder="비밀번호" />
+        </div>               
+      </fieldset>
+
+      <fieldset class="check_area">
+        <legend class="blind">자동로그인 체크</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="auto_login" name="auto_login" value="">
+            <label for="auto_login">자동로그인</label>
+          </li>
+          <li><a href="#">아이디(이메일>/비밀번호찾기</a></li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="log_btn_area">
+        <legend class="blind">로그인 및 회원가입</legend>
+        <ul>
+          <li>
+            <button type="submit">로그인</button> 
+          </li>
+
+          <li><a href="#">회원가입</a></li>
+        </ul>
+
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>

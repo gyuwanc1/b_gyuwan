@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- b_12_coupang_join_result.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css" />
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css" />
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_12_coupang_join_result.css">
+  <script src="../js/common/modernizr-custom.js"></script>
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">웹</a></h1>
+
+    <div class="input_text">
+      <input type="checkbox" id="checkBtn" value="값" name="check__Btn" /> 
+      <label for="checkBtn">
+        <i></i>
+        체크확인
+      </label>
+      <a href="#">정보보기</a>
+    </div>
+
+    <div class="modal_area">
+      <div class="modal">
+        <h3>쿠팡 이용 약관 동의</h3>
+        <div class="content">
+          <div class="content_inner">
+            <h4>[쿠팡 이용 약관]</h4>
+            <h5> 제1장 총칙 </h5>
+            <dl>
+              <dt>제1조</dt>
+              <dd>놰  안됨</dd>
+              <dt>제2조</dt>
+              <dd>오늘은 수육전골<br />
+              오늘도 술인가...<br />
+              그만<br />
+              술은 이제 그만<br />
+              나도이제그만<br />
+              공부해야<br />
+              하는데<br />
+              유유
+          </dd>
+            </dl>
+          </div>
+      
+        </div>
+          <div class="confirm_btn">
+            <button type="button">확인</button>
+            <div class="close_btn">
+              <button type="button"><i class="fas fa-close"></i><span>닫기</span></button>
+            </div>
+          </div>
+      </div>
+      <div class="modal_bg"></div>
+    </div>
+
+  </div>
+
+  <!-- script -->
+  <script>
+    var inputTest = document.querySelector('.input_text');
+    var inputLink = inputTest.querySelector('a');
+    var modalArea = document.querySelector('.modal_area');
+    var closeWrap = document.querySelector('.close_btn');
+    var closeBtn = closeWrap.querySelector('button');
+
+    inputLink.addEventListener('click', function(event){
+      //a,button의 경우 기본 실행되는 이벤트처리를 동작방지
+      event.preventDefault();
+      modalArea.style.display = 'block';
+    });
+    closeBtn.addEventListener('click', function(event){
+      event.preventDefault();
+      modalArea.removeAttribute('style');
+    });
+
+  </script>
+</body>
+</html>

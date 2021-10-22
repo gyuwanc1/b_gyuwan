@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*b_11_aoupang_join.css */
+
+html, body {width: 100%; height: 100%;}
+#warp {width: 100%; height: 100%;}
+
+.member_area {width: 530px; height: auto; min-height: 200px; 
+  padding: 30px;margin: auto; box-sizing: content-box;}
+
+h2 {width: 100%; height: auto; text-align: center; font-size: 40px;}
+
+.private_box {width: 100%; height: auto;}
+
+.private_box ul {width: 100%; height: auto;}
+.private_box li {width: 100%; height: auto; background-color:#F2E0B5; margin-bottom: 10px;}
+.private_box label {float:left; width: 40px; height: 40px; background-color: #eee;}
+.private_box label i {width: 40px; height: 40px; background-color: #eee; text-align: center; line-height: 40px;
+font-size: 30px;}
+.private_box input {float:left; width: calc(100% - 40px); height: 40px;
+border:1px solid #eee;}
+
+.confirm {width: 100%; height: auto; margin-left: 10px;}
+
+.v_checkbox {width: 100%; height: auto; border: 1px solid #171717;}
+
+.v_checkbox  div {width: 100%; height: auto; padding-left: 10px; box-sizing: border-box; }
+
+.v_checkbox button {float:right;}
+
+.select_four { padding-left: 30px; width:100%; height: auto;}
+
+.btn button {width: 100%; height: 52px; background-color:#0074e9; margin-top: 20px;
+color:#eee;}
+
+.modal {
+  display:none;  
+  position: fixed; top:0; left: 0; z-index: 100;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5)
+}
+
+.modal_message { overflow: scroll;
+  position: absolute;
+  top: 50%; left: 50%; z-index: 100;
+    margin-left:-250px; margin-top: -150px;
+  width: 500px; height: 300px;
+background-color: #fff;}
+  
