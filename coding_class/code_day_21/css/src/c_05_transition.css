@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+#wrap {
+  width: 900px; height: auto;
+  margin: auto; background-color: #eee;
+  padding-bottom: 700px; box-sizing: border-box;
+}
+
+.part {
+  width: 95%; height: auto;
+  margin: auto; border:1px solid #777;
+  padding: 0.5rem;
+}
+
+
+.part ul {
+  width: 100%; height: auto;
+  background-color: #fdd;
+
+}
+
+.part li {
+  width: 100%; height: 300px;
+  margin-bottom: 50px;
+  padding:3rem;
+  border-bottom: 1px solid #0af;
+}
+
+.part span {
+  display: block; width: 4rem; height: 4rem;
+  border-radius: 0.5rem;
+  background-color: #f73;
+}
+
+
+.tr1:hover li:nth-child(1) span {
+  transform: translateX(700px);
+
+  transition-property:transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  transition-delay: 1s;
+}
+
+.tr1 li:nth-child(2) span {
+  transition-property: transform, background-color; /* <-색과 동시에 움직임 변경됨*/  
+  transition-duration:500ms, 1000ms;  /*<-기능에 따른 시간 변경 가능*/
+  transition-timing-function: ease-out;
+  transition-delay: 300ms 1000ms;
+  
+}
+
+.tr1:hover li:nth-child(2) span {
+  transform:translate(500px) scale(1.2);
+  background-color: #f07; color:#fff;
+}
+
+.tr1 :nth-child(3) span {
+  transition:all 2000ms linear 300ms; /* 앞에 시간은 구현시간 뒤에있는 시간은 지연시간*/
+}
+
+.tr1:hover :nth-child(3) span{
+  transform:translate(700px) rotate(360deg);
+  background-color: #06f; font-weight: 700;
+  color: #fff;
+}
+
+.tr1 :nth-child(4) span {
+  transition:all 2000ms cubic-bezier(0,1.12,.45,-0.62) 300ms; /* 앞에 시간은 구현시간 뒤에있는 시간은 지연시간*/
+}
+
+.tr1:hover :nth-child(4) span{
+  transform:translate(700px) rotate(360deg);
+  background-color: #06f; font-weight: 700;
+  color: #fff;
+}
+
+.tr1 :nth-child(5) span {
+  transition:all 2000ms 300ms;}
+
+.tr1:hover :nth-child(5) span{
+  transform:translate(700px) rotate(360deg);
+  background-color: #06f; font-weight: 700;
+  color: #fff;
+  transition:all 500ms ease;
+} 
+
+.tran_Ex {
+  position: relative; z-index:100;
+  width: 400px; height: 600px;
+  margin: 5rem auto;
+  border: 1px solid #777;
+  background-color: #ccc;
+  padding:1,2rem;
+
+}
+
+.div line{
+  position: absolute; top:0; left: 0; z-index: -1;
+  width: 100%; height: 100%;  
+}
+
+.tran_Ex span {
+  position: absolute;
+  display: block; background-color: #0af;
+  transition: all 500ms linear;
+}
+
+.tran_Ex .line01{top:0; left:0; height: 1rem; width: 0;
+  transition-delay: 1500ms}
+.tran_Ex .line02{top:0; right:0; width: 1rem; height: 0;
+  transition-delay: 1000ms}
+.tran_Ex .line03{bottom:0; right:0; height: 1rem; width: 0;
+  transition-delay: 500ms}
+.tran_Ex .line04{bottom:0;  left:0; width: 1rem; height: 0;
+  transition-delay: 0ms}
+
+.tran_Ex:hover span { transition: all 1000ms linear;}
+
+.tran_Ex:hover .line01 {width: 100%;
+transition-delay: 0ms;}
+.tran_Ex:hover .line02 {height: 100%;
+  transition-delay: 500ms}
+.tran_Ex:hover .line03 {width: 100%;
+  transition-delay: 1000ms}
+.tran_Ex:hover .line04 {height: 100%;
+  transition-delay: 1500ms}
+
+  .hover_line {
+    width: 700px; height: 100px;
+    margin: 10rem auto;
+    background-color: #fcc;
+  }
+
+  .gage {
+    width: 0; height: 100%; background-color: #05a;
+  }
+
+  .hover_line:hover .gage {
+    width: 100%;
+    transition:all 1000ms ease-out;
+  } 
+  
+  .hover_line .gage {
+    transition-delay: 1300ms;
+  }
+
+  /* 
+  *하나의 요소가 아니라 여러개의 요소에 시간을 다르게 배분시,
+  다양한 에러가 발생하기 때문에 0초의 시간도 ms단위를 붙여 사용
+  *마우스를 올리거나, 벗어나거나 누르거나 띄거나 등 2가지 이상의 선택상황이 생기면
+  위와 동일한 에러가 발생하기 때문에 선택자의 상황도 동일하게 처리하는 것이 좋다.
+  */
