@@ -1,0 +1,59 @@
+/*c_11_reponsive_result.css*/
+
+#wrap {width: 480px; height: auto; min-width:500px; background-color: #333;}
+#view_04 div {float: left;}
+
+/*480px*/
+@media all and (max-width:480px) {
+  #wrap {width: 100%; min-width: 320px; min-height: 600px; background-color: #333;}
+
+  #headBox {width: 100%; height: 100px; background-color: aquamarine;}
+    .logo {float:right; margin-top:25px; margin-right: 25px; width: 45px; height: 45px; background-color: #eee;}
+  #viewBox {width: 100%; height: 400px; background-color: blueviolet;}
+  #view_04 { width: 100%; height: 400px; background-color: #eee;}
+    .view_inner_01 {width: 50%; height: 50%; background-color: aqua;} 
+    .view_inner_02 {width: 50%; height: 50%; background-color:aquamarine;}
+    .view_inner_03 {width: 50%; height: 50%; background-color: aqua;}
+    .view_inner_04 {width: 50%; height: 50%; background-color:aquamarine;}
+  #commercial {width: 100%; height: 100px; background-color: burlywood;}
+  #con_box {width:100%; height: 200px; background-color: coral;}
+  #footBox {width: 100%; height: 100px; background-color: darkgoldenrod;}
+    .foot_logo {width: 50%; height: 100%; margin:auto; background-color: blue;}
+  }
+
+  /*480px*/
+
+  /*768px*/
+
+  @media all and (min-width: 481px) and (max-width:768px) {
+    #wrap {width: 100%; min-width: 481px; min-height: 600px; background-color: #333;}
+
+    #headBox {width: 100%; height: 150px; background-color:aquamarine; }
+    .logo {width: 100px; height: 150px; background-color: #eee;}
+    #viewBox {width: 100%; height: 300px; background-color: blueviolet;}
+    #view_04 {width: 100%; height: 400px; background-color: #eee;}
+    .view_inner_01 {width: 25%; height: 100%; background-color:aqua;}
+    .view_inner_02 {width: 25%; height: 100%; background-color:aquamarine;}
+    .view_inner_03 {width: 25%; height: 100%; background-color:aqua;}
+    .view_inner_04 {width: 25%; height: 100%; background-color:aquamarine;}
+    #commercial {width: 100%; height: 100px; background-color: burlywood;}
+    #con_box {width: 100%; height: 200px; background-color:coral;}
+    #footBox {width: 100%; height: 100px; background-color:darkgoldenrod;}
+    .foot_logo {float:left; width: 100px; height: 100%; background-color: blue;}
+  } /* max:768px*/
+
+  @media all and (min-width:769px) and (max-width:960px){
+
+    #wrap {width: 100%; min-width: 769px; min-height: 600px; background-color: #333;}
+
+    #headBox {width: 100%; height: 150px; background-color: aquamarine;}
+    .logo {width: 100px; height: 150px; background-color: #eee;}
+    #viewBox {width: 100%; height: 450px; background-color: blueviolet;}
+    #view_04 {width: 100%; height: 600px; background-color: #eee;}
+    .view_inner_01 {width: 25%; height: 100%; background-color:aqua;}
+    .view_inner_02 {width: 25%; height: 100%; background-color:aquamarine;}
+    .view_inner_03 {width: 25%; height: 100%; background-color:aqua;}
+    .view_inner_04 {width: 25%; height: 100%; background-color:aquamarine;}
+    #footBox {width: 100%; height: 100px; background-color: darkgoldenrod;}
+    .foot_logo {float:left; width: 100px; height: 100%; background-color: blue;}
+  } /* max:960px*/
