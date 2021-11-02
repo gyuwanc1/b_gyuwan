@@ -2,6 +2,12 @@
   @media all and (min-width:960px) {
 
     #headBox { height:60px;}
+    #headBox > .container {padding:10px;}
+    
+    #navigation {width: 500px;}
+      .gnb {float:left; width: 430px; height: 33px;}
+      .unb {float: right;} 
+
     #viewBox {height:450px; padding-top:60px;}
     #contentBox {max-width: 960px; height:210px; }
     #infoBox {max-width: 960px; height:540px; }

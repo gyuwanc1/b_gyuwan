@@ -2,7 +2,15 @@
 
   @media all and (max-width:479px) {
 
-    #headBox {height:40px; height: 12.5vw; min-height: 40px;}
+    #headBox {height:40px; height: 12.5vw; min-height: 40px;
+    }
+    #headBox > .container {padding:2.1875vw 10px;}
+    h1 {width: 110px; height: 26px; }
+    #navigation { width: 60px; padding:0;}
+      .gnb {width: 20px; height: 26px;}
+      .unb {float: left; width: 26px; height: 26px; background-color: #fff;}     
+  
+
     #viewBox {height:480px; height: 150vw; min-height: 480px; padding-top:40px; }
     #contentBox {height:480px; height: 150vw; min-height: 480px;}
     #infoBox {height:480px; height: 150vw; min-height: 480px;}

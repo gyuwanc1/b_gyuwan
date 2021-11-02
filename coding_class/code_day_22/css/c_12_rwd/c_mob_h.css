@@ -1,7 +1,16 @@
   /*design 기준 480px*/
   @media all and (min-width:480px) and (max-width:767px) {
 
+    /* #headBox*/
     #headBox {height:60px; }
+    #headBox > .container {padding:10px 15px; }
+  
+    #navigation { width: 80px; }
+      .gnb {width: 40px; height: 34px;}
+         
+  
+
+
     #viewBox {height:720px; height: 150vw; min-height: 720px;padding-top:60px;  }
     #contentBox { height:720px; height: 150vw; min-height: 720px;}
     #infoBox { height:720px;height: 150vw; min-height: 720px;}
