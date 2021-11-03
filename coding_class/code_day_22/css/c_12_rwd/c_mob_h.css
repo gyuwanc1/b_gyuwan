@@ -7,11 +7,25 @@
   
     #navigation { width: 80px; }
       .gnb {width: 40px; height: 34px;}
-         
+      
   
 
 
     #viewBox {height:720px; height: 150vw; min-height: 720px;padding-top:60px;  }
+
+
+    .indicator {position: absolute; bottom: 10px; left:50%; z-index: 100;
+    width: auto; height: 30px; transform: translateX(-50%);}
+    .indi_list {
+      width: auto; height: 100%; padding: 2px; border-radius: 30px; background-color: #fff; }
+    .indi_list li {width: 26px; height: 26px;} 
+    
+    .indi_list li:first-child {margin-left: 0;}
+    .indi_list a { background-color: var(--color-deepY); border-radius:30px;}
+    .indicator p {display: none;}
+
+
+    
     #contentBox { height:720px; height: 150vw; min-height: 720px;}
     #infoBox { height:720px;height: 150vw; min-height: 720px;}
     #footBox {height: 60px; }
