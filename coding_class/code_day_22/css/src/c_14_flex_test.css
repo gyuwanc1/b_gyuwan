@@ -4,7 +4,7 @@
 #wrap > div {width: 100%; height: auto;
 border:1px solid #333; margin-bottom: 100px; padding: 10px;}
 h3 {width: 150px; height: 80px; background-color: #ccc;}
-.navi { width: 600px; height: 50px; background-color: #eee;    margin-top: 30px; }
+.navi { width: 600px; height: 50px; background-color: #eee; margin-top: 30px; }
 .gnb {width: 400px; height: 40px; background-color: #acf;}
 .unb {width: 150px; height: 40px; background-color: #fdd;}
 
@@ -17,3 +17,11 @@ h3 {width: 150px; height: 80px; background-color: #ccc;}
 
 /*-------------------------------------------*/
 .header_02 { display: flex; justify-content: space-between;}
+
+/*----------------------*/
+
+#wrap .part {display: flex; justify-content: space-between; width: 800px ; height: 500px; background-color: #eee;}
+
+.part > ul {display:flex; justify-content: space-around;  width: 350px; height: 300px; border:1px solid #333;}
+.part > ol {display:flex; justify-content: space-around;  width: 350px; height: 300px; border:1px solid #f06;}
+.part li { width: 80px; height: 200px; background-image: linear-gradient(45deg, #dff, #fd7);}
