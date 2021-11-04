@@ -95,9 +95,9 @@ arr[9]=undefined;
 console.log(arr);
 console.log(arr2);
 
-console.clear();
 
-var arT = new Array()
+
+var arT = new Array();
 console.log(arT);
 arT[0]="물";
 arT[1]="약";
@@ -144,4 +144,80 @@ obj2[1] = 'pen';
 obj2[2] = '텀블러';
 console.log( obj2);
 
+console.clear();
+//-------------------------------------------------------
+
 //function
+
+var fn = function(a){
+  //a는 매개변수(parameter) ,인수/인자(argument)
+  //return 마지막에 작성하는 것으로, 어쩃든간에 최종결론은? 답을 도출하는 역활
+  return 1 + a;
+};
+
+console.log( fn(5) );
+
+var fn2 = function (a,b){
+  var c=a+b;   
+  return c;
+}
+
+console.log ( fn2(1,6));
+
+var d= 1+6;
+console.log(d);
+
+console.log (fn2(4,50));
+console.log (fn2(4,80));
+console.log (fn2(44,50));
+console.log (fn2(41,4));
+
+//함수의 기본형태 : function(){} <- 이름이 없는 함수 익명함수
+//함수 선언식 : 이름을 부여한다 -> 기명함수 : fuction 이름 () {} 
+// 함수 표현식:
+// 이름 부여하지 않는다 -> 익명함수 -> 이름이 없기에 대신 이름을 할당할 수 있는 무언가를 선언(변수선언) : var 변수명 = function () {}
+
+//함수 선언식
+console.log (fn3());
+function fn3() {
+  return 'test';
+}
+console.log (fn3());  //호이스팅 현상 주의
+
+//함수 표현식
+var fn4 = function(){
+  return 'test2';
+}
+console.log( fn4() );
+
+//----------------------------------------------------------------------
+console.clear();
+
+var x='hero'; // 광범위한 범위를 가지고 있다. 전역변수
+function ckFn() {
+  var y='xido'; //y의 사용범위는 fuction ckFn()내부에서만 동작 가능
+  console.log (x,y);
+  return y;
+}
+//1. console.log (x);// 결과물 :hero
+//2. ckFn();//콘솔? 결과물 hero xido, 반환된 값:xido
+//3. var rel = ckFn(); console.log ( rel);
+//4.console.log(y); //콘솔의 결과: 
+
+function ckFn2(){
+  var x ='who?';
+  console.log ();
+  // return x;
+}
+
+console.log (x);
+ckFn2();
+console.log(x);
+
+//--------------------------------------------
+
+function ff(){}
+ff()
+
+(function(){})() // 즉시실행함수 : 익명함수의 기다림 없이 바로 실행
+(function(){}()) // 즉시실행함수 : 익명함수의 기다림 없이 바로 실행
