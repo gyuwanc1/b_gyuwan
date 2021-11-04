@@ -15,3 +15,23 @@ console.clear ();
 //7-2 함수에 return이라는게 있는데 최종 결론도출 
 //8. 스코프 (범위): 변수가 사용할 수 있는 범위- 전역/지역
 
+
+var a ='2021년';
+var b ='11월';
+var c = '04일';
+var dot = '.';
+var date;
+  date=parseInt(a)+dot+parseInt(b)+dot+parseInt(c);
+console.log(date)
+//----------------------------------------------------//
+
+var user = function(a) {
+  //
+  var obj=user;
+  obj[xx님] = '고생하셨어요'
+  obj[xx님] = '힘내세요'
+  obj[xx님] = '내일도 또 다시' 
+  return user
+}
+
+console.log(user);// 1. xx님 오늘도 고생하셨어요!//2. xx님 힘내세요.// xx님 내일도 또 다시
