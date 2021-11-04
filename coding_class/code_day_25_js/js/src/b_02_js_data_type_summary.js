@@ -1,5 +1,5 @@
 
-console.clear ();
+// console.clear();
 
 //형타입! 
 //1. 숫자 -> 값을 더하면 계산이 된다
@@ -21,17 +21,20 @@ var b ='11월';
 var c = '04일';
 var dot = '.';
 var date;
-  date=parseInt(a)+dot+parseInt(b)+dot+parseInt(c);
+  date = parseInt(a) + dot + parseInt(b) + dot + '0' + parseInt(c);
 console.log(date)
 //----------------------------------------------------//
 
-var user = function(a) {
-  //
-  var obj=user;
-  obj[xx님] = '고생하셨어요'
-  obj[xx님] = '힘내세요'
-  obj[xx님] = '내일도 또 다시' 
-  return user
-}
+console.clear();
 
-console.log(user);// 1. xx님 오늘도 고생하셨어요!//2. xx님 힘내세요.// xx님 내일도 또 다시
+
+var user = function(a){ 
+  var i = '님 오늘도 고생하셨어요!'
+  return a+i
+};
+console.log(user('xido'));
+
+// 1. xx님 오늘도 고생하셨어요!
+//2. xx님 힘내세요. 
+//3. xx님 내일도 또 다시 !!!
+
