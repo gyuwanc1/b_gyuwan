@@ -27,7 +27,6 @@ console.log(date)
 
 console.clear();
 
-
 var user = function(a){ 
   var i = '님 오늘도 고생하셨어요!'
   return a+i
@@ -37,4 +36,141 @@ console.log(user('xido'));
 // 1. xx님 오늘도 고생하셨어요!
 //2. xx님 힘내세요. 
 //3. xx님 내일도 또 다시 !!!
+
+var ran = parseInt(Math .random() * 7); //0~7
+
+var arrSample = [1, 5, 'apple', 'banana', 'graph', 'kwiw', 'car']
+
+console.log( ran, arrSample[ran]);
+
+console.clear ();
+
+var content=['오늘도 고생하셨어요',
+'힘내세요',
+'내일 또 다시'];
+
+// var content2 =[];
+// content2[0] ='힘내세요';
+// content2.push('내일 또 다시');
+// content2.unshift ('오늘도 고생하셨어요');
+
+// console.log(content2);
+
+var userFn = function(data){
+  var random = Math.random() * 3;
+  var  int =  parseInt(random);
+  var plusText =data + '님' + ' ' +content[int];
+  return plusText;
+}
+
+var userRel = userFn('me');
+
+console.log ( userRel);
+
+//js에서 id 명을 선택하는 방법
+
+// 1.document.getElementById(id이름);
+// 2.document.querySelector(css와 동일한 선택자);
+
+// 요소 생성하는 방법
+// document.createelement (요소명); <- 생성해서 어딘가에 넣을 준비를 해라
+// 선택자.innerHtml = '요소'; <- 어딘가에 넣겠다. 기존선택자 내부에 존재하는것 삭제
+// 선택자.append(요소) <-선택자 내부 뒤에 요소를 삽입 (단, .text형태는 글자로 삽입)
+
+
+var wrap = document.getElementById('wrap');
+var p = document.createElement ('p');
+p.innerText = userRel;
+wrap.append(p);
+
+
+console.clear();
+
+//...................................................................
+
+var variable = '이것은 변수입니다.';
+
+document.write(variable);
+
+var arA = [];
+arA[0] ="물";
+arA[1] ="약";
+console.log(arA[0]);
+
+var fnCall = function(){
+  console.log('game Go');
+};
+fnCall();
+
+var fnCall2 = function(){
+  return 'this';
+};
+fnCall2();
+
+//변수, 함수//------------------------------------------------------------
+
+// sum(a,b); //덧셈 a+b=값
+// Mul(a,b); //뺼셈 a * b=값
+// devide(a,b); //나누기 a/b=값 ->정수값만
+// minus(a,b); //곱셈 a-b=값
+// svg(a,b); //평균 a*b/2=값 
+// remainder(a,b);// 나머지 값 a % b = 값
+// // + - * / %
+console.clear;
+
+
+
+var sum = function (a,b){
+  var c=a+b;   
+  return a+'+'+b+'='+ c;
+}
+console.log(sum(1,2));
+//--------------------------------
+
+var minus = function (a,b){
+  var c=a-b;
+  return a+'-'+b+'='+ c;
+}
+console.log(minus(2,1));
+//--------------------------------
+
+var mul = function (a,b){
+  var c= a*b;
+  return a + ' * ' + b + '='+c;
+}
+console.log (mul(4,2));
+//--------------------------------
+
+var divide = function(a,b){
+  var c= a/b;
+  return a + ' / ' + b + '='+c;
+}
+console.log(divide(4,2));
+
+//--------------------------------
+
+var svg = function (a,b){
+  var c= a+b/2
+  return a + ' * ' + b +'/'+ '2'+'='+c;
+}
+console.log(svg(4,2));
+
+//--------------------------------
+
+var remainder = function (a,b){
+  var c= a % b
+  return a + ' % ' + b + '='+'2'+'...'+c;
+}
+console.log(remainder(5,2));
+//--------------------------------
+
+
+var dic2 =[sum(1,2),minus(2,1),mul(4,2),divide(4,2),svg(4,2),remainder(5,2)]
+
+var dic = dic2
+
+console.log(dic);
+
+
+
 
