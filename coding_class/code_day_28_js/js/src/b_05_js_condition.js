@@ -115,11 +115,11 @@ console.clear();
 //===========================================================
 
 var storeList = [];
-var i =0;
+var i =0; //외부에서 지속되게 처리하는 변수
 var setFn = function(selector){
-  var userStep = [];
-  var storeSelectFn = function (selector){
-    switch(selector) {
+  var userStep = []; //return과의 값은 같지만 다른의미이다.
+  var storeSelectFn = function (selector){ //함수내부에 생성후 호출->클로저  1.굳이 외부에 도출X :람다식, 2.내부기능에서 자신의 기능을 여러번 호출:재귀함수
+    switch(selector) { // switch: 조건과 일치되는 기능 수행, 기본 베이스로 break작성,9상황에따라서 뺄수도 있다.)
       case 'a'://살경우
       storeSelectFn('send')    
       userStep.push('3-0')
@@ -159,9 +159,9 @@ var setFn = function(selector){
         userStep.push('...');
       }
       return userStep;
-      }
+    }
    storeSelectFn(selector);
-  //  console.log(userStep); 
+   
   return userStep; 
 };
 // setFn('a');
@@ -169,17 +169,17 @@ var setFn = function(selector){
 
 //----------------------------------------------------
 var storeFn = function(selector, user){
-  var userCheck = {name:'사용자', content:[]};
-  var userStep = [];
+  var userCheck ={}; //{name:'사용자', content:[]};
+  var userStep = []; //어떤한 값을 나열
   //------------------------------
-userStep = setFn (selector);
+userStep = setFn (selector);//userStep은 함수를 호출한 결과를 닫는다.
   
   //------------------------------
 
-  i +=1;
-  userCheck.name = user || 'noNameUser_' + i ;
-  userCheck.content = userStep;
-  storeList.push(userCheck);  
+  i +=1; // 1씩더해라 -> streFn을 호출시 값이 1씩증가, 외부에서 지속되게 처리하는 변수 
+  userCheck.name = user || 'noNameUser_' + i ; //name:사용가 이름을 작성 또는 'noName,e_방문자번호'
+  userCheck.content = userStep; // 방문자가 한 행동 순서
+  storeList.push(userCheck);// 전체방문자 기록 지침  
   return userCheck;
 };
 
@@ -188,3 +188,42 @@ console.log(storeFn('b','user2'));
 console.log(storeFn('c'));
 console.log(storeFn('d','user4'));
 console.log(storeList);
+
+/* JS해석하는 순서 */
+
+// 기능을 원하는 것을 먼저 작성
+// 수행되는 순서대로, 큰 틀내용대로 작성
+// 세부 내용이 어떻게 처리할지, 기능위주로 들어가는것은 별첨으로 따로 작성
+
+// 주요 목적 - 편의점에서 할수 있는 일 (물건 구매/판매/환불시 수행되는 작용 처리)
+// 하나의 조건기준(다른 조건이들어가면 그에따른 첨부)
+// 1. 큰 수행 순서
+// 2. 큰 수행 순서
+  // 2-1. 중간 작업수행
+  // 2-2. 중간 작업수행  * 별도함수처리(setFn기능 별첨)
+  // 2-3. 중간 작업수행
+// 3. 큰 수행 순서
+// 4. 큰 수행 순서
+// 5. 큰 수행 순서
+// 6. 큰 수행 순서
+
+// *별첨 1 : setFn기능
+// *별첨 2 : setFn기능
+
+console.clear();
+
+var box2 = function(){
+  var list = ['1',4,5];
+  return list;
+}
+
+var box1 = function () {
+  var list;
+  //console.log(list);
+  list = box2();
+  var sam = list;
+  sam.push('789');
+  console.log(list,sam);
+}
+
+box1();
