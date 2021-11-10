@@ -1,0 +1,33 @@
+/*b_03_scss_hw.scss*/
+#wrap { width: 1440px; height: auto; background-color: #777; }
+
+/*--------------------work spcae----*/
+.headBox { width: 1440px; height: 100px; background-color: #63F979; padding-top: 15px; }
+
+.headBox > div { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 1000px; height: 70px; background-color: #eee; margin: auto; }
+
+.headBox > div > h1 { width: 120px; height: 70px; background-color: #ABF0E6; }
+
+.headBox > div .navigation { width: 530px; height: 70px; background-color: #B1593D; }
+
+.headBox > div .navigation .unb { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; margin-bottom: 9px; float: right; width: 270px; height: 26px; background-color: #4CC343; }
+
+.headBox > div .navigation .unb li { width: 50px; height: 20px; }
+
+.headBox > div .navigation .gnb { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; width: 530px; height: 35px; background-color: #CC907E; }
+
+.headBox > div .navigation .gnb li { width: 75px; height: 25px; margin: auto; }
+
+.contentBox { position: relative; width: 1440px; height: 2269px; background-color: #249A10; padding: 450px 170px 129px; }
+
+.contentBox > h2 { position: absolute; top: 0; left: 0; z-index: 100; width: 1440px; height: 250px; background-color: #CC907E; }
+
+.contentBox > .content { width: 1100px; height: 1735px; background-color: #7E0D87; margin-bottom: 38px; }
+
+.contentBox > .content .tab_title { width: 1100px; height: 57px; background-color: #61295D; padding: 0px 147px 21px; }
+
+.contentBox > .content .tab_title > ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; width: 806px; height: 36px; background-color: #86A856; }
+
+.contentBox > .content .tab_title > ul > li { width: 126px; height: 36px; background-color: palegoldenrod; text-align: center; line-height: 36px; }
+
+.footBox { width: 1440px; height: 450px; background-color: #B1593D; }
