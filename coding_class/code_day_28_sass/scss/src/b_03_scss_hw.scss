@@ -27,7 +27,7 @@
   & > h2 {position:absolute; top:0; left:0; z-index: 100; 
     width: 1440px; height: 250px; background-color: #CC907E;} //h2
   & > .content {width: 1100px; height: 1735px; background-color: #7E0D87; margin-bottom: 38px;
-   & .tab_title {width: 1100px; height: 57px; background-color: #61295D; padding:0px 147px 21px; 
+    & .tab_title {width: 1100px; height: 57px; background-color: #61295D; padding:0px 147px 21px; 
       & > ul {display: flex; justify-content:space-around;
         width:806px; height: 36px; background-color: #86A856;
         & > li {width:126px; height: 36px; background-color: palegoldenrod;
@@ -35,6 +35,10 @@
       }// ul
     } //tab.title
   }//content
+
+  .menu_list {display: flex; justify-content:space-around; flex-wrap: wrap;
+    width: 1098px; height: 1640px; background-color: #F82CC9;
+  & > li{width: 240px; height: 350px; background-color: #6DDEE5; }}
 }//#contentBox
 
 .footBox {width: 1440px; height:450px; background-color: #B1593D;}
