@@ -1,0 +1,16 @@
+//_mixin.scss
+
+@mixin size($w:100%,$h:auto){
+  width: 100%; height: auto;
+  @content;
+}//size();
+
+@mixin bgimg ($i, $r:no-repeat, $p:50% 50%, $s:initial){
+  background: {
+    image:url('#{$url}#{$i}');
+    repeat:no-repeat;
+    position:0 0;
+    size:contain;
+  }
+}
+
