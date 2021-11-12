@@ -9,3 +9,10 @@
 
 # scss변환시 해당내용정보처리에 대한 자료 삭제
 **/*css.map
+
+#node-module삭제
+**/node_modules
+node_modules
+
+# .vscodr
+**/*.vscode
