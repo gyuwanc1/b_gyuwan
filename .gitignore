@@ -1,4 +1,11 @@
 
+#.gitignore 실행되지 않을때 다음순서대로 처리
+#1.git rm -r --cashed .
+#2.git add .
+#3.git commit -m"fixed untracked filed" 
+
 # 모든 폴더의 프리프로스 파일은 올리지 않는다.
 **/prepros.config
 
+# scss변환시 해당내용정보처리에 대한 자료 삭제
+**/*css.map
