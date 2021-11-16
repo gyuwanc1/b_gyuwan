@@ -46,5 +46,52 @@ var indexCk = array.indexOf('mug'); //indexof 내부에 값을 입력하여, 동
 //존재하지 않는 다면 -1; 
 console.log(indexCk);
 
-var replaceArr = array.splice(1,0,'cam','mug','charger');
+var replaceArr = array.splice(1,0,'cam','mug','charger'); //[].splice 중간에 삽입/삭제하는 기능 (순번,삭제갯수,삽입요소)
 console.log(array); //중간삽입 
+
+var array2 = ['desktop','tablet','smartphone'];
+console.log(array, array2);
+
+// array.splice(0,0,array2);
+// console.log(array);
+
+var conArray = array.concat(array2);
+console.log(conArray); //배열과 배열을 하나의 배열로 완성하는 것.
+
+var arrayN = [10,5,2,50,80,90,200];
+var sum=0;
+arrayN.forEach(function(d,i){
+  sum +=d;
+});
+console.log(sum); //배열 숫자 +연산
+
+var ck=arrayN.reduce( function(a,b){ 
+  // console.log(a,b);
+  var c = a+b;
+  console.log(a,b);
+  return c;
+});
+
+//====================================================================
+
+// [].filter(function(){ return}): 반환된 값을 저장하여 이후 처리 
+
+var nList = [1,2,3,4,5,6,7];
+
+var filterList = [];
+/*
+nList.forEach(function(d,i){
+  if (d > 4) {
+    filterList.push(d);
+  }
+});
+*/
+//filter는 체크된 내용중 return값만 별도로 담아서 처리 
+filterList=nList.filter(function(d,i,k){
+  //console.log(d,i,k) : data,index,array 순서
+  if( d>4 ){
+    return d;
+  }
+});
+console.log('filterList',filterList);
+
