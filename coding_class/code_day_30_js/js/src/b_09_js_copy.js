@@ -99,8 +99,7 @@ for(var d in snack) {
 console.log(wood);
 
 //=========================================================================================
-var ice = [{'롯데':['폴라포','수박바']},{'해태':'브라보'}, {'허쉬':'민트초코'}, {'빙그레':'투게더'}]
-var tong = []
+
 /* 1번째 풀이------------
 tong.push(ice[0]);
 tong.push(ice[1]);
@@ -109,16 +108,18 @@ tong.push(ice[3]);
 
 console.log(tong);
 ---------------------*/
-/* 2번째 풀이*/
-
-ice.forEach(function(data,index){
-  tong[index] = data;
-});
-console.log(tong) 
-
-
 // var ice = [{'롯데':['폴라포','수박바']},{'해태':'브라보'}, {'허쉬':'민트초코'}, {'빙그레':'투게더'}]
 // var tong = []
+
+/* 2번째 풀이*/
+
+// ice.forEach(function(data,index){
+//   tong[index] = data;
+// });
+
+// ice[0]['롯데'].push('메로나');
+
+// console.log(tong) 
 //
 //ice.'롯데'=['폴라포','수박바']
 /*for (){  
@@ -129,5 +130,14 @@ console.log(tong)
 }
 tong.push(ice2);
 ??
-
 */
+
+
+// console.clear();
+// //================
+var ice = [{'롯데':['폴라포','수박바']},{'해태':'브라보'}, {'허쉬':'민트초코'}, {'빙그레':'투게더'}];
+
+var textAr = JSON.stringify(ice);
+var tong = JSON.parse(textAr);
+
+console.log(tong);
