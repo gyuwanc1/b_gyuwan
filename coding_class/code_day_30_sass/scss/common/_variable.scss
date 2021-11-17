@@ -1,0 +1,113 @@
+$color_primary_01: rgba(26,93,84,1);
+$color_primary_02: rgba(131,76,51,1);
+$color_light_gray_01: rgba(196,196,196,1);
+$color_light_gray_02: rgba(170,170,170,1);
+$color_light_gray_03: rgba(117,117,117,1);
+$color_deep_gray: rgba(80,80,80,1);
+$color_black_01: rgba(51,51,51,1);
+$color_black_02: rgba(23,23,23,1);
+$color_white: rgba(255,255,255,1);
+$color_gray_op: rgba(85,85,85,0.300);
+$color_yellow_01: rgba(255,189,85,1);
+$color_yellow_02: rgba(247,233,211,1);
+$color_white_02: rgba(239,239,239,1);
+@mixin text_style_title_02 {
+	font-size:40px;
+	font-family:"Noto Sans KR";
+	font-weight:bolder;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_title_03 {
+	font-size:36px;
+	font-family:"Noto Sans KR";
+	font-weight:bolder;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_title_04 {
+	font-size:28px;
+	font-family:"Noto Sans KR";
+	font-weight:bolder;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_title_05 {
+	font-size:22px;
+	font-family:"Noto Sans KR";
+	font-weight:bolder;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_content_01 {
+	font-size:22px;
+	font-family:"Noto Sans KR";
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_content_02 {
+	font-size:18px;
+	font-family:"Noto Sans KR";
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_content_03 {
+	font-size:16px;
+	font-family:"Noto Sans KR";
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_content_04 {
+	font-size:12px;
+	font-family:"Noto Sans KR";
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_content_04_1 {
+	font-size:12px;
+	font-family:"Noto Sans KR";
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_button_text {
+	font-size:22px;
+	font-family:"Noto Sans KR";
+	font-weight:bolder;
+	font-style:normal;
+	text-decoration:none;
+}
+@mixin text_style_style_code_01 {
+	font-size:9px;
+	font-family:"Noto Sans KR";
+	font-weight:bold;
+	font-style:normal;
+	line-height:24px;
+	letter-spacing:-0.006em;
+	text-decoration:none;
+}
+@mixin text_style_style_code_02 {
+	font-size:10px;
+	font-family:"Noto Sans KR";
+	font-weight:bold;
+	font-style:normal;
+	line-height:24px;
+	letter-spacing:-0.006em;
+	text-decoration:none;
+}
+@mixin text_style_style_code_03 {
+	font-size:12px;
+	font-family:"Noto Sans KR";
+	font-weight:bold;
+	font-style:normal;
+	line-height:24px;
+	letter-spacing:-0.006em;
+	text-decoration:none;
+}
+@mixin effect_style_shadow_01 {
+	box-shadow:0.00px 4.00px 4.00px rgba(0,0,0,0.250);
+}
