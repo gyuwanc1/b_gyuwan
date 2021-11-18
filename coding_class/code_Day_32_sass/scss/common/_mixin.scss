@@ -21,4 +21,46 @@
 
 // image
 
-// size
+//size
+$baseSize:16;
+//unit
+@mixin remUnit($name, $unit){
+  #{$name}:#{$unit} + px;
+  #{$name}:#{$unit/$baseSize}+rem;
+}
+
+
+
+
+
+// media query
+$mobile:320px;
+$tablet:600px;
+$laptop:1024px;
+$pc:1440px;
+//$pcfull:1920px;
+
+
+@mixin mobile(){
+  @media all and (max-width:#{$tablet - 1}){
+    @content;
+  } //연산하기 위해 보간법 사용  #{}변수를 참조
+}
+
+@mixin tablet(){
+  @media all and (min-width:$tablet) and (max-width:#{$laptop - 1}) {
+    @content;
+  }
+}
+
+@mixin laptop(){
+  @media all and (min-width:$laptop) and (max-width:#{$pc - 1}) {
+    @content;
+  }
+}
+
+@mixin pc () {
+  @media all and (min-width:$pc) {
+    @content;
+  }
+}
