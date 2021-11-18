@@ -130,8 +130,10 @@ var day = date.getDate();
 
 console.log(year, month, day);
 //====================================================================
-/*원시함수 - 생성자함수,JS를 기본 구성하는 함수-형타입을 구성하게하는 최소한의 세팅
-Number(),String(),Boolean(),Date(),Function(),Object,Array()......*/
+/*
+원시함수 - 생성자함수,JS를 기본 구성하는 함수-형타입을 구성하게하는 최소한의 세팅
+Number(),String(),Boolean(),Date(),Function(),Object,Array()......
+*/
 
 //정의 되어진 원시함수는 직접사용이 불가능한 함수 - new를 붙이자.
 
