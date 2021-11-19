@@ -42,7 +42,6 @@ h1 {
   z-index: 200;
   width: 60px;
   height: 35px;
-  background-color: #fff;
 }
 @media all and (max-width: 599px) {
   h1 {
@@ -51,7 +50,6 @@ h1 {
     right: 0;
     top: 8px;
     margin: auto;
-    background-color: #dfa;
   }
   .head_area {
     padding: 0;

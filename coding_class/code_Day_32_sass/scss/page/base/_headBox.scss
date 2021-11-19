@@ -13,11 +13,11 @@ $imgPath:'../../multi/img/';
  @at-root h1{
      position:relative; z-index:200;
     width: 60px; height: 35px;  
-    background-color: #fff;
+    
 
     @include mobile{
       position: absolute; left:0; right:0; top:8px; margin: auto;
-      background-color: #dfa;
+      
       @at-root .head_area{padding: 0;}     
       }
          
