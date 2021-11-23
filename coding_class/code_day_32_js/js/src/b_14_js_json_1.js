@@ -155,12 +155,5 @@ dataList.forEach(loopFn1);*/
     list.text(content.title);       //선택자.innerText = '값';
     list.attr('href', content.link);//선택자.setAttribute('속성명','값);
   });
-})(jQuery);
-
-
-
-
-
-
-
+})(jQuery); //즉시실행함수
 
