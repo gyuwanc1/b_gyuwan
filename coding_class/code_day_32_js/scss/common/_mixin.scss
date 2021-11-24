@@ -74,8 +74,8 @@ $pc:1440px;
 }
 
 @mixin handhelds(){
-  @media all and (max-width:#{$laptop - 1}){
-    @content;
+  @media all and (max-width:#{$laptop - 1}) {
+    @content; 
   }
 }
 

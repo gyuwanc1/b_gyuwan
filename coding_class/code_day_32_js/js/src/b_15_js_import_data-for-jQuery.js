@@ -1,6 +1,8 @@
-//b_15_js_import_data-for-jQuery.js
+// b_15_js_import_data-for-jQuery.js
 
-// $.ready(function(){}); //HTML의 BODY에 내용이 작성이 끝나면 수행하세요. head에 사용가능. 기존의 스크립트 코드와 같이 head로들어가야함.
+// $(document).ready(function(){})
+// $.ready(function(){});
+
 
 // IIFE 즉시실행함수
 // var fn = function($){};
@@ -42,5 +44,21 @@
   }, 500);
 
   console.log('5.setTimeout 함수 뒤에 수행!');
+
+  // -------------------------------------------
+  var jsonPath = '../data/person_card.json';
+  $.ajax({
+    url:jsonPath
+  }).done(function(data){
+    var dataList = data;
+    console.log( dataList );  
+  });
+
+  $.getJSON(jsonPath, function(data){
+    console.log(data);
+  })
+
+
+
 
 })(jQuery);
