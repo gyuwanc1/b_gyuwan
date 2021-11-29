@@ -63,6 +63,8 @@ console.log(arr.indexOf(7)); // 7의 위치를 파악 3 ->jQuery : index();
 버튼처리 클릭시 slide 형식의 사라짐과 토글기능
 //setInterval, setTimeout을 이용한 랜덤 숫자배열/color매치
 //탭메뉴 형식의 레이아웃 구성 -> jquery코드 작성 
+
+
 과제:버튼 클릭시 모달윈도우 형식 fade구성처리 (opacity:block, 0-100% / 100%-0,none);
 //선택박스.fadeIn(), 선택박스.fadeOut(), 선택박스.fadetoggle()
 */
