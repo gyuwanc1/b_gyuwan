@@ -1,0 +1,20 @@
+//a_02_fadein.scss
+
+
+//=================================================
+$url : '../img/';
+$cardImg : ('archi1.jpg', 'archi2.jpg', 'shoes.jpg') ;
+//=================================================
+
+#wrap {
+  width: 90%; min-width: 600px; max-width:1400px;
+  margin: auto; background-color: #efefef;
+}
+
+#headBox {width: 100%; height: auto; border-bottom:  1px solid #757575 ;}
+#newbox {width: 100%; height: auto; padding:1rem;
+  h2 {width: 100%; margin-bottom: 1rem; font-size: 1.5rem; text-align: center; text-decoration: underline;}
+  @at-root .new_area {display:flex; justify-content: space-around; width: 100%; height: auto; background-color: yellow;}
+  @at-root .card {width: 90%; min-width: 180px; max-width: 300px; height: 400px;}
+}
+
