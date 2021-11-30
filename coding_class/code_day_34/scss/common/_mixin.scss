@@ -55,7 +55,7 @@ $baseSize: 16;
 
 $deviceBase : 400;
 @function makeVw($size, $deviceWidth:$deviceBase){
-    @return (math.div($size,$deviceWidth) * 100) + vw;
+    @return ( math.div($size,$deviceWidth) * 100 ) + vw;
 }
 
 // @media query --------------------------------------
