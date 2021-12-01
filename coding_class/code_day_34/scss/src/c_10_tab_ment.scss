@@ -1,0 +1,72 @@
+//c_10_tab_meny.html
+
+@import '../common/variable';
+@import '../common/mixin';
+
+#wrap {
+  width: 100%; min-width: 1280px; height: auto;
+  margin: auto; background-color: #eee;
+}
+
+#headBox {width: 100%; height: 100px;
+  padding:1rem; 
+  background-color: #fff;}
+
+#eventBox{ 
+  width: 100%; height: auto; min-height: 37.5rem;
+
+}
+.width_full {width: 100%; height: 15.625rem; margin-bottom: 6.25rem; padding:1.6875rem 0; background-color: #753;
+    @at-root .title_area {
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      width: 100%; max-width: 940px; height: 100%;
+      margin: auto; color:$color_white;
+
+      & > h2 { font-size: 2.5rem; text-transform: capitalize;}
+      & > p { font-size: 1.125rem;}
+    }
+}
+
+.event_area {
+  width: 58.75rem; height: auto; min-height: 400px;
+  margin: auto; margin-bottom: 100px; padding-bottom: 160px;
+
+  @at-root .title_inner {width: 100%; height: 52px; margin-bottom: 50px; padding:0.5rem; 
+    & > ul {display: flex; justify-content: flex-start; align-items: center; width: 100%; height: 100%;
+    }
+    & li {display: flex; align-items: center; margin-right: 2rem; color:$color_light_gray_03;
+      font-size: map-get($map:$font-size , $key:title5); }
+    & button {width: auto; height: 100%; padding: 0 0.5rem; color:inherit;}
+    & li.on button {
+      border-bottom:$line3; 
+      color:$color-primary_01; text-decoration: underline;
+      font-weight:700;
+      font-size: map-get($map:$font-size, $key:title4);}
+    
+  }
+  //-------------------------------------------------
+  @at-root .content_inner { width: 100%; height: auto;}
+  .year_part { display: none;
+    &.on {display: block;}
+    & > h3 {@include blind;}
+  }
+  .event_particle { width: 100%; height: auto;
+    & >li {position:relative;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      width: 100%; height: 200px; margin-bottom:30px;
+      border-radius: 0.5rem;
+      padding: { top:45px;left:30px;right:30px;bottom:36px;  }
+      background-color: #da9;
+    }
+    @import '../particle/event_content_list_particle';  
+  }
+}//.event_area
+
+//===================================================================
+
+#footBox {
+  width: 100%; height: 450px; padding: 2rem;
+  color: #fff;
+  background-color: $color_black_01;
+}
