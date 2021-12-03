@@ -1,0 +1,199 @@
+//c_10_dom_tab_menu2.js
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++
+//시나리오:
+//새로운 2021년에 해당하는 div를 생성하자( <div class="year_part"></div>) 내부에 각 이벤트 내용을 담기.
+//1..year_part는 .content_inner내용의 뒤에 생성하는 것이 아닌 앞에 생성
+//2..year_part를 생성함과 동시,(<h3>2021년도 이벤트</h3>) 를 생성
+//3. h3뒤에 (<ul class="event+particle"></ul>)생성
+//4.ul 내부에 li를 생성 및 각 기능에 따르는 추가요소들을 처리.
+/*
+<a href="" data-id="">
+  <h4 class="event_title"></h4>
+  <p class="event_narration"></p>
+  <dl class="date"><dt class="blind">기간</dt><dd></dd></dl>
+  <dl class="event_check success"><dt>이벤트 진행</dt><dd></dd></dl>
+</a>
+*/
+//5.내부에 들어가는 각 요소의 내용을 별도의 객체로 생성하여 담을 수 있게 처리
+//6.상황에 맞게 조건을 보고 그게 따른 추가 기능을 제작
+//7.li의 내부에 존재하는 a를 클릭시 별도의 모달창이 나타나게 하여 향후 추가 data를 불러와서 적용 할 수 있도록 처리
+//++++++++++++++++++++++++++++++++++++++++++++++++++
+//내용 이벤트 날짜 기준 순서 뒤집기
+
+//--------------------------------------------------
+//data:
+var eventData = { 
+    heading:'2021년 이벤트',
+    //제목, 내용(선택), 기간(시작일-종료일), 진행여부(plan, play, end, stop), 추가데이터 주소, 적용이미지(background)
+    eventList : [ 
+      {
+        title:'spring event',
+        content:'신년 맞이 행사',
+        date:'2021.02.04 - 2021.02.21',
+        status:'end',
+        morePath:'../data/y21.0201.json',
+        bgImg:'../multi/img/event/bg1.jpg'
+      },
+      {
+        title:'spring event2',
+        content:'싱그러운 봄을 위한 세일 이벤트',
+        date:'2021.03.04 - 2021.04.05',
+        status:'end',
+        morePath:'../data/y21.0402.json',
+        bgImg:'../multi/img/event/bg2.jpg'
+      },
+      {
+        title:'summer flavor',       
+        date:'2021.07.15 - 2021.07.30',
+        status:'play',
+        morePath:'../data/y21.0702.json',
+        bgImg:'../multi/img/event/bg3.jpg'
+      }
+    ]  
+  }
+//--------------------------------------------------
+eventData.eventList.reverse();
+//==================================================
+//기본변수:
+
+var EVENT_INSERT_CODE = '<a href data-id>\
+                        <h4 class="event_title">제목을 넣어주세요.</h4>\
+                        <p class="event_narration">설명을 담아주세요</p>\
+                          <dl class="date"><dt class="blind">기간</dt><dd>시작-종료일 작성</dd></dl>\
+                          <dl class="event_check success"><dt>이벤트 진행</dt><dd>준비,진행,종료,취소</dd></dl>\
+                        </a>';
+
+var eleventBox = document.querySelector('#eventBox');
+var elcontentInner = eleventBox.querySelector('.content_inner');
+
+var yearPartList = eventData.eventList;
+var partLen = yearPartList.length;
+var i = 0;
+//==================================================
+//기능:
+//생성후 삽입 - h3/ul ===================================
+var mkYearPart = document.createElement('div'); //div생성
+    mkYearPart.setAttribute('class', 'year_part');//div에 이름부여 (.year_part)
+    //mkYearPart.className = 'year_part'          // .year_part에 이름부여 기능 동일
+    mkYearPart.innerHTML='<h3>'+eventData.heading+'</h3>'; //.year_part에 h3생성
+var elYearPartH3 = mkYearPart.querySelector('h3'); //h3선택
+var mkEventParticle = document.createElement('ul'); //ul생성
+    mkEventParticle.setAttribute('class', 'event_particle'); //ul에 이름부여 (.event_particle)
+
+    elYearPartH3.after(mkEventParticle);// .event_particle h3뒤에 삽입    
+    elcontentInner.prepend(mkYearPart); //.year_part를 삽입
+
+var elEventParticle = elcontentInner.querySelector('.event_particle'); //ul선택자
+
+
+
+
+//==================================================
+//함수
+// var fnMake = function(el,name){
+//    var mkEl = document.createElement(el);
+//    if(!!name) {mkEl.setAttribute('class',name);}
+//    return mkEl;
+// };
+//
+// li내부에 각각의 내용을 설정하는 함수
+
+var fnFixContent = function (parentElement, data){
+  var elparent = parentElement
+
+   //data요소 내부에 들어있는 프로퍼티: title, content(option),date,status(select),morePath(외부주소),bgImg(배경)
+  var elH4 =  elparent.querySelector('.event_title');
+  var elp = elparent.querySelector('.event_narration');
+  var elDate = elparent.querySelector('.date > dd');
+  var elEventCh = elparent.querySelector('.event_check');
+  var elEventDd = elEventCh.querySelector('dd');
+  var elLink = elparent.querySelector('a');
+
+
+
+  elH4.innerText = data.title;
+  (data.content !== undefined) ?  elp.innerText = data.content : elp.remove();
+  elDate.innerText = data.date;
+
+  //status(plan,play,end,stop)중 하나만 선택, 해당라는 요소에 class이름부여, dd에
+  //내용을 표기
+
+  switch(data.status){
+    case'plan':
+      elEventCh.classList.add('plan');
+      elEventDd.innerText = '준비중';
+      break;
+    case'play':
+      elEventCh.classList.add('play');
+      elEventDd.innerText = '진행';
+      break;
+    case 'end':
+      elEventCh.classList.add('end');
+      elEventDd.innerText = '종료';
+      break;
+    case 'stop':
+    default:
+      elEventCh.classList.add('stop');
+      elEventDd.innerText = '진행중지';
+  }
+
+  //morePath(외부주소, 배경이미지)
+  elLink.setAttribute('href', data.morePath);
+  elLink.style.backgroundImage = 'url('+ data.bgImg +')';
+  elLink.style.backgroundColor = 'transparent';
+
+  //
+
+};
+
+
+//==================================================
+//이벤트 (실제 최종 처리 기능)
+//목록 생성 및 삽입 - li -----------------------------------
+//li의 갯수를 파악
+yearPartList.forEach(function(data, index){
+  var mkLi = document.createElement('li');
+  mkLi.innerHTML = EVENT_INSERT_CODE
+  elEventParticle.append(mkLi);
+
+    //var mkLi = fnMake('li');
+    //elEventParticle.append(mkLi);
+
+
+    fnFixContent(mkLi, data);
+});
+
+//==================================================
+//첨부:
+// el    : 요소(element) 선택에 대한 변수
+// make  : 요소생성에 대한 변수
+// check : 단순한 값을 판단하는 변수
+// fn    : 함수선택하는 변수
+// Pascal: 생성자함수
+// _     : 임시용 지역변수
+// 대문자: 'string'
+//       : 기타
+// append-prepend before-after next-prev
+
+//-------------------------------------------------
+/*
+//<div class="box"> </div>
+var mkDiv = document.createElement('div');
+mkDiv.setAttribute('class', 'box more');
+
+//<ul class="list_wrap"></ul>
+
+var mkUl = document.createElement ('ul');
+mkUl.setAttribute('class', 'list_warp');
+
+//<ul class="list_wrapper"></ul>
+var mkUl2 =document.createElement('ul');
+mkUl2.setAttribute('class', 'list+wrapper');
+*/
+
+// var fnmakeEl = function(element, Attribute){
+//   var _makeEl = document.createElement(element);
+//   _makeEl.setAttribute('class', Attribute);
+//   return _makeEl;
+// }
