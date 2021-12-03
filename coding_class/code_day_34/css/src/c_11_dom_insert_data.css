@@ -1,3 +1,4 @@
+/* c_11_dom_insert_data.css */
 #wrap {
   width: 90%;
   min-width: 500px;
@@ -44,7 +45,7 @@
   background-color: #f7e9d3;
 }
 .card .bg_img {
-  width: 100px;
+  width: 200px;
   height: 100%;
   background-color: #fff;
   background-repeat: no-repeat;
@@ -52,20 +53,21 @@
   background-position: 50% 50%;
 }
 .card dl {
-  width: calc(100% - 110px);
+  width: calc(100% - 210px);
   height: 100%;
 }
 .card dl dt {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 .card dl dd {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 250px;
+  height: auto;
   font-size: 0.975rem;
-  color: #aaaaaa;
+  color: #757575;
 }
 .card dl a {
   width: 140px;
