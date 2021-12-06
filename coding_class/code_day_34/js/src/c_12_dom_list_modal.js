@@ -1,0 +1,95 @@
+// c_12_dom_list_modal.js
+
+
+
+// 시나리오.
+//1. li 가져와서 여러개 생성
+
+//data
+var data = [
+  {title:'title_01', content:"lorem text_01", dataLink:'data_01.json'},
+  {title:'title_02', content:"lorem text_02", dataLink:'data_02.json'},
+  {title:'title_03', content:"lorem text_03", dataLink:'data_03.json'},
+  {title:'title_04', content:"lorem text_04", dataLink:'data_04.json'},
+  {title:'title_05', content:"lorem text_05", dataLink:'data_05.json'},
+  {title:'title_06', content:"lorem text_06", dataLink:'data_06.json'},
+  {title:'title_07', content:"lorem text_07", dataLink:'data_07.json'},
+  {title:'title_08', content:"lorem text_08", dataLink:'data_08.json'},
+  {title:'title_09', content:"lorem text_09", dataLink:'data_09.json'},
+  {title:'title_10', content:"lorem text_10", dataLink:'data_10.json'},
+  {title:'title_11', content:"lorem text_11", dataLink:'data_11.json'},
+  {title:'title_12', content:"lorem text_12", dataLink:'data_12.json'},
+  {title:'title_13', content:"lorem text_13", dataLink:'data_13.json'},
+  {title:'title_14', content:"lorem text_14", dataLink:'data_14.json'},
+  {title:'title_15', content:"lorem text_15", dataLink:'data_15.json'}
+  
+]
+
+//변수
+var elConBox = document.querySelector('#contentBox');
+var elCardPart = elConBox.querySelector('.card_part');
+
+var i = 0;
+var dataLen = data. length;
+var elCardModal;
+//기능
+// 요소생성방법1 (element로 인식)
+// var mkLi = document.createElement('li');
+// mkLi.innerHTML = '<a href="#">li 내용을 복사해서 사용해 봅시다.'
+
+//요소생성방법 2 (text 로 인식)
+// var elLiOrigin = '<li><a href="#">li내용을 복사해서 사용해 봅시다!!!</a></li>;
+
+//요소생성방법3 (기존 html문서에서 copy)
+var elLiOrigin = elCardPart.children[0];//요소상태 그대로 가져오기
+elLiOrigin.remove(); //기존(원본)요소 삭제(추가생성시에 혼동을 막기위해)
+
+//모달요소 기본가져오고 기존값 제거
+var elModal = elConBox.querySelector('.card_modal');
+elModal.remove();
+
+
+//함수수행===========================
+var fnMakeCard = function(n){
+  var cloneEl= elLiOrigin.cloneNode(elLiOrigin); //기존data복제
+
+  cloneEl.children[0].innerText = data[n].content;
+  cloneEl.children[0].title = data[n].title;
+  cloneEl.children[0].setAttribute('data-link', data[n].dataLink);
+
+
+  elCardPart.append(cloneEl);//복제요소를 첨부
+}
+
+var fnRemoveModal = function(e){
+  e.preventDefault();
+  elCardModal.remove();
+}
+//li클릭시 수행 함수
+var fnClickLi = function(e){
+  e.preventDefault();
+  //클릭시 수행하는 기능
+  console.log('a');
+  elConBox.append(elModal);//  .card_modal을 생성
+  elCardModal = elConBox.querySelector('.card_modal');
+  var elCloseBtn = elCardModal.querySelector('button');
+  elCardModal.classList.add('on'); // .card_modal영역이 나타나기(on)
+  elCloseBtn.addEventListener('click', fnRemoveModal); // 내부 닫기버튼사용가능하게
+}
+
+//함수 기본 수행 ======================
+for (; i < dataLen; i+=1){
+  fnMakeCard(i)
+}
+
+//추가변수
+var elLi = elCardPart.querySelectorAll('li>a');
+
+
+//이벤트
+elLi.forEach(function(element, index){
+  element.addEventListener('click', fnClickLi)})
+  // var dataLink = this.getAttribute('data-link');
+
+    //===============================================
+  
