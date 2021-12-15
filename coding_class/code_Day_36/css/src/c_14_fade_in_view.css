@@ -1,0 +1,60 @@
+#wrap {
+  width: 1280px;
+  height: 500px;
+  background-color: #fda;
+}
+#wrap .view_area {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  background-color: #eee;
+  margin: auto;
+  padding: 100px 0;
+}
+#wrap .view_area ul {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+}
+#wrap .view_area ul li {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: 10;
+  width: 500px;
+  height: 100%;
+  margin: auto;
+}
+#wrap .view_area ul li:nth-child(1) {
+  background-color: #8A5CDB;
+}
+#wrap .view_area ul li:nth-child(2) {
+  background-color: #1C4BE3;
+}
+#wrap .view_area ul li:nth-child(3) {
+  background-color: #C8B7EA;
+}
+#wrap .view_area ul li:nth-child(4) {
+  background-color: #3F5C75;
+}
+#wrap .view_area ul .on {
+  display: block;
+}
+#wrap .view_area .btn_area {
+  position: absolute;
+  top: 48%;
+  left: 20%;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 0;
+}
+#wrap .view_area .btn_area button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #171717;
+}
+
+/*# sourceMappingURL=c_14_fade_in_view.css.map */
