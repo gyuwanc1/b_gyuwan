@@ -22,7 +22,6 @@
   position: absolute;
   top: 0;
   left: 50px;
-  z-index: 10;
   width: 500px;
   height: 100%;
   margin: auto;
@@ -41,6 +40,10 @@
 }
 #wrap .view_area ul .on {
   display: block;
+}
+#wrap .view_area ul .act {
+  display: block;
+  z-index: 20;
 }
 #wrap .view_area .btn_area {
   position: absolute;

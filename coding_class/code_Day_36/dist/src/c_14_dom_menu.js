@@ -22,47 +22,61 @@ const next = viewArea.querySelector('.next')
 
 // const viewOn = 'on';
 // let i = 0;
-let [classCheck, i, timed, cssFn] = ['act', 0, 500, 'ease'];
+let [checkit, i, timed, cssFn] = ['act', 0, 500, 'ease'];
 let beforeI = i;
 const lilen = viewSlide.length;
+// let permission = true;
 //옵션변수
-viewSlide[i].classList.remove('on');
+
+viewSlide[i].classList.replace('on', checkit);
 
 
 
 //함수================================================
+// const fnDelay = async (t = timed) => {
+//   const promise = new Promise(resolve => {
+//     setTomeout( () => resolve('opacity처리완료!'),t)
+//   })
+//   return promise;
+// }
 
-const fnInsertStyle = () => {
-viewSlide[beforeI].style.display = 'block' ;
-viewSlide[beforeI].style.zIndex = '20' ;
-viewSlide[beforeI].style.position = 'absolute' ;
-viewSlide[beforeI].style.transition = `all ${timed}ms ${cssFn}`;
-}
-
+// const fnInsertStyle = () => {
+// viewSlide[beforeI].style.display = 'block' ;
+// viewSlide[beforeI].style.zIndex = '20' ;
+// viewSlide[beforeI].style.position = 'absolute' ;
+// viewSlide[beforeI].style.transition = `all ${timed}ms ${cssFn}`;
+// }
 
 const fnOpacity = ()=>{
+
   viewSlide[i].style.display = 'block';
+
+  viewSlide[beforeI].style.transition = `all ${timed}ms ${cssFn}`;
   viewSlide[beforeI].style.opacity = 0;
 
   //수행2
   setTimeout(()=>{
     viewSlide[beforeI].removeAttribute('style');
+    viewSlide[beforeI].classList.remove(checkit);
+   
     //viewSlide[i].style = null
+    viewSlide[i].classList.add(checkit);
     beforeI = i
-    fnInsertStyle();
-  },timed )
-}
+    // fnInsertStyle();
+    },timed )
+  }
+  
+
 
 //함수 기본 수행
-fnInsertStyle();
+// fnInsertStyle();
 //================================================
 //이벤트처리 
 //다음버튼
 next.addEventListener('click',(e)=>{
   e.preventDefault();
     //수행1
-  
-  (i < lilen-1) ? i +=1: i = 0;
+    (i < lilen-1) ? i +=1: i = 0;
   fnOpacity();
   
 })
@@ -73,5 +87,5 @@ prev.addEventListener('click',(e)=>{
   
   (i > 0) ? i -=1: i = lilen-1;
   fnOpacity();
-  
+
 })
