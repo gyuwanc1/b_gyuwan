@@ -63,27 +63,36 @@ const slidePrev = elViewbox.querySelector('.prev');
 
 
 let i = 0;
-let timed_Op =500;
+let timed_Op =300;
 ulStyle.transition = `left ${timed_Op}ms linear`;
+
 slideNext.addEventListener('click',(e)=>{
   e.preventDefault();
-  i+= 1;
+  i += 1;
 
   if ( i >= slideLen){ 
     i = 0;
     ulStyle.transition = null;
     ulStyle.left = 100+'%'
   }
+    setTimeout (()=>{
+      ulStyle.transition = `left ${timed_Op}ms linear`;
+      ulStyle.left = (-100 * i) + '%';
+  },300 )
   
-  setTimeout (()=>{
-    
-    ulStyle.left = (-100 * i) + '%';
-  },700 )
-  
-
 });
 
-// elPrev.addEventListener('click',(e)=>{
-//   e.preventDefault();
-  
-// });
+// slidePrev.addEventListener('click',(e)=>{
+//    e.preventDefault();
+   
+
+//   if ( i < slideLen){ 
+//     i = 0;
+//     ulStyle.left = -100+'%'
+//     ulStyle.transition = null;
+//   }
+//     setTimeout (()=>{
+//         ulStyle.left = (100 * i) + '%';
+//   },700 )
+    
+//  });
