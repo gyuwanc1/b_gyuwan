@@ -1,8 +1,20 @@
 //slide.scss
 @at-root #viewBox {
+  position: relative;
   display: flex; justify-content: space-between; flex-wrap: wrap;
   width: 37.5rem; height: 400px; margin: auto;
   border: 0.0625rem solid #333;
+
+  .indicator {
+    position: absolute; bottom: 1rem; right: 0; z-index: 200;
+    display: flex; justify-content: flex-end;
+    width: 100%; height: 2rem; background-color: #dff;
+
+    .conunt_part{width: auto; height: 100%; padding: 0.2rem 1rem; text-align: right;
+      text-decoration: none;
+    }
+    .total_count {font-weight: 700; color:#07a;}
+  }
 
   .slide_content {
     width: 100%; height: 350px;

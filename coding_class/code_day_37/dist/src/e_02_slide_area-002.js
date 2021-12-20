@@ -4,68 +4,65 @@
 const elViewbox = document.querySelector('#viewBox');
 const elSlideContent = elViewbox.querySelector('.slide_content');
 const elSlideUl = elSlideContent.querySelector('.slide_wrapper');
-//현재의 선택자 li는 복제 전 요소 
 const elSlideLi = elSlideUl.querySelectorAll('li');   
 const elSlideCvt = [].slice.call(elSlideLi);
 
 const elslide_btn = elViewbox.querySelector('.slide_btn');
 
 
-//추가설정 변수
+//---------------------------------------------------------------------
 const slideLen = elSlideLi.length;
 console.log(elSlideUl);
 
 //기능처리
-//1.1마지막 요소 복제하여 앞에 붙이기 (prepend)
-const elSlideLast = elSlideCvt.at(-1); //-1은  배열상의 맨뒤로 이동
+
+const elSlideLast = elSlideCvt.at(-1);
 const cloneSlide = elSlideLast.cloneNode(true);
 elSlideUl.prepend(cloneSlide);
 
-//1.2변경된 요소의 갯수에 맞게 ul의 사이즈변경
-//1.3  li요소의 사이즈를 변경 (복제된 요소는 기존 변수로 선정된 요소와는 별개로 처리)
-//1.4 메인에 보여줘야 하는 요소를 맞추기 위해 위치이동 (왼쪽방향으로 -100% 만큼 이동);
-
 const ulStyle = elSlideUl.style;
 
-elSlideUl.style.width = ( 100 * (slideLen +1) ) + '%'; // width값 500%로 변경
+elSlideUl.style.width = ( 100 * (slideLen +1) ) + '%';
 elSlideUl.style.position = 'relative';
 elSlideUl.style.left = 0;
 elSlideUl.style.marginLeft = '-100%';
 elSlideContent.style.overflowX = 'hidden';
 
 const elSlideLiRe = elSlideUl.querySelectorAll('li');
-const elSlideLiReCvt = [].slice.call(elSlideLiRe); // li요소 재선택
+const elSlideLiReCvt = [].slice.call(elSlideLiRe); 
 
 elSlideLiReCvt. forEach((li,idx)=>{
   li.style.width = 100 / (slideLen +1) + '%';
 })
-
-
-//이벤트 구동 시나리오
-//1. next버튼 클릭
-//2. LI 를 감싸고 있는 UL이 반대로 이동 (-100%씩 이동)
-//3. 다음 li가 보임
-
-//4. prev 버튼 클릭시
-//5. Li 를 감싸고 있는 UL이 정방향으로 이동 (+100% 이동)
-
 //-----------------------------------------------------------------------------
 const slideNext = elViewbox.querySelector('.next');
 const slidePrev = elViewbox.querySelector('.prev');
+const elcount = elViewbox.querySelector('.count_part');
+const elNowCount = elcount.querySelector('.now_count');
+const elTotalCount = elcount.querySelector('.total_count');
 
 
 //함수
-
-
-//이벤트
 
 //이벤트처리
 
 
 let i = 0;
 let timed_Op =300;
+
+
+elTotalCount.innerText = slideLen;
+
 ulStyle.transition = `left ${timed_Op}ms linear`;
 
+
+//-----------------------------------------------
+const fnNowCount = ()=>{
+  elNowCount.innerText = i +1;
+}
+
+
+//=========================================다음버튼
 slideNext.addEventListener('click',(e)=>{
   e.preventDefault();
   i += 1;
@@ -78,21 +75,58 @@ slideNext.addEventListener('click',(e)=>{
     setTimeout (()=>{
       ulStyle.transition = `left ${timed_Op}ms linear`;
       ulStyle.left = (-100 * i) + '%';
+      fnNowCount();
   },300 )
   
 });
 
-// slidePrev.addEventListener('click',(e)=>{
-//    e.preventDefault();
-   
+//------------------------------------------------------------------------
 
-//   if ( i < slideLen){ 
-//     i = 0;
-//     ulStyle.left = -100+'%'
-//     ulStyle.transition = null;
-//   }
-//     setTimeout (()=>{
-//         ulStyle.left = (100 * i) + '%';
-//   },700 )
-    
-//  });
+//============================================================================
+
+
+/* 시나리오
+* 슬라이드 처리에 따른 카운트 수치 수행
+* 복제 이전의 갯수파악하여 .total_count에 값 삽입
+* 현재보이는 순번을  .now_count에 값 삽입
+* 다음/이전버튼 수행시 /now_count값은 계속 변화
+*/
+
+//============================================================================
+//* 이전버튼 시나리오
+//1. ul이 현재위치 기준으로 오른쪽 100% 이동 (100% * ㅑ)
+//2.반복수행
+//3. 원본이미지 처음요소에 위치했을경우 복제된 곳으로 animation으로 이동하여 복제 원본요소로 점프 이동
+//4. 여러번 반복 클릭시 문제점 발생 ->권한부여하여 처리
+//5. 움직이는 기준이 되는 변수는 공통변수, 권한을 부여하는 변수 공통변수
+
+slidePrev.addEventListener('click',(e)=>{
+  e.preventDefault();
+  i -=1;
+  // console.log(i);
+  ulStyle.left = -100* i +'%';
+
+
+  //timed_Op 시간이 지난 후에 i 값을 파악하여 추가진행
+  setTimeout ( ()=>{
+    if (i <=-1){
+      
+      i = slideLen-1;
+      ulStyle.transition = null;
+      ulStyle.left = -100* i +'%';
+      
+      setTimeout (()=>{
+        ulStyle.transition = `left ${timed_Op}ms linear`;
+        
+      },10)
+    }
+    fnNowCount();  
+  },timed_Op)
+  
+})
+
+fnNowCount();
+
+
+
+//==================================================================================
