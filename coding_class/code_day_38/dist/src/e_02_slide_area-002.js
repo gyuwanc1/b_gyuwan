@@ -9,44 +9,6 @@
  * 1.5 css 처리(nth-child) 에 관한 문제점 해결 - css에서 직접 수정
  */
 // =========================================
-
-
-(()=>{
-  
-  // 변수 -----------------------------------------------------------------
-  // 선택자 
-  const elViewBox = document.querySelector('#viewBox');
-  const elSlideContent = elViewBox.querySelector('.slide_content');
-  const elSlideUl = elSlideContent.querySelector('.slide_wrapper'); // ul
-  // 현재의 선택자 li는 복제전 요소
-  const elSlideLi = elSlideUl.querySelectorAll('li');// Node(4) [ li, li, li, li ]
-  const elSlideCvt = [].slice.call(elSlideLi);  // [ li, li, li, li ]
-
-  // 추가설정 변수
-  const slideLen = elSlideLi.length;
-
-  // 기능처리 --------------------------------
-  // 1.1 마지막요소 복제하여 앞에 붙이기(prepend) - li갯수 5개로 변경
-  const elSlideLast = elSlideCvt.at(-1); // li의 마지막 요소를 선택
-  const cloneSlide = elSlideLast.cloneNode(true); // li의 마지막 요소를 복제(내부요소까지 복제)
-  elSlideUl.prepend(cloneSlide); // 복제요소를 앞으로 추가로 첨부 : css에서 nth-child는 사용할 수 없다 (이름으로 할당!)
-
-  // 1.2 변경된 요소의 갯수에 맞게, `elSlideUl` 의 사이즈와, 
-  // 1.3 `elSlideLi`요소의 사이즈를 변경 (복제된 요소는 기존 변수로 선정된 요소와는 별개로 처리)
-  // 1.4 메인에 보여주어야 하는 요소를 맞추기위해 위치 이동(왼쪽방향으로 -100% 만큼 이동);
-
-  const ulStyle = elSlideUl.style;
-  ulStyle.width = ( (slideLen + 1) * 100 )+'%';
-  ulStyle.marginLeft = '-100%';
-  
-
-  const elSlideLiRe = elSlideUl.querySelectorAll('li');
-  const elSlideLiReCvt = [].slice.call(elSlideLiRe);
-
-  elSlideLiReCvt.forEach( (li,idx)=>{
-    li.style.width = 100 / (slideLen + 1) + '%';
-  });
-
 // =========================================
 /** 시나리오 - 2 
  * + 가로형슬라이드 형태를 구현을 위한 세팅 : 다음버튼 +
@@ -76,23 +38,84 @@
  * 4.3 다음/이전 버튼 수행시 .now_count값은 계속 변화 
  */
 // =========================================
+/* * 시나리오 5-1
+* + 광고의 갯수를 파악하여,indicator li를 생성+
+*/
+// =========================================
+/* 시나리오 5.2
+* + 인디케이터 처리 수행 +
+* 클릭시 해당 순번 파악
+*파악된 광고 슬라이드 해당위치로 이동
+* indicator li에 .on의 위치 변경
+*/
+//-------------------------------------------------
+/* 시나리오 -6
+* + 일정시간마다 광고가 자동으로 움직이게 처리+
+* 광고영역에 마우스 올리면 일시정지
+* 영역을벗어나면 다시 재생
+*/
+//================================================
+/* *시나리오 추가 구성
+*data불러와서 광고 갯수만큼 생성 (시나리오0)
+* indicator 생성 (시나리오 5.1)
+* 광고자체 링크는 우선 `tabIndex = -1` 마우스클릭/인디케이터 처리/다음/이전버튼으로 화변이 나타나는 시점에서 `tabindex=0`
+* indicator기준 클릭이 아닌 focus처리시 광고화면이 이동, 엔터키를 누르면 해당하는 광고의 위치로 이동 
+*/
+(()=>{
+  
+  // 변수 -----------------------------------------------------------------
+  const elViewBox = document.querySelector('#viewBox');
+  const slideNext = elViewBox.querySelector('.next');
+  const slidePrev = elViewBox.querySelector('.prev');
+  const elCount  = elViewBox.querySelector('.count_part');
+  const elNowCount = elCount.querySelector('.now_count');
+  const elTotalCount = elCount.querySelector('.total_count');
+  // 선택자 
+  const elSlideContent = elViewBox.querySelector('.slide_content');
+  const elSlideUl = elSlideContent.querySelector('.slide_wrapper'); // ul
+  // 현재의 선택자 li는 복제전 요소
+  const elSlideLi = elSlideUl.querySelectorAll('li');// Node(4) [ li, li, li, li ]
+  const elSlideCvt = [].slice.call(elSlideLi);  // [ li, li, li, li ]
 
-elSlideContent.style.overflowX = 'hidden';
+  // 추가설정 변수
+  const slideLen = elSlideLi.length; //슬라이드 복제전 갯수파악 변수
+  let SLIDE_COUNT = 0; //슬라이드 위치 파악 변수
+  let TIME_OPTION = 500; //슬라이드 이동시간 처리 변수
+  let PERMISSION = true; //슬라이드 수행에 따른 권한처리 변수
 
-const slideNext = elViewBox.querySelector('.next');
-const slidePrev = elViewBox.querySelector('.prev');
-const elCount  = elViewBox.querySelector('.count_part');
-const elNowCount = elCount.querySelector('.now_count');
-const elTotalCount = elCount.querySelector('.total_count');
+  // 기능처리 --------------------------------
+  //----------
+  //5.2 (cloneNode는 indicator목록에 포함 되지 않는다)
+  const indiPart = elViewBox.querySelector('.indicator_part');
+  const indiLi = indiPart.querySelectorAll('li');
+  
+
+  // 1.1 마지막요소 복제하여 앞에 붙이기(prepend) - li갯수 5개로 변경
+  const elSlideLast = elSlideCvt.at(-1); // li의 마지막 요소를 선택
+  const cloneSlide = elSlideLast.cloneNode(true); // li의 마지막 요소를 복제(내부요소까지 복제)
+  elSlideUl.prepend(cloneSlide); // 복제요소를 앞으로 추가로 첨부 : css에서 nth-child는 사용할 수 없다 (이름으로 할당!)
+
+  // 1.2 변경된 요소의 갯수에 맞게, `elSlideUl` 의 사이즈와, 
+  // 1.3 `elSlideLi`요소의 사이즈를 변경 (복제된 요소는 기존 변수로 선정된 요소와는 별개로 처리)
+  // 1.4 메인에 보여주어야 하는 요소를 맞추기위해 위치 이동(왼쪽방향으로 -100% 만큼 이동);
+
+  const ulStyle = elSlideUl.style;
+  const elSlideLiRe = elSlideUl.querySelectorAll('li');
+  const elSlideLiReCvt = [].slice.call(elSlideLiRe);
 
 
-let SLIDE_COUNT = 0;
-let TIME_OPTION = 500;
-let PERMISSION = true;
+  
+  elSlideLiReCvt.forEach( (li)=>{
+    li.style.width = 100 / (slideLen + 1) + '%';
+  });
 
-ulStyle.transition = `left ${TIME_OPTION}ms linear`;
-ulStyle.position = 'relative';
-ulStyle.left = 0;
+  elSlideContent.style.overflowX = 'hidden';
+
+  ulStyle.width = ( (slideLen + 1) * 100 )+'%';
+  ulStyle.marginLeft = '-100%';
+  ulStyle.transition = `left ${TIME_OPTION}ms linear`;
+  ulStyle.position = 'relative';
+  ulStyle.left = 0;
 
 elTotalCount.innerText = slideLen;
 
@@ -107,12 +130,25 @@ const fnNowCount = ()=>{
   elNowCount.innerText = SLIDE_COUNT + 1;
 };
 
+//indicator수행 함수
+const fnIndiRotate = ()=>{  
+    indiLi.forEach((el,index)=>{
+    (index !== SLIDE_COUNT) ? el.classList.remove('on') : el.classList.add('on')
+  });
+};
+
 // 다음버튼 클릭시 수행하는 함수
 const fnAniSlide = async () =>{
+  if(SLIDE_COUNT >= slideLen){
+    SLIDE_COUNT = 0;
+    ulStyle.transition = null; //ani 삭제
+    ulStyle.left = 100 +'%'; // 복제로이동
+  }  
   await fnDelay();
   ulStyle.transition = `left ${TIME_OPTION}ms linear`;// ani첨부(있으면 덮어씌우기)
   ulStyle.left = ( -100 * SLIDE_COUNT ) +'%';
   await fnDelay(TIME_OPTION + 200);
+  fnIndiRotate();
   fnNowCount();
   PERMISSION = true;
 };
@@ -127,15 +163,31 @@ const aniPrevSlide = async () => {
     ulStyle.left = ( -100 * SLIDE_COUNT ) + '%';  
   }
   await fnDelay(200);
+  fnIndiRotate();
   fnNowCount();
   ulStyle.transition = `left ${TIME_OPTION}ms linear`;
   PERMISSION = true;
 };
 
+//=========================================
+let slideGO;
+
+const fnSlideMove = () => {    
+slideGO = setInterval( ()=>{
+    SLIDE_COUNT += 1;  
+    fnAniSlide();     
+    },TIME_OPTION*4 );
+  };
+  
+  const fnSlidPause = () => {
+  clearInterval(slideGO);
+}
+
+
 // ------------------------------------------
 // 기본함수 수행
 fnNowCount();
-
+fnSlideMove();
 // ------------------------------------------
 // 다음버튼 클릭
 slideNext.addEventListener('click', (e)=>{
@@ -182,12 +234,43 @@ slidePrev.addEventListener('click', (e) => {
   }// if
 }); // slidePrev 클릭
 
+//indicator li클릭
+indiLi.forEach((el, idx)=>{
+  el.children[0].addEventListener('click', (e)=>{
+    e.preventDefault();
+    if(PERMISSION){
+      PERMISSION=false;
+      SLIDE_COUNT=idx;
+      // let BEFORE_COUNT = SLIDE_COUNT;
+      // indiLi[BEFORE_COUNT].classList.remove('on');
+      // indiLi[SLIDE_COUNT].classList.add('on');
+      fnIndiRotate();
+      fnNowCount();
+      ulStyle.left = ( -100 * SLIDE_COUNT ) +'%';
+      setTimeout(()=>{
+        PERMISSION=true;
+      }, TIME_OPTION+200);
+      }
+    })
+  })
+    //일정시간마다 광고슬라이드 이동수행 (다음버튼 클릭과 동일한 기능)
+
+    //광고영역에 마우스 올리면 광고슬라이드 일시정지
+    elViewBox.addEventListener('mouseenter', (e)=>{
+      fnSlidPause();
+    })
+
+    //광고영역에 마우스 벗어나면 광고슬라이드 다시재생
+    elViewBox.addEventListener('mouseleave',(e)=>{
+      fnSlideMove();
+    })
+
+//==========================================================================
 })();
 
-// 1. indicator 
-// 2. 일정시간마다 넘어가는 수치
-// 3. 터치/마우스누른상태로 내용이동
+
 
 
 
 // js에서는 잠시 기다렸다가 다음을 수행해라는 의미가 뒤에오는 코드들 까지 기다리게하는 의미가 아니다!
+// 이벤트 위임, 버블링, 캡쳐링
