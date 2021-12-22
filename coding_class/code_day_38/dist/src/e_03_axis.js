@@ -14,7 +14,7 @@ elWrap.addEventListener('mousemove',(e)=>{
   // console.log('offsetX', e.offsetX);
   console.log('pageX', e.pageX);
 //   console.log('screenX', e.screenX);
- })
+})
 
 //clientX | y -> 브라우저에 보이는 화면기준 (스크롤바 와 관계없이 보이는 기준)
 //pageX | y -> 브라우저페이지 존재하는 내용 시잔부터 기준치를 잰 위치
