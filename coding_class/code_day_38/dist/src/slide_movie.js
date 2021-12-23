@@ -56,7 +56,7 @@ elSlideWrap.addEventListener('click',e=>{
   e.preventDefault();
   let el = e.target
   let selectData;
-  // console.log(dbVideoData);
+  console.log(dbVideoData);
   if(el.tagName.toLowerCase() === 'button' ){
     let num = el.parentNode.getAttribute('data-num');
 
