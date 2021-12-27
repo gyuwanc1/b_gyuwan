@@ -49,12 +49,8 @@ const elTotalCount = elcount.querySelector('.total_count');
 
 let i = 0;
 let timed_Op =300;
-
-
 elTotalCount.innerText = slideLen;
-
 ulStyle.transition = `left ${timed_Op}ms linear`;
-
 
 //-----------------------------------------------
 const fnNowCount = ()=>{
