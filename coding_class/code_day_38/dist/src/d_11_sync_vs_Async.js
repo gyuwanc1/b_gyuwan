@@ -21,39 +21,42 @@ setTimeout( ()=> {  console.log('4:', num += 5 );}, 300);
 console.log('5:', num );
 */
 
-/*
-const prom = new Promise((resolve, reject)=>{
-  setTimeout(()=>{
-    // resolve('ok');
-    reject('cancle')
-  },300);
-}); //생성자 함수
 
-//resolve는 승인 then
-//reject는 잘못된것 실패, 취소 catch
+// new Promise( function (resolve, reject) {})
+/*
+const prom = new Promise( (resolve, reject) => {
+  setTimeout( ()=>{
+    // resolve('ok');
+    reject('cancle');
+  }, 300);
+});
+
 
 prom
-.then((data)=>{
-  console.log(data);
+.then( (data)=>{
+  console.log( data );
 })
-.catch((error)=>{ 
-  console.log(error)
+.catch( (error)=>{
+  console.log(error);
 })
 */
 
-const fnAge = (age)=>{
-  return new Promise((resolve,reject)=>{
-    if(age >20 ){
-      resolve('성인')
-    }else{
-      reject('미성년자입니다')
-    }
-  } )
+
+const fnAge = (age) => {
+  return new Promise ( (resolve, reject)=>{
+    setTimeout(()=>{
+      if(age > 20){
+        resolve('성인입니다.')
+      }else{
+        reject('미성년자입니다.')
+      }
+    },1000)
+  });
 }
 
-fnAge(30)
-.then(console.log)
-.catch(console.log)
-.finally (()=>{
-  console.log('promise의 개념이해')
-})
+fnAge(22)
+  .then(console.log)
+  .catch(console.log)
+  .finally(()=> { 
+    console.log('promise의 개념이해')
+  });

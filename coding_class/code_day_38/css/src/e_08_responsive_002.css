@@ -129,10 +129,6 @@
     transform: translateY(0) rotate(-45deg);
   }
 
-  .nav_btn.on + .gnb {
-    display: block;
-  }
-
   .gnb {
     display: none;
     flex-direction: column;

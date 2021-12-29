@@ -1,46 +1,46 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    #mapBox {width: 800px; height: 500px; margin: auto; padding: 0.2rem;}
-    #map {width: 100%; height: 100%; background-color: #dff;}
+    #mapBox { width:800px; height:500px; margin: auto; padding: 0.2rem;}
+    #map, .map_area {width: 100%; height: 100%; background-color: #dff;}
   </style>
 </head>
 <body>
   <div id="wrap">
     <h1><a href="./a_content.html">web</a></h1>
+
     <div id="mapBox">
       <h2>카카오지도 이용</h2>
-      <div id="map"></div>
-
+      <div class="map_area">
+      
+      </div>
     </div>
   </div>
-  
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e20ffc69ae1ed1d555d3dc30ccb22fb&libraries=services,clusterer,drawing"></script>
-  <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script> -->
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2ca90444fcecb5b4a251f29aaee991b8&libraries=services,clusterer,drawing"></script>
   <script>
-    const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-    const options = { //지도를 생성할 때 필요한 기본 옵션
-	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-	level: 3 //지도의 레벨(확대, 축소 정도)
-};
+     // 마커가 표시될 위치입니다 
+    const markerPosition  = new kakao.maps.LatLng(37.4020146187738, 126.92266344376408); 
+    const container = document.querySelector('.map_area');
+    const options = { 
+      center: markerPosition,
+      level: 3
+    };
 
-    const map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-    map.setZoomable(false); //확대축소끄기
-    
-var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667);  //마커 생성위치
+    const map = new kakao.maps.Map(container, options);
+    map.setZoomable(false); // 확대축소 끄기
 
-// 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-    position: markerPosition
-});
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({  position: markerPosition  });
 
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
   </script>
 </body>
 </html>
