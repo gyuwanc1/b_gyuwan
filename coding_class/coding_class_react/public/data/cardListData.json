@@ -1,8 +1,17 @@
-
 [
-  {"id":"01" , "imgUrl":"#B49369", "imagAlt":"Mopobun", "title":"Fannie", "content":"YETK", "detaillLink":"#"}, 
-  {"id":"02" , "imgUrl":"#D0E3B0", "imagAlt":"Kezsifwit", "title":"Celia", "content":"SaAWMM", "detailLink":"#"}, 
-  {"id":"03" , "imgUrl":"#DBE7BE", "imagAlt":"Lanoba", "title":"Derrick", "content":"ThursSIIM", "detailLink":"#"}, 
-  {"id":"04" , "imgUrl":"#8F5AB6", "imagAlt":"Uvhuwe", "title":"Jeff", "content":"MoLVLS", "detailLink":"#"}, 
-  {"id":"05" , "imgUrl":"#DD1295", "imagAlt":"Difismu", "title":"Rose", "content":"MZWES", "detailLink":"#"} 
+  { "id":"01" , "checkName":"card_01",
+    "imgUrl":"#7425E9", "imgAlt":"Esijomje", 
+    "title":"Harvey Ramsey","content":"12cc7dec-9b46-51f4-a6c7-c0c673a2e8bf", "detailLInk":"#"},
+  { "id":"02" , "checkName":"card_02",
+    "imgUrl":"#48D0F2", "imgAlt":"Dirusob", 
+    "title":"Christina Douglas","content":"43c3824a-76b3-550b-b5a9-ca177b1ecc13", "detailLInk":"#"},
+  { "id":"03" , "checkName":"card_03",
+    "imgUrl":"#D08855", "imgAlt":"Kuizohod", 
+    "title":"Minerva Sanders","content":"f9688777-c2a1-5112-bb01-618e3d494abd", "detailLInk":"#"},
+  { "id":"04" , "checkName":"card_04",
+    "imgUrl":"#611EAB", "imgAlt":"Tahpajbi", 
+    "title":"Jeanette Pittman","content":"c1ef1e37-c805-529e-9896-8ace0a0d6aa3", "detailLInk":"#"},
+  { "id":"05" , "checkName":"card_05",
+    "imgUrl":"#796077", "imgAlt":"Cirhudulu", 
+    "title":"Pauline Mathis","content":"a281ded2-e694-5e9c-ad8e-d5d3d24f8188", "detailLInk":"#"}
 ]
