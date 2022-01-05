@@ -1,19 +1,17 @@
-import Header from './Component/Header';
-import ContentBox from './Component/content';
-import Footer from './Component/Footer';
+import React from 'react';
+import Header from './component/Header';
+import Main from './component/Main';
+import Footer from './component/Footer';
 import './App.css';
 
 function App() {
-  const myName = 'gyuwanc';
-  // -------------------------------------
+  const title = 'site';
+
   return (
     <div className="App">
-      <Header 
-        name={myName} 
-        url="http://naver.com" />
-      <ContentBox 
-        name={myName} />  
-      <Footer name={myName} />      
+      <Header heading={title} />
+      <Main />    
+      <Footer heading={title} />
     </div>
   );
 }
