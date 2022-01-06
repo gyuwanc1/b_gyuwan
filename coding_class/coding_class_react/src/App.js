@@ -1,11 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter,Routes, Route} from 'react-router-dom'
 import Header from './Component/Header';
 import Main from './Component/Main';
 import Footer from './Component/Footer';
+import CardList from './Component/CardList';
+import Review from './Component/Review.js';
+
 import './App.css';
 
 function App() {
   const title = 'site';
+
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Header heading={title} />
+          <Routes>
+            <Route path="/" element={ <Main /> } />
+            <Route path="/Review" element={ <Review /> } />
+            <Route path="/CardList" element={ <CardList /> } />  
+          </Routes>
+        <Footer heading={title} />
+      </BrowserRouter>
+      
+
+    </div>
+  );
+}
+
+
+
+export default App;
+
+//==============================
 
 //   const style={backgroundColor:"#add",
 //   color:"#fff",
@@ -31,17 +58,3 @@ function App() {
 // 5 -1. useState: 변수의 값이 변경될때 그것을 재처리하기위한 기능
 // 5 -2. useEffect: 변화할때마다 그변화를 체크, 필요데이터를 불러와서 확인 
 
-  return (
-    <div className="App">
-      {/* <button style={style} onClick={pCng}>클릭</button>
-      <p>{par}</p> */}
-      <Header heading={title} />
-      <Main />    
-      <Footer heading={title} />
-    </div>
-  );
-}
-
-
-
-export default App;
