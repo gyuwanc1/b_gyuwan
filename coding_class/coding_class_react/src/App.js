@@ -1,11 +1,7 @@
 import React from 'react';
-import { BrowserRouter,Routes, Route} from 'react-router-dom'
 import Header from './Component/Header';
-import Main from './Component/Main';
 import Footer from './Component/Footer';
-import CardList from './Component/CardList';
-import Review from './Component/Review.js';
-
+import RouterPage from './router/RouterPage';
 import './App.css';
 
 function App() {
@@ -13,17 +9,9 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
         <Header heading={title} />
-          <Routes>
-            <Route path="/" element={ <Main /> } />
-            <Route path="/Review" element={ <Review /> } />
-            <Route path="/CardList" element={ <CardList /> } />  
-          </Routes>
-        <Footer heading={title} />
-      </BrowserRouter>
-      
-
+        <RouterPage />
+        <Footer heading={title} />    
     </div>
   );
 }
@@ -58,3 +46,9 @@ export default App;
 // 5 -1. useState: 변수의 값이 변경될때 그것을 재처리하기위한 기능
 // 5 -2. useEffect: 변화할때마다 그변화를 체크, 필요데이터를 불러와서 확인 
 
+//==========================================================================================
+
+//react0router-dom 을 사용하깅 위해
+//1. router기능을 사용하는 범위를 <Browserroute>로 감싸주어야한다.
+//2.router를 사용하기 위해 a요소 대신 Link 또는 NavLink요소 사용
+//3.href 대신 to속성을 사용
