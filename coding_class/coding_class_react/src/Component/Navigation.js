@@ -5,6 +5,7 @@ export default function Navigation (){
     {content:"Main", href:"/"},  
     {content:"Review", href:"Review"},  
     {content:"CareList", href:"CardList"},  
+    {content:"Product", href:"Product"},  
   ];
 
   return (

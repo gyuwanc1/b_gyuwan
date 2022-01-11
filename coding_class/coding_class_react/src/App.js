@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import RouterPage from './router/RouterPage';
+import Product from './component/Product';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
         <Header heading={title} />
         <RouterPage />
+        {/* <Product /> */}
         <Footer heading={title} />    
     </div>
   );
