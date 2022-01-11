@@ -1,7 +1,9 @@
 //product.js
 
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
+import ProductContent from './ProductContent';
 import '../style/Product.scss'
+import axios from "axios";
 
 //---------------------------------------------
 
@@ -11,59 +13,29 @@ export default function Product(){
 
 const [num, setNum] = useState(0);
 
-const menuData =    
-[
-  {
-  "pageTitle": "coffee",
-  "pageContent" : "Coffee 내용에 따른 설명",
-  "products": [
-    {"product":"americano" , "narr": "americano 설명"},
-    {"product":"lattte" , "narr": "lattte 설명"},
-    {"product":"cafemocha" , "narr": "cafemocha 설명"},
-    {"product":"apogatto" , "narr": "apogatto 설명"},
-    {"product":"espresso" , "narr": "espresso 설명"}
-  ]
-  },
-  {
-  "pageTitle": "drink",
-  "pageContent" : "drink 내용에 따른 설명",
-  "products": [
-    {"product":"orange" , "narr": "americano 설명"},
-    {"product":"포도" , "narr": "lattte 설명"},
-    {"product":"kiwi" , "narr": "cafemocha 설명"},
-    {"product":"banana" , "narr": "apogatto 설명"}    
-  ]
-  }
-  ]
-  
+const [menuData, setMenudata] = useState([]);
 
-  
-  let prCon = menuData[num]; 
+useEffect(()=>{
+  axios.get('./data/menudata.json')
+  .then(res=> setMenudata(res.data))
+    // .then(()=>{ console.log(menuData)})  
+},[])
+
+  // let prCon = menuData[num]; 
+  const code = menuData.filter((data, index)=>index ===num);
 
 //---------------------------------------------
   return (
     <div className="product_area">
       <div className="btn_part">
-        <button type="button" onClick={(e)=>prCon=menuData[setNum(0)]}>Coffee</button>
-        <button type="button" onClick={(e)=>prCon=menuData[setNum(1)]}>Drink</button>
+        {/* <button type="button" onClick={(e)=>prCon=menuData[setNum(0)]}>Coffee</button>
+        <button type="button" onClick={(e)=>prCon=menuData[setNum(1)]}>Drink</button> */}
       </div>
-      
+      {code.map(data => <ProductContent data = {code} />)}
+      {/* {menuData.map (data=> <p key = {data.pageTitle}>{data.pageTitle}</p> )} */}
 
-      <div className="content_part">
-        <h2>{prCon.pageTitle}</h2>
-        <p>{prCon.pageContent}</p>
-          <ul>
-            {prCon.products.map((pr, idx) => (
-              <li key={idx}>
-                <dl>
-                  <dt>{pr.product}</dt>
-                  <dd>{pr.narr}</dd>
-                </dl>
-              </li>
-              )
-            )}          
-          </ul>
-        </div>
+      {/* <ProductContent data={prCon}/> */}
+
     </div>
   )
 }
