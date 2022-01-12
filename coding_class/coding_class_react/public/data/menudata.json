@@ -1,6 +1,7 @@
 
 [
 {
+"id":0,
 "pageTitle": "coffee",
 "pageContent" : "Coffee 내용에 따른 설명",
 "products": [
@@ -12,6 +13,7 @@
 ]
 },
 {
+"id":1,
 "pageTitle": "drink",
 "pageContent" : "drink 내용에 따른 설명",
 "products": [
@@ -20,5 +22,16 @@
   {"product":"kiwi" , "narr": "cafemocha 설명"},
   {"product":"banana" , "narr": "apogatto 설명"}    
 ]
-}
+},
+{
+  "id":2,
+  "pageTitle": "snack",
+  "pageContent" : "drink 내용에 따른 설명",
+  "products": [
+    {"product":"과자" , "narr": "과자 설명"},
+    {"product":"오징어" , "narr": "오징어 설명"},
+    {"product":"초콜렛" , "narr": "초코렛 설명"},
+    {"product":"주류" , "narr": "주류 설명"}    
+  ]
+  }
 ]
